@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIM Online × UNSW — IC Call Script</title>
+<style>
+:root{
+  --navy:#1E2754; --cyan:#00AEEF; --yellow:#F5C123; --red:#E63329;
+  --navy-t:#2B356B; --ink:#1b2033; --sub:#5a6178; --bg:#f4f5f9; --card:#ffffff;
+  --line:#e3e6ef; --unsw:#FFB81C; --unsw-d:#7a5c00;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:-apple-system,Segoe UI,Calibri,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+a{color:inherit;}
+::-webkit-scrollbar{width:8px;} ::-webkit-scrollbar-thumb{background:#c7cbdb;border-radius:4px;}
+
+/* ============ SELECT SCREEN ============ */
+#selectScreen{
+  position:fixed;inset:0;background:linear-gradient(135deg,var(--navy) 0%,#111637 100%);
+  z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:30px 20px;overflow-y:auto;
+}
+.sel-wrap{max-width:920px;width:100%;color:#fff;}
+.sel-brand{font-size:12px;letter-spacing:4px;color:var(--cyan);font-weight:700;text-align:center;margin-bottom:6px;}
+.sel-title{font-size:28px;font-weight:800;text-align:center;margin-bottom:4px;}
+.sel-sub{text-align:center;color:#b7bcd6;font-size:14px;margin-bottom:32px;}
+.sel-block{margin-bottom:28px;}
+.sel-label{font-size:12px;letter-spacing:2px;color:var(--yellow);font-weight:700;margin-bottom:12px;}
+.ls-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.ls-card{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 18px;cursor:pointer;transition:.15s;}
+.ls-card:hover{border-color:var(--cyan);background:rgba(0,174,239,.1);}
+.ls-card.active{border-color:var(--cyan);background:rgba(0,174,239,.16);}
+.ls-card h4{margin:0 0 4px;font-size:15px;}
+.ls-card p{margin:0;font-size:12.5px;color:#c3c7de;line-height:1.4;}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.prog-card{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:12px;padding:14px;cursor:pointer;transition:.15s;text-align:left;}
+.prog-card:hover{border-color:var(--yellow);}
+.prog-card.active{border-color:var(--yellow);background:rgba(245,193,35,.14);}
+.prog-card .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1px;background:var(--navy-t);color:#fff;padding:2px 7px;border-radius:20px;margin-bottom:6px;}
+.prog-card h5{margin:0 0 4px;font-size:13.5px;line-height:1.3;}
+.prog-card .meta{font-size:11px;color:#b7bcd6;}
+.sel-start{display:block;width:100%;max-width:320px;margin:30px auto 0;background:var(--yellow);color:var(--navy);border:none;border-radius:10px;padding:15px;font-size:16px;font-weight:800;cursor:pointer;text-align:center;}
+.sel-start:disabled{opacity:.35;cursor:not-allowed;}
+.sel-start:not(:disabled):hover{background:#ffd450;}
+
+/* ============ LAYOUT ============ */
+#app{display:none;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{
+  width:250px;flex-shrink:0;background:var(--navy);color:#fff;position:fixed;top:0;bottom:0;left:0;
+  overflow-y:auto;padding:18px 14px 30px;z-index:50;
+}
+.sb-brand{font-size:11px;letter-spacing:3px;color:var(--cyan);font-weight:700;margin-bottom:2px;}
+.sb-title{font-size:15px;font-weight:800;margin-bottom:2px;}
+.sb-ctx{font-size:11px;color:#9aa1c2;margin-bottom:16px;line-height:1.4;}
+.sb-ctx b{color:var(--yellow);}
+.sb-sec-title{font-size:10px;letter-spacing:2px;color:#7d84a8;font-weight:700;margin:16px 0 6px;text-transform:uppercase;}
+.sb-nav a{display:block;padding:7px 9px;border-radius:7px;font-size:12.5px;color:#dfe1f0;text-decoration:none;margin-bottom:2px;}
+.sb-nav a:hover{background:rgba(255,255,255,.08);}
+.sb-obj a{display:block;padding:5px 9px;border-radius:6px;font-size:11.5px;color:#c3c7de;text-decoration:none;margin-bottom:1px;}
+.sb-obj a:hover{background:rgba(255,255,255,.08);color:#fff;}
+.sb-btn{display:block;width:100%;text-align:left;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:9px 10px;border-radius:8px;font-size:12px;cursor:pointer;margin-bottom:6px;}
+.sb-btn:hover{background:rgba(255,255,255,.16);}
+.sb-switch{margin-top:16px;font-size:11px;color:#8890b3;text-decoration:underline;cursor:pointer;background:none;border:none;padding:0;}
+
+.main{margin-left:250px;flex:1;max-width:900px;padding:26px 34px 90px;}
+.top-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.badge{font-size:10.5px;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:20px;}
+.badge.ls{background:var(--navy);color:#fff;}
+.badge.prog{background:var(--yellow);color:var(--navy);}
+.badge.unit{background:#eef0f8;color:var(--sub);}
+
+.legend{font-size:11px;color:var(--sub);background:#eef0f8;border-radius:8px;padding:8px 12px;margin-bottom:20px;}
+.sec{margin-bottom:10px;}
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.sec-num{width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0;}
+.sec-hdr h2{margin:0;font-size:19px;}
+.timing{font-size:11px;color:var(--sub);font-weight:600;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px;}
+.tog{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:2px 0;}
+.tog h3{margin:0;font-size:14.5px;}
+.chv{transition:.2s;color:var(--sub);}
+.tog.closed .chv{transform:rotate(-90deg);}
+.tog-body{margin-top:10px;}
+.tog-body.closed{display:none;}
+.sl{background:#f7f8fc;border-left:3px solid var(--cyan);border-radius:6px;padding:10px 12px;margin:8px 0;}
+.sl p{margin:0;font-size:13.5px;line-height:1.55;}
+.sl-tip{margin-top:6px;font-size:11px;color:var(--sub);font-style:italic;}
+.compliance{background:#fff7e0;border:1px solid #f0d98a;border-radius:8px;padding:10px 12px;margin:10px 0;}
+.compliance .lbl{font-size:10.5px;font-weight:700;letter-spacing:1px;color:var(--unsw-d);margin-bottom:4px;}
+.compliance p{margin:0;font-size:13px;}
+.qb{display:flex;gap:10px;align-items:flex-start;margin-top:10px;}
+.ql{width:22px;height:22px;border-radius:6px;background:var(--cyan);color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.qt{font-size:14px;font-weight:600;line-height:1.4;padding-top:2px;}
+.hint{font-size:11.5px;color:var(--sub);margin-top:8px;}
+.sq-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.sq-btn{background:#fff8e0;border:1px solid var(--yellow);color:#8a6c00;font-size:12px;font-weight:600;padding:7px 12px;border-radius:20px;cursor:pointer;}
+.sq-btn.active{background:var(--yellow);color:var(--navy);}
+.sq-btn:hover{background:#ffe9a0;}
+.sq-ans{display:none;background:#f7f8fc;border-radius:8px;padding:10px 12px;margin-top:8px;}
+.sq-ans.show{display:block;}
+.sq-l1{font-size:13px;margin-bottom:6px;}
+.sq-plbl{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--cyan);}
+.sq-probe{font-size:12.5px;color:var(--sub);font-style:italic;margin-top:2px;}
+.note{font-size:11.5px;color:var(--red);margin-top:6px;}
+
+.prog-name-slot{color:var(--navy);font-weight:700;}
+.unsw-box{border:2px dashed var(--unsw);background:#fffaf0;border-radius:10px;padding:14px 16px;margin:12px 0;}
+.unsw-box h5{margin:0 0 6px;font-size:13px;color:var(--unsw-d);letter-spacing:.5px;}
+.confirm{background:#ffe4e1;color:#a11313;font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;}
+.usp-list{margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.6;}
+.entry-box{background:#eef0f8;border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px;}
+
+.divider{border:none;border-top:1px solid var(--line);margin:26px 0;}
+
+/* objections */
+.obj-panel{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden;scroll-margin-top:20px;}
+.obj-header{padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#fff;}
+.obj-header.navy{background:var(--navy);}
+.obj-header.red{background:var(--red);}
+.obj-header.teal{background:#0a7ea4;}
+.obj-body{padding:14px 16px;display:none;}
+.obj-body.show{display:block;}
+.obj-row{margin-bottom:10px;}
+.obj-label{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1px;padding:2px 8px;border-radius:5px;margin-bottom:4px;}
+.obj-label.emp{background:#dbeafe;color:#1d4ed8;}
+.obj-label.ref{background:#fef3c7;color:#92400e;}
+.obj-label.cls{background:#dcfce7;color:#166534;}
+.obj-content{font-size:13px;line-height:1.55;}
+
+.sg-box{background:#e6f7ff;border:1px solid #b3e5fc;border-radius:10px;padding:14px 16px;}
+.sg-box h5{margin:0 0 8px;font-size:13px;color:#075985;}
+.sg-box ul{margin:0;padding-left:18px;font-size:12.5px;line-height:1.7;}
+
+.checklist{list-style:none;padding:0;margin:0;}
+.checklist li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;}
+.check-box{width:19px;height:19px;border:2px solid var(--cyan);border-radius:5px;flex-shrink:0;cursor:pointer;}
+.check-box.checked{background:var(--cyan);}
+.checklist li.done{color:var(--sub);text-decoration:line-through;}
+
+/* sticky notes */
+#stickyToggle{position:fixed;right:20px;bottom:20px;background:var(--red);color:#fff;border:none;width:52px;height:52px;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:80;}
+#stickyPanel{position:fixed;right:20px;bottom:84px;width:280px;max-height:60vh;background:#fffbe0;border:1px solid #f0d98a;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.2);z-index:80;display:none;flex-direction:column;padding:10px;}
+#stickyPanel.show{display:flex;}
+#stickyPanel h4{margin:2px 4px 6px;font-size:12.5px;color:#8a6c00;}
+#stickyTextarea{flex:1;min-height:200px;resize:vertical;border:none;background:transparent;font-family:inherit;font-size:13px;outline:none;}
+
+/* slide-out reference panels */
+.ref-overlay{position:fixed;inset:0;background:rgba(10,12,30,.45);z-index:90;display:none;}
+.ref-overlay.show{display:block;}
+.ref-panel{position:fixed;top:0;right:0;bottom:0;width:380px;max-width:88vw;background:#fff;z-index:91;transform:translateX(100%);transition:.25s;overflow-y:auto;padding:22px;}
+.ref-panel.show{transform:translateX(0);}
+.ref-panel h3{margin-top:0;color:var(--navy);}
+.ref-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--sub);}
+.diff-block{margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+.diff-block h5{margin:0 0 6px;font-size:13px;color:var(--navy);}
+.diff-block p,.diff-block li{font-size:12.5px;line-height:1.55;color:#333;}
+
+@media(max-width:880px){
+  .sidebar{position:fixed;transform:translateX(-100%);transition:.2s;}
+  .sidebar.show{transform:translateX(0);}
+  .main{margin-left:0;padding:60px 16px 90px;}
+  #mobileMenuBtn{display:flex;}
+  .prog-grid{grid-template-columns:1fr 1fr;}
+  .ls-grid{grid-template-columns:1fr;}
+}
+#mobileMenuBtn{display:none;position:fixed;top:14px;left:14px;z-index:60;background:var(--navy);color:#fff;border:none;width:40px;height:40px;border-radius:9px;font-size:18px;}
+</style>
+</head>
+<body>
+
+<!-- ============ SELECT SCREEN ============ -->
+<div id="selectScreen">
+  <div class="sel-wrap">
+    <div class="sel-brand">KEYPATH · SIM ONLINE</div>
+    <div class="sel-title">SIM Online — IC Call Script</div>
+    <div class="sel-sub">Singapore market · advisor-facing tool · select lead source and programme to build your script</div>
+
+    <div class="sel-block">
+      <div class="sel-label">STEP 1 — WHERE DID THIS LEAD COME FROM?</div>
+      <div class="ls-grid">
+        <div class="ls-card" data-ls="unsw" onclick="selectLS('unsw')">
+          <h4>🎯 SIM × UNSW ad</h4>
+          <p>Prospect clicked an ad that already mentioned the UNSW articulation / Masters pathway. They are primed for the UNSW outcome — open with UNSW, position SIM as the credible on-ramp.</p>
+        </div>
+        <div class="ls-card" data-ls="sim" onclick="selectLS('sim')">
+          <h4>🏫 SIM-only ad</h4>
+          <p>Prospect responded to a SIM Online ad with no UNSW mention. Build value in the SIM programme first — the UNSW articulation is introduced later as an upsell.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sel-block">
+      <div class="sel-label">STEP 2 — WHICH PROGRAMME?</div>
+      <div class="prog-grid" id="progGrid"></div>
+    </div>
+
+    <button class="sel-start" id="startBtn" disabled onclick="startCall()">Start call script →</button>
+  </div>
+</div>
+
+<!-- ============ APP ============ -->
+<div id="app">
+<button id="mobileMenuBtn" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+<div class="layout">
+
+  <div class="sidebar">
+    <div class="sb-brand">KEYPATH · SIM ONLINE</div>
+    <div class="sb-title">IC Call Script</div>
+    <div class="sb-ctx" id="sbCtx"></div>
+
+    <div class="sb-sec-title">Navigate</div>
+    <div class="sb-nav">
+      <a href="#s1">1 · Opening &amp; Compliance</a>
+      <a href="#s2">2 · Discovery</a>
+      <a href="#s3">3 · Programme Alignment</a>
+      <a href="#s4">4 · Objection Handling</a>
+      <a href="#s5">5 · Closing</a>
+      <a href="#s6">6 · Checklist</a>
+    </div>
+
+    <div class="sb-sec-title">Jump to objection</div>
+    <div class="sb-obj">
+      <a href="#obj1">SkillsFuture not eligible</a>
+      <a href="#obj2">"Isn't a Cert lower than my degree?"</a>
+      <a href="#obj3">Why not apply to UNSW directly?</a>
+      <a href="#obj4">Employer won't recognise it</a>
+      <a href="#obj5">Too expensive</a>
+      <a href="#obj6">Need to discuss with family/employer</a>
+      <a href="#obj7">Not ready / thinking about it</a>
+    </div>
+
+    <div class="sb-sec-title">Reference</div>
+    <button class="sb-btn" onclick="openPanel('diff')">📘 Differentiation Guide</button>
+    <button class="sb-btn" onclick="openPanel('stats')">📊 Quick Sell Stats</button>
+
+    <button class="sb-switch" onclick="backToSelect()">← Change programme / lead source</button>
+  </div>
+
+  <div class="main">
+    <div class="top-badges">
+      <span class="badge ls" id="badgeLS"></span>
+      <span class="badge prog" id="badgeProg"></span>
+      <span class="badge unit" id="badgeUnit"></span>
+    </div>
+    <div class="legend">▾ headings expand/collapse · yellow buttons reveal the prospect's likely answer + a deeper probe · Section 3 and the closing upsell are pre-set to the lead source you chose · tap the 🔴 note button (bottom right) for live call notes</div>
+
+    <!-- S1 -->
+    <section class="sec" id="s1">
+      <div class="sec-hdr"><div class="sec-num">1</div><div><h2>Opening &amp; Compliance</h2><span class="timing">3–5 minutes</span></div></div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Warm greeting &amp; compliance line</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl"><p>Hi [Name], this is [Your Name] calling from SIM Online. How are you today? Thank you so much for taking the time to speak with me.</p><div class="sl-tip">[Tip: use their name early. You are calling into Singapore from Malaysia — speak at a natural, unhurried pace; don't let the cross-border call feel transactional.]</div></div>
+          <div class="compliance">
+            <div class="lbl">COMPLIANCE — REQUIRED BEFORE PROCEEDING</div>
+            <p>"Before we begin, just a quick note that this call may be recorded for training and quality assurance purposes."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card ls-block" data-ls="unsw">
+        <div class="tog" onclick="tSub(this)"><h3>Opening — SIM × UNSW lead</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl"><p>I can see you were looking into the pathway that leads to a UNSW Master's degree — that's actually one of the most popular routes we offer, so you're in the right place. Before we get into that, I'd love to understand a bit more about what's driving you to look at postgraduate study right now.</p><div class="sl-tip">[Tip: Confirm the UNSW interest immediately — this is why they engaged — but don't over-promise before you've qualified them. The pathway is conditional on GPA and correct unit selection; keep language open ("one of the most popular routes") rather than guaranteed at this stage.]</div></div>
+        </div>
+      </div>
+
+      <div class="card ls-block" data-ls="sim">
+        <div class="tog" onclick="tSub(this)"><h3>Opening — SIM-only lead</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl"><p>I'd love to understand a bit about what you're looking to achieve, and see whether the <span class="prog-name-slot" data-slot="short"></span> could be a good fit for you.</p><div class="sl-tip">[Tip: Do NOT lead with UNSW on this call type. Establish the value of the SIM qualification itself first — the UNSW articulation is a strong closing upsell later, and lands better once they already see value in SIM on its own merits.]</div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S2 -->
+    <section class="sec" id="s2">
+      <div class="sec-hdr"><div class="sec-num">2</div><div><h2>Discovery — Motivation, End Goal &amp; Skill Gaps</h2><span class="timing">6–8 minutes</span></div></div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>2A — Motivation: why now?</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="qb"><div class="ql">Q</div><div class="qt">What's made you start looking into postgraduate study at this point in time?</div></div>
+          <div class="hint">→ Tap their answer:</div>
+          <div class="sq-grid">
+            <button class="sq-btn" onclick="tSQ(this,'m1')">Want a promotion / pay rise</button>
+            <button class="sq-btn" onclick="tSQ(this,'m2')">Looking to switch fields</button>
+            <button class="sq-btn" onclick="tSQ(this,'m3')">Employer / industry expects it</button>
+            <button class="sq-btn" onclick="tSQ(this,'m4')">Personal development / staying relevant</button>
+          </div>
+          <div class="sq-ans" id="m1"><div class="sq-l1">That makes sense — a recognised postgraduate qualification is often exactly what tips a promotion decision.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">What's the specific gap your manager or the role above you is looking for that you don't have on paper yet?</div></div>
+          <div class="sq-ans" id="m2"><div class="sq-l1">Got it — a lot of our students are making exactly that kind of move.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">What's the field you're moving toward, and what's stopping you from making that move today?</div></div>
+          <div class="sq-ans" id="m3"><div class="sq-l1">That's a strong signal — when the market itself is asking for it, it's usually not optional for long.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">Is this something your employer would support financially, or are you looking at this independently?</div></div>
+          <div class="sq-ans" id="m4"><div class="sq-l1">That's a really practical mindset, especially with how quickly skills requirements are shifting.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">Is there a particular skill area you feel you're falling behind on compared to peers in your field?</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>2B — Current situation &amp; background</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="qb"><div class="ql">Q</div><div class="qt">Tell me a little about your current role.</div></div>
+          <div class="qb"><div class="ql">Q</div><div class="qt">What's your highest academic qualification so far?</div></div>
+          <div class="hint">→ Tap their answer:</div>
+          <div class="sq-grid">
+            <button class="sq-btn" onclick="tSQ(this,'b1')">Bachelor's degree</button>
+            <button class="sq-btn" onclick="tSQ(this,'b2')">Diploma only</button>
+            <button class="sq-btn" onclick="tSQ(this,'b3')">Already holds a Master's</button>
+          </div>
+          <div class="sq-ans" id="b1"><div class="sq-l1">Perfect — that meets the standard entry requirement for this programme.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">How many years ago did you complete that, and how closely does your day-to-day work relate to it now?</div></div>
+          <div class="sq-ans" id="b2"><div class="sq-l1">Thanks for sharing that. <span class="confirm">CONFIRM</span> whether SIM has a relevant-work-experience entry pathway for Diploma holders before progressing — do not commit to eligibility on the call.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">How many years of relevant work experience do you have in this field? That's often the key factor if an alternate entry pathway exists.</div></div>
+          <div class="sq-ans" id="b3"><div class="sq-l1">Good to know — this programme is a Graduate Certificate/Diploma level, so it may be better suited as a targeted upskill rather than a full postgraduate journey. Let's talk through what you're actually looking for.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">Is there a specific technical gap your Master's didn't cover that you're trying to close?</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>2C — End goal: where do they want to be?</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="qb"><div class="ql">Q</div><div class="qt">In an ideal world, where would you like to be in your career 2–3 years from now?</div></div>
+          <div class="hint">→ Tap their answer:</div>
+          <div class="sq-grid">
+            <button class="sq-btn" onclick="tSQ(this,'e1')">A specific role / title in mind</button>
+            <button class="sq-btn" onclick="tSQ(this,'e2')">Not sure yet, exploring options</button>
+            <button class="sq-btn" onclick="tSQ(this,'e3')">Wants to eventually pursue a full Master's</button>
+          </div>
+          <div class="sq-ans" id="e1"><div class="sq-l1">That's a clear target — let's work backwards from there.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">What do you think is the single biggest thing standing between you and that role today?</div></div>
+          <div class="sq-ans" id="e2"><div class="sq-l1">That's completely fine — a lot of people use a focused qualification like this to test a direction before committing further.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">If you had to guess, which area — technical skills, leadership, or a formal qualification on paper — is holding you back the most right now?</div></div>
+          <div class="sq-ans" id="e3"><div class="sq-l1">That's great to hear — this is actually exactly what this programme is designed to lead into, at a meaningful cost saving.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">Had you already looked into UNSW directly, or is this the first time you're hearing about a pathway option?</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>2D — Skill gaps getting in the way</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="qb"><div class="ql">Q</div><div class="qt">What's the one skill area you feel is holding you back the most right now?</div></div>
+          <div class="hint">→ Link their answer to programme learning outcomes:</div>
+          <div id="gapMap"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S3 -->
+    <section class="sec" id="s3">
+      <div class="sec-hdr"><div class="sec-num">3</div><div><h2>Programme Alignment — <span class="prog-name-slot" data-slot="name"></span></h2><span class="timing">5–7 minutes</span></div></div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Programme overview</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl"><p id="progOverview"></p></div>
+          <div class="entry-box"><strong>Structure:</strong> <span id="progStructure"></span><br><strong>Entry requirement:</strong> <span id="progEntry"></span></div>
+          <ul class="usp-list" id="progUSP"></ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Grad Cert vs Bachelor's — the level explainer</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl"><p>"I know 4 units over 8 months sounds short compared to your Bachelor's degree — but it's important to understand these sit at a <strong>higher level</strong>, not a lower one. A Graduate Certificate is a <strong>postgraduate</strong> qualification — you actually need a Bachelor's degree just to be admitted into it. It's built to be intensive and specialised, not broad and lengthy like an undergraduate degree. Shorter duration reflects focus, not a lower level of study."</p><div class="sl-tip">[This is one of the most common misunderstandings on SIM calls — prospects assume shorter = lesser. Use this framing proactively in Section 3, before it becomes an objection in Section 4.]</div></div>
+        </div>
+      </div>
+
+      <div class="unsw-box ls-block" data-ls="unsw">
+        <h5>🎯 UNSW ARTICULATION — CONFIRMING THE PATHWAY (lead already interested)</h5>
+        <div class="sl"><p>"So to confirm what drew you to us — all six SIM Online postgraduate programmes, including the <span class="prog-name-slot" data-slot="short"></span>, articulate into a UNSW Master's degree. If you complete your units and meet the required GPA, you receive a <strong>20% fee saving</strong> on the UNSW Master's tuition. The specific UNSW Master's programme this leads into is <span id="unswTarget" class="confirm"></span>."</p></div>
+        <div class="note">GPA threshold and exact unit-matching rules: <span class="confirm">CONFIRM before quoting</span> — do not state a specific GPA number until verified.</div>
+      </div>
+
+      <div class="unsw-box ls-block" data-ls="sim">
+        <h5>🎯 UNSW ARTICULATION — THE UPSELL (introduce once SIM value is established)</h5>
+        <div class="sl"><p>"One more thing worth mentioning, since it sounds like you're thinking long-term: the <span class="prog-name-slot" data-slot="short"></span> also sits on a pathway into a UNSW Master's degree — UNSW is a well-regarded university globally. If you complete the required units and meet the GPA requirement, you'd receive a <strong>20% fee saving</strong> on the UNSW programme. So this isn't just a standalone certificate — it can be your first step toward a full Master's, at a lower combined cost than enrolling directly."</p></div>
+        <div class="note">Only raise this after the prospect shows genuine interest in the SIM programme itself — introducing it too early undercuts the standalone value of SIM. GPA threshold and exact UNSW programme mapping: <span class="confirm">CONFIRM before quoting</span>.</div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S4 -->
+    <section class="sec" id="s4">
+      <div class="sec-hdr"><div class="sec-num">4</div><div><h2>Objection Handling</h2><span class="timing">as needed</span></div></div>
+
+      <div class="obj-panel" id="obj1">
+        <div class="obj-header red" onclick="tObj(this)">⚠ "Isn't this eligible for SkillsFuture Credit?"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's a fair question — a lot of people ask that, since SkillsFuture Credit covers so many courses in Singapore."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Be upfront and honest: these SIM Online postgraduate programmes are <strong>not</strong> SkillsFuture Credit-eligible. Do not dodge this — it damages trust if discovered later. Instead, pivot immediately to a value/ROI sell: this is a postgraduate-level qualification with a direct pathway to a UNSW Master's, not a short CET course. The comparison isn't "cheap SkillsFuture course vs. this" — it's "career-level qualification investment vs. course-level top-up."</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"I want to be upfront with you — this particular programme isn't SkillsFuture Credit-eligible, since it's positioned at postgraduate level rather than as a short course. What I'd rather focus on is the actual outcome: this directly leads toward a UNSW Master's at a 20% saving, and that's a very different return than a subsidised short course. Does your employer have a training or L&amp;D budget that could support this instead? <span class="confirm">CONFIRM</span> current employer co-funding / instalment options available before offering specifics."</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj2">
+        <div class="obj-header navy" onclick="tObj(this)">⚠ "Isn't a Certificate lower than my Bachelor's degree?"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's a really common assumption, so I'm glad you asked directly."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Explain clearly: a Graduate Certificate is a <strong>postgraduate</strong> qualification. You need a Bachelor's degree to even be admitted — it sits above your existing degree, not below it. The shorter duration (4 units / 8 months) reflects that it's focused and specialised, not that it's a lower academic level.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"To be really clear — this is a postgraduate qualification that builds on top of your Bachelor's degree, not a step below it. Think of it as a focused, intensive layer on top of what you already have, specifically in [<span class="prog-name-slot" data-slot="short"></span>]. Does that change how you're thinking about it?"</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj3">
+        <div class="obj-header teal" onclick="tObj(this)">⚠ "Why not just apply to UNSW directly?"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's a smart question to ask before committing to anything."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Position SIM as the lower-cost, lower-risk on-ramp: the SIM units are more affordable per-unit than jumping straight into a UNSW Master's, the articulation carries a 20% fee saving on the UNSW tuition once GPA/unit requirements are met, and studying with SIM first lets the prospect test postgraduate study (workload, format) before committing to the full Master's cost and duration.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"You certainly could apply directly — but most people find it's a bigger financial and time commitment to jump straight in. Starting with SIM lets you build toward it in smaller, more affordable steps, and if you meet the GPA and unit requirements, you actually pay 20% less for the UNSW Master's than if you'd applied directly. It's the same destination, with a more manageable and cost-effective route there."</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj4">
+        <div class="obj-header navy" onclick="tObj(this)">⚠ "Will my employer recognise an online certificate?"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's an important thing to think through, especially if you're doing this for career progression."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">SIM is a long-established professional education institution in Singapore with strong local brand recognition; the qualification is delivered online but the award itself is not a "MOOC-style" credential — it's a formal postgraduate qualification. <span class="confirm">CONFIRM</span> current SIM accreditation/EduTrust status and any employer-recognition proof points (e.g. named employer partnerships) before quoting specifics on the call.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"SIM has been a trusted name in professional education in Singapore for decades — this isn't an informal online course, it's a formally recognised postgraduate qualification, just delivered in a flexible e-learning format so you can study around your job. Is there a specific concern your employer has raised, or is this more of a general question?"</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj5">
+        <div class="obj-header red" onclick="tObj(this)">⚠ "This feels expensive for just 4 units"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"I completely understand — it's a real financial decision, and it's right to weigh it carefully."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Shift away from a per-unit or per-month cost comparison (which invites comparison to cheap SkillsFuture-subsidised courses) and toward outcome-based framing: career progression value, the postgraduate qualification level, and — if relevant — the discounted combined cost of the UNSW pathway versus applying to UNSW directly.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"I hear you — and I'd rather you make this decision based on the outcome than the sticker price. If we look at where this could take you — [reflect back their Section 2 end-goal] — plus the fact that this can lead into a UNSW Master's at 20% less than applying directly, does the value start to look different? Also worth asking — does your company have a training budget you could tap into for this?"</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj6">
+        <div class="obj-header teal" onclick="tObj(this)">⚠ "I need to discuss this with my spouse / employer"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"Of course — that's a completely reasonable thing to want to do before committing."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Don't push for an immediate close. Equip them for that conversation and set a concrete follow-up time.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"That makes complete sense. Is there anything specific — the time commitment, the cost, or the career outcome — that I can help you prepare for that conversation? And shall we pencil in a call for [specific day] once you've had a chance to talk it through?"</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj7">
+        <div class="obj-header navy" onclick="tObj(this)">⚠ "I need some time to think about it"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"Absolutely, this is a meaningful decision and it's good that you're not rushing into it."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Uncover what's really behind the hesitation — "thinking about it" is often a proxy for cost, confidence, or an unresolved objection above. Ask a direct, non-pushy diagnostic question.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"Totally understand. Just so I can help you properly — is there something specific giving you pause, whether it's the cost, the time commitment, or something else? And in the meantime, let me send you the Express of Interest link on WhatsApp now so you have all the details in front of you while you decide."</div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S5 -->
+    <section class="sec" id="s5">
+      <div class="sec-hdr"><div class="sec-num">5</div><div><h2>Closing &amp; Next Steps</h2><span class="timing">3–5 minutes</span></div></div>
+
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Intent to enrol question</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="qb"><div class="ql">Q</div><div class="qt">Based on everything we've covered, how are you feeling about moving forward with the <span class="prog-name-slot" data-slot="short"></span>?</div></div>
+          <div class="hint">→ Route the call based on their answer:</div>
+          <div class="sq-grid">
+            <button class="sq-btn" onclick="tSQ(this,'c1')">✅ Yes, ready to proceed</button>
+            <button class="sq-btn" onclick="tSQ(this,'c2')">🤔 Unsure / needs time</button>
+            <button class="sq-btn" onclick="tSQ(this,'c3')">❌ Not interested right now</button>
+          </div>
+          <div class="sq-ans" id="c1"><div class="sq-l1"><strong>Capture Intent to Enrol as "High" in CRM before ending the call — this is mandatory and directly predicts EC completion.</strong> Send the Express of Interest (EC) link via WhatsApp <em>during</em> the call, not after. Agree a specific completion date/time before hanging up.</div><div class="sq-plbl">SIM-ONLY LEADS ONLY — UPSELL CLOSE</div><div class="sq-probe">"Since you're moving forward — would it be worth structuring your units now so you're on track for the UNSW pathway from day one? It costs nothing extra to plan for it, and it means you won't need to adjust course later."</div></div>
+          <div class="sq-ans" id="c2"><div class="sq-l1">Identify and address the specific hesitation using the relevant objection card in Section 4. Capture Intent as "Medium" and agree a specific follow-up date. Send the EC link on WhatsApp regardless so they have the details while they decide.</div></div>
+          <div class="sq-ans" id="c3"><div class="sq-l1">Capture Intent as "Low" and the reason in CRM. Thank them for their time genuinely — leave the door open for re-engagement. Do not push further; a respectful close preserves the relationship for future re-contact.</div></div>
+        </div>
+      </div>
+
+      <div class="sg-box">
+        <h5>Singapore market tips</h5>
+        <ul>
+          <li><strong>SkillsFuture is the elephant in the room</strong> — assume most prospects will ask about it. Lead with honesty and pivot to value/ROI immediately (see Objection 1). Do not let this surface as a surprise late in the call.</li>
+          <li><strong>Grad Cert vs. Bachelor's confusion</strong> is your other top misunderstanding — proactively explain the postgraduate level in Section 3, don't wait for it to become an objection.</li>
+          <li><strong>Employer L&amp;D budgets</strong> are common in the Singapore corporate market — always ask whether the prospect's company has a training budget or sponsors postgraduate study.</li>
+          <li><strong>WhatsApp is still the fastest way to re-engage</strong> a Singaporean lead — send the EC link during the call, and use WhatsApp (not email) for follow-up.</li>
+          <li><strong>Competitor awareness:</strong> prospects may be comparing against SMU Academy, NUS SCALE, or NTU professional programmes. <span class="confirm">CONFIRM</span> current positioning/differentiators against each before using them by name on calls.</li>
+          <li>Cross-border call: speak clearly, avoid Malaysia-specific references (PTPTN, HRD Corp, RON95 do not apply to a Singapore-based prospect).</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S6 -->
+    <section class="sec" id="s6">
+      <div class="sec-hdr"><div class="sec-num">6</div><div><h2>Quick Reference — Call Checklist</h2><span class="timing">tick off as you go</span></div></div>
+      <ul class="checklist" id="checklist">
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Compliance recording line stated</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Opening matched to correct lead source (SIM×UNSW vs SIM-only)</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Motivation, background &amp; end-goal explored (Section 2)</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Grad Cert vs Bachelor's level explained proactively</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> UNSW articulation positioned correctly for lead source (confirm vs. upsell)</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> SkillsFuture ineligibility addressed honestly if raised</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Objections handled using Empathise → Reframe → Close</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Intent to Enrol captured in CRM (mandatory)</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> EC link sent via WhatsApp during the call</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Specific follow-up date/time agreed before hanging up</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+</div>
+
+<!-- Sticky notes -->
+<button id="stickyToggle" onclick="document.getElementById('stickyPanel').classList.toggle('show')">📝</button>
+<div id="stickyPanel">
+  <h4>Live call notes</h4>
+  <textarea id="stickyTextarea" placeholder="Jot notes during the call — saved automatically on this device..."></textarea>
+</div>
+
+<!-- Reference panels -->
+<div class="ref-overlay" id="refOverlay" onclick="closePanel()"></div>
+<div class="ref-panel" id="panel-diff">
+  <button class="ref-close" onclick="closePanel()">✕</button>
+  <h3>Differentiation Guide</h3>
+  <div class="diff-block"><h5>Graduate Certificate vs. Bachelor's degree</h5><p>A Graduate Certificate/Diploma is a <strong>postgraduate</strong> qualification — a Bachelor's degree is required for entry. It sits above the Bachelor's, not below it. Shorter duration reflects a focused, specialised curriculum rather than a lower academic level.</p></div>
+  <div class="diff-block"><h5>Why SIM, not SkillsFuture-subsidised courses</h5><p>SIM Online programmes are formal postgraduate qualifications with an articulation pathway to a UNSW Master's — a different category to a short subsidised CET course. Sell on career/qualification outcome, not on funding availability.</p></div>
+  <div class="diff-block"><h5>Why articulate via SIM rather than apply to UNSW directly</h5><p>Lower per-unit cost while building toward the same outcome; 20% fee saving on the UNSW Master's once GPA and unit requirements are met; a lower-risk way to test postgraduate study format and workload first.</p></div>
+  <div class="diff-block"><h5>SIM vs. local competitors</h5><p><span class="confirm">CONFIRM</span> current comparative positioning against SMU Academy, NUS SCALE, and NTU professional/continuing-education programmes before using on live calls.</p></div>
+  <div class="diff-block"><h5>Lead source framing, at a glance</h5><p><strong>SIM × UNSW ad:</strong> confirm the UNSW pathway early, qualify GPA/units, keep language conditional.<br><strong>SIM-only ad:</strong> build SIM value first, introduce UNSW as an upsell once genuine interest is shown.</p></div>
+</div>
+<div class="ref-panel" id="panel-stats">
+  <button class="ref-close" onclick="closePanel()">✕</button>
+  <h3>Quick Sell Stats</h3>
+  <div class="diff-block"><h5>Institutional credibility</h5><p>SIM is a long-established professional education institution in Singapore. <span class="confirm">CONFIRM</span> current founding year, student numbers, and accreditation/EduTrust status for precise figures to quote.</p></div>
+  <div class="diff-block"><h5>UNSW</h5><p>UNSW Sydney is a major Australian research university. <span class="confirm">CONFIRM</span> current global/QS ranking figures before quoting a specific rank on calls — rankings change year to year.</p></div>
+  <div class="diff-block"><h5>Articulation pathway</h5><p>All 6 SIM Online postgraduate programmes articulate to a UNSW Master's with a 20% fee saving, subject to GPA and correct unit selection. <span class="confirm">CONFIRM</span> exact GPA threshold and the specific UNSW Master's mapped to each SIM programme before quoting.</p></div>
+  <div class="diff-block"><h5>Outcomes / alumni data</h5><p><span class="confirm">CONFIRM</span> — no verified employment outcome, salary uplift, or alumni statistics are loaded yet. Do not cite figures until provided.</p></div>
+</div>
+
+<script>
+const PROGRAMMES = [
+  {id:'cyber', short:'Cybersecurity Management', name:'Graduate Certificate in Cybersecurity Management', units:4, months:8,
+    overview:"A focused postgraduate qualification addressing one of Singapore's most in-demand skill areas — cyber and information security governance, risk and management.",
+    entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
+    usp:["Targets a persistent, high-demand skills gap in the Singapore market","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
+    unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of IT / Master of Cyber Security)",
+    gap:"Technical / security skills"},
+  {id:'digmkt', short:'Digital Marketing', name:'Graduate Certificate in Digital Marketing', units:4, months:8,
+    overview:"A focused postgraduate qualification covering modern digital marketing strategy, channels, and analytics.",
+    entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
+    usp:["Practical, channel-relevant curriculum for a fast-moving discipline","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
+    unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of Marketing / Master of Commerce)",
+    gap:"Marketing / commercial skills"},
+  {id:'hr', short:'Human Resource Management', name:'Graduate Certificate in Human Resource Management', units:4, months:8,
+    overview:"A focused postgraduate qualification in modern HR practice — talent, performance, and organisational management.",
+    entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
+    usp:["Directly relevant for HR practitioners moving into strategic / leadership HR roles","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
+    unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of HR Management / Master of Commerce)",
+    gap:"People / leadership skills"},
+  {id:'analytics', short:'Analytics', name:'Graduate Certificate in Analytics', units:4, months:8,
+    overview:"A focused postgraduate qualification building practical data and business analytics capability.",
+    entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway / quantitative-background expectations for non-degree holders.",
+    usp:["Addresses one of the fastest-growing skill demands across every industry","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
+    unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of Data Science &amp; Decisions / Master of Business Analytics)",
+    gap:"Data / analytical skills"},
+  {id:'itm', short:'Information Technology Management', name:'Graduate Certificate in Information Technology Management', units:4, months:8,
+    overview:"A focused postgraduate qualification in IT strategy, governance, and management for professionals moving into IT leadership.",
+    entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
+    usp:["Suited to technical professionals moving into IT management/leadership","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
+    unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of IT / Master of IT Management)",
+    gap:"IT leadership / management skills"},
+  {id:'busmgmt', short:'Business Management', name:'Graduate Diploma in Business Management', units:8, months:16,
+    overview:"A broader postgraduate qualification (8 units / 16 months) covering core business management disciplines — ideal for those seeking a more comprehensive step toward a full Master's.",
+    entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
+    usp:["Broader curriculum than the 4-unit Graduate Certificates — a bigger step toward the UNSW Master's","Delivered 100% online — study around a full-time role","Strong fit for prospects who already know they want the full Master's outcome"],
+    unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of Business Administration / Master of Commerce / Master of Management)",
+    gap:"General management / leadership skills"},
+];
+
+let selectedLS = null, selectedProg = null;
+
+function renderProgGrid(){
+  const grid = document.getElementById('progGrid');
+  grid.innerHTML = PROGRAMMES.map(p => `
+    <div class="prog-card" data-prog="${p.id}" onclick="selectProg('${p.id}')">
+      <span class="tag">${p.units} UNITS · ${p.months} MO</span>
+      <h5>${p.name}</h5>
+      <div class="meta">E-Learning · Graduate ${p.units===8?'Diploma':'Certificate'}</div>
+    </div>`).join('');
+}
+renderProgGrid();
+
+function selectLS(ls){
+  selectedLS = ls;
+  document.querySelectorAll('.ls-card').forEach(c => c.classList.toggle('active', c.dataset.ls===ls));
+  checkReady();
+}
+function selectProg(id){
+  selectedProg = id;
+  document.querySelectorAll('.prog-card').forEach(c => c.classList.toggle('active', c.dataset.prog===id));
+  checkReady();
+}
+function checkReady(){
+  document.getElementById('startBtn').disabled = !(selectedLS && selectedProg);
+}
+
+function startCall(){
+  const p = PROGRAMMES.find(x => x.id===selectedProg);
+  document.getElementById('selectScreen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  document.body.classList.add('ls-'+selectedLS);
+
+  document.querySelectorAll('.prog-name-slot').forEach(el=>{
+    el.textContent = el.dataset.slot==='short' ? p.short : p.name;
+  });
+  document.getElementById('progOverview').textContent = p.overview;
+  document.getElementById('progStructure').textContent = `${p.units} units over ${p.months} months, 100% e-learning.`;
+  document.getElementById('progEntry').innerHTML = p.entry;
+  document.getElementById('progUSP').innerHTML = p.usp.map(u=>`<li>${u}</li>`).join('');
+  document.getElementById('unswTarget').textContent = p.unswTarget;
+
+  document.getElementById('badgeLS').textContent = selectedLS==='unsw' ? 'SIM × UNSW LEAD' : 'SIM-ONLY LEAD';
+  document.getElementById('badgeProg').textContent = p.short.toUpperCase();
+  document.getElementById('badgeUnit').textContent = `${p.units} units · ${p.months} mo`;
+  document.getElementById('sbCtx').innerHTML = `Lead source: <b>${selectedLS==='unsw'?'SIM × UNSW ad':'SIM-only ad'}</b><br>Programme: <b>${p.short}</b>`;
+
+  document.querySelectorAll('.ls-block').forEach(el=>{
+    el.style.display = el.dataset.ls===selectedLS ? '' : 'none';
+  });
+
+  const gapMap = {
+    "Technical / security skills":"Their gap maps directly to the technical/security-management curriculum in this programme — connect it to specific modules if known.",
+    "Marketing / commercial skills":"Their gap maps directly to the digital marketing strategy and channel modules in this programme.",
+    "People / leadership skills":"Their gap maps directly to the talent/performance/organisational management modules in this programme.",
+    "Data / analytical skills":"Their gap maps directly to the applied analytics and data-driven decision-making modules in this programme.",
+    "IT leadership / management skills":"Their gap maps directly to the IT governance and strategy modules in this programme.",
+    "General management / leadership skills":"Their gap maps across the broader business management curriculum — this is the widest-coverage of the six programmes."
+  };
+  document.getElementById('gapMap').innerHTML = `<div class="sl"><p>${gapMap[p.gap]}</p></div>`;
+
+  window.scrollTo(0,0);
+}
+
+function backToSelect(){
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('selectScreen').style.display = 'flex';
+}
+
+function tSub(el){
+  el.classList.toggle('closed');
+  el.nextElementSibling.classList.toggle('closed');
+}
+function tSQ(btn, id){
+  const grid = btn.parentElement;
+  grid.querySelectorAll('.sq-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const container = grid.parentElement;
+  container.querySelectorAll('.sq-ans').forEach(a=>a.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+}
+function tObj(header){
+  header.nextElementSibling.classList.toggle('show');
+}
+function toggleCheck(box){
+  box.classList.toggle('checked');
+  box.parentElement.classList.toggle('done');
+}
+
+function openPanel(name){
+  document.getElementById('refOverlay').classList.add('show');
+  document.getElementById('panel-'+name).classList.add('show');
+}
+function closePanel(){
+  document.getElementById('refOverlay').classList.remove('show');
+  document.querySelectorAll('.ref-panel').forEach(p=>p.classList.remove('show'));
+}
+
+const stickyKey = 'sim_ic_sticky_notes';
+const ta = document.getElementById('stickyTextarea');
+try{ ta.value = localStorage.getItem(stickyKey) || ''; }catch(e){}
+ta.addEventListener('input', ()=>{ try{ localStorage.setItem(stickyKey, ta.value); }catch(e){} });
+</script>
+</body>
+</html>
