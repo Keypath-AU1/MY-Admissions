@@ -1,0 +1,1341 @@
+week_ending,entity,group,type,name,metric,value
+2026-07-17,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-07-17,SIM,Admissions,Advisor,Advisor 1,Contacts,162
+2026-07-17,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-07-17,SIM,Admissions,Advisor,Advisor 1,Handles,312
+2026-07-17,SIM,Admissions,Advisor,Advisor 1,ICs,53
+2026-07-17,SIM,Admissions,Advisor,Advisor 2,Apps,13
+2026-07-17,SIM,Admissions,Advisor,Advisor 2,Contacts,159
+2026-07-17,SIM,Admissions,Advisor,Advisor 2,ECs,16
+2026-07-17,SIM,Admissions,Advisor,Advisor 2,Handles,291
+2026-07-17,SIM,Admissions,Advisor,Advisor 2,ICs,61
+2026-07-17,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-07-17,SIM,Admissions,Advisor,Advisor 3,Contacts,105
+2026-07-17,SIM,Admissions,Advisor,Advisor 3,ECs,4
+2026-07-17,SIM,Admissions,Advisor,Advisor 3,Handles,242
+2026-07-17,SIM,Admissions,Advisor,Advisor 3,ICs,29
+2026-07-17,SIM,Marketing,Channel,Email,Leads,6
+2026-07-17,SIM,Marketing,Channel,Facebook / Paid Social,Leads,29
+2026-07-17,SIM,Marketing,Channel,Organic / Direct,Leads,21
+2026-07-17,SIM,Marketing,Channel,Other,Leads,4
+2026-07-17,SIM,Marketing,Channel,Referral,Leads,7
+2026-07-17,SIM,Marketing,Channel,SEO,Leads,45
+2026-07-17,SIM,Marketing,Program,Business,Applications,4
+2026-07-17,SIM,Marketing,Program,Business,Leads,56
+2026-07-17,SIM,Marketing,Program,Data Science,Applications,3
+2026-07-17,SIM,Marketing,Program,Data Science,Leads,38
+2026-07-17,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-07-17,SIM,Marketing,Program,UNSW Articulation,Leads,28
+2026-07-17,SUN,Admissions,Advisor,Beiley Chen,Apps,22
+2026-07-17,SUN,Admissions,Advisor,Beiley Chen,Contacts,252
+2026-07-17,SUN,Admissions,Advisor,Beiley Chen,ECs,27
+2026-07-17,SUN,Admissions,Advisor,Beiley Chen,Handles,507
+2026-07-17,SUN,Admissions,Advisor,Beiley Chen,ICs,87
+2026-07-17,SUN,Admissions,Advisor,Josephine Jemes,Apps,43
+2026-07-17,SUN,Admissions,Advisor,Josephine Jemes,Contacts,243
+2026-07-17,SUN,Admissions,Advisor,Josephine Jemes,ECs,52
+2026-07-17,SUN,Admissions,Advisor,Josephine Jemes,Handles,473
+2026-07-17,SUN,Admissions,Advisor,Josephine Jemes,ICs,99
+2026-07-17,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,21
+2026-07-17,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,342
+2026-07-17,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,28
+2026-07-17,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,494
+2026-07-17,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,104
+2026-07-17,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-07-17,SUN,Admissions,Advisor,Ron Lim,Contacts,286
+2026-07-17,SUN,Admissions,Advisor,Ron Lim,ECs,7
+2026-07-17,SUN,Admissions,Advisor,Ron Lim,Handles,516
+2026-07-17,SUN,Admissions,Advisor,Ron Lim,ICs,125
+2026-07-17,SUN,Marketing,Channel,Email,Leads,15
+2026-07-17,SUN,Marketing,Channel,Facebook / Paid Social,Leads,118
+2026-07-17,SUN,Marketing,Channel,Organic / Direct,Leads,63
+2026-07-17,SUN,Marketing,Channel,Other,Leads,8
+2026-07-17,SUN,Marketing,Channel,Referral,Leads,30
+2026-07-17,SUN,Marketing,Channel,SEO,Leads,147
+2026-07-17,SUN,Marketing,Program,Business,Applications,10
+2026-07-17,SUN,Marketing,Program,Business,Leads,96
+2026-07-17,SUN,Marketing,Program,Business Analytics,Applications,4
+2026-07-17,SUN,Marketing,Program,Business Analytics,Leads,44
+2026-07-17,SUN,Marketing,Program,Data Science,Applications,6
+2026-07-17,SUN,Marketing,Program,Data Science,Leads,61
+2026-07-17,SUN,Marketing,Program,Education,Applications,3
+2026-07-17,SUN,Marketing,Program,Education,Leads,31
+2026-07-17,SUN,Marketing,Program,Finance,Applications,3
+2026-07-17,SUN,Marketing,Program,Finance,Leads,38
+2026-07-17,SUN,Marketing,Program,Management,Applications,3
+2026-07-17,SUN,Marketing,Program,Management,Leads,34
+2026-07-17,SUN,Marketing,Program,Marketing,Applications,7
+2026-07-17,SUN,Marketing,Program,Marketing,Leads,63
+2026-07-24,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-07-24,SIM,Admissions,Advisor,Advisor 1,Contacts,144
+2026-07-24,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-07-24,SIM,Admissions,Advisor,Advisor 1,Handles,301
+2026-07-24,SIM,Admissions,Advisor,Advisor 1,ICs,49
+2026-07-24,SIM,Admissions,Advisor,Advisor 2,Apps,11
+2026-07-24,SIM,Admissions,Advisor,Advisor 2,Contacts,149
+2026-07-24,SIM,Admissions,Advisor,Advisor 2,ECs,13
+2026-07-24,SIM,Admissions,Advisor,Advisor 2,Handles,267
+2026-07-24,SIM,Admissions,Advisor,Advisor 2,ICs,55
+2026-07-24,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-07-24,SIM,Admissions,Advisor,Advisor 3,Contacts,115
+2026-07-24,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-07-24,SIM,Admissions,Advisor,Advisor 3,Handles,260
+2026-07-24,SIM,Admissions,Advisor,Advisor 3,ICs,36
+2026-07-24,SIM,Marketing,Channel,Email,Leads,5
+2026-07-24,SIM,Marketing,Channel,Facebook / Paid Social,Leads,30
+2026-07-24,SIM,Marketing,Channel,Organic / Direct,Leads,23
+2026-07-24,SIM,Marketing,Channel,Other,Leads,3
+2026-07-24,SIM,Marketing,Channel,Referral,Leads,7
+2026-07-24,SIM,Marketing,Channel,SEO,Leads,43
+2026-07-24,SIM,Marketing,Program,Business,Applications,4
+2026-07-24,SIM,Marketing,Program,Business,Leads,50
+2026-07-24,SIM,Marketing,Program,Data Science,Applications,3
+2026-07-24,SIM,Marketing,Program,Data Science,Leads,39
+2026-07-24,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-07-24,SIM,Marketing,Program,UNSW Articulation,Leads,27
+2026-07-24,SUN,Admissions,Advisor,Beiley Chen,Apps,19
+2026-07-24,SUN,Admissions,Advisor,Beiley Chen,Contacts,246
+2026-07-24,SUN,Admissions,Advisor,Beiley Chen,ECs,26
+2026-07-24,SUN,Admissions,Advisor,Beiley Chen,Handles,536
+2026-07-24,SUN,Admissions,Advisor,Beiley Chen,ICs,90
+2026-07-24,SUN,Admissions,Advisor,Josephine Jemes,Apps,47
+2026-07-24,SUN,Admissions,Advisor,Josephine Jemes,Contacts,244
+2026-07-24,SUN,Admissions,Advisor,Josephine Jemes,ECs,51
+2026-07-24,SUN,Admissions,Advisor,Josephine Jemes,Handles,486
+2026-07-24,SUN,Admissions,Advisor,Josephine Jemes,ICs,104
+2026-07-24,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,15
+2026-07-24,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,306
+2026-07-24,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,20
+2026-07-24,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,469
+2026-07-24,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,88
+2026-07-24,SUN,Admissions,Advisor,Ron Lim,Apps,6
+2026-07-24,SUN,Admissions,Advisor,Ron Lim,Contacts,273
+2026-07-24,SUN,Admissions,Advisor,Ron Lim,ECs,7
+2026-07-24,SUN,Admissions,Advisor,Ron Lim,Handles,484
+2026-07-24,SUN,Admissions,Advisor,Ron Lim,ICs,125
+2026-07-24,SUN,Marketing,Channel,Email,Leads,14
+2026-07-24,SUN,Marketing,Channel,Facebook / Paid Social,Leads,112
+2026-07-24,SUN,Marketing,Channel,Organic / Direct,Leads,55
+2026-07-24,SUN,Marketing,Channel,Other,Leads,11
+2026-07-24,SUN,Marketing,Channel,Referral,Leads,26
+2026-07-24,SUN,Marketing,Channel,SEO,Leads,128
+2026-07-24,SUN,Marketing,Program,Business,Applications,10
+2026-07-24,SUN,Marketing,Program,Business,Leads,93
+2026-07-24,SUN,Marketing,Program,Business Analytics,Applications,4
+2026-07-24,SUN,Marketing,Program,Business Analytics,Leads,45
+2026-07-24,SUN,Marketing,Program,Data Science,Applications,6
+2026-07-24,SUN,Marketing,Program,Data Science,Leads,63
+2026-07-24,SUN,Marketing,Program,Education,Applications,3
+2026-07-24,SUN,Marketing,Program,Education,Leads,31
+2026-07-24,SUN,Marketing,Program,Finance,Applications,3
+2026-07-24,SUN,Marketing,Program,Finance,Leads,36
+2026-07-24,SUN,Marketing,Program,Management,Applications,3
+2026-07-24,SUN,Marketing,Program,Management,Leads,36
+2026-07-24,SUN,Marketing,Program,Marketing,Applications,7
+2026-07-24,SUN,Marketing,Program,Marketing,Leads,70
+2026-07-31,SIM,Admissions,Advisor,Advisor 1,Apps,9
+2026-07-31,SIM,Admissions,Advisor,Advisor 1,Contacts,153
+2026-07-31,SIM,Admissions,Advisor,Advisor 1,ECs,12
+2026-07-31,SIM,Admissions,Advisor,Advisor 1,Handles,312
+2026-07-31,SIM,Admissions,Advisor,Advisor 1,ICs,58
+2026-07-31,SIM,Admissions,Advisor,Advisor 2,Apps,10
+2026-07-31,SIM,Admissions,Advisor,Advisor 2,Contacts,144
+2026-07-31,SIM,Admissions,Advisor,Advisor 2,ECs,13
+2026-07-31,SIM,Admissions,Advisor,Advisor 2,Handles,276
+2026-07-31,SIM,Admissions,Advisor,Advisor 2,ICs,56
+2026-07-31,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-07-31,SIM,Admissions,Advisor,Advisor 3,Contacts,111
+2026-07-31,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-07-31,SIM,Admissions,Advisor,Advisor 3,Handles,252
+2026-07-31,SIM,Admissions,Advisor,Advisor 3,ICs,33
+2026-07-31,SIM,Marketing,Channel,Email,Leads,6
+2026-07-31,SIM,Marketing,Channel,Facebook / Paid Social,Leads,26
+2026-07-31,SIM,Marketing,Channel,Organic / Direct,Leads,21
+2026-07-31,SIM,Marketing,Channel,Other,Leads,4
+2026-07-31,SIM,Marketing,Channel,Referral,Leads,7
+2026-07-31,SIM,Marketing,Channel,SEO,Leads,47
+2026-07-31,SIM,Marketing,Program,Business,Applications,4
+2026-07-31,SIM,Marketing,Program,Business,Leads,54
+2026-07-31,SIM,Marketing,Program,Data Science,Applications,3
+2026-07-31,SIM,Marketing,Program,Data Science,Leads,33
+2026-07-31,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-07-31,SIM,Marketing,Program,UNSW Articulation,Leads,28
+2026-07-31,SUN,Admissions,Advisor,Beiley Chen,Apps,21
+2026-07-31,SUN,Admissions,Advisor,Beiley Chen,Contacts,246
+2026-07-31,SUN,Admissions,Advisor,Beiley Chen,ECs,26
+2026-07-31,SUN,Admissions,Advisor,Beiley Chen,Handles,532
+2026-07-31,SUN,Admissions,Advisor,Beiley Chen,ICs,87
+2026-07-31,SUN,Admissions,Advisor,Josephine Jemes,Apps,40
+2026-07-31,SUN,Admissions,Advisor,Josephine Jemes,Contacts,215
+2026-07-31,SUN,Admissions,Advisor,Josephine Jemes,ECs,48
+2026-07-31,SUN,Admissions,Advisor,Josephine Jemes,Handles,447
+2026-07-31,SUN,Admissions,Advisor,Josephine Jemes,ICs,93
+2026-07-31,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,16
+2026-07-31,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,337
+2026-07-31,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,25
+2026-07-31,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,493
+2026-07-31,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,108
+2026-07-31,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-07-31,SUN,Admissions,Advisor,Ron Lim,Contacts,273
+2026-07-31,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-07-31,SUN,Admissions,Advisor,Ron Lim,Handles,495
+2026-07-31,SUN,Admissions,Advisor,Ron Lim,ICs,122
+2026-07-31,SUN,Marketing,Channel,Email,Leads,16
+2026-07-31,SUN,Marketing,Channel,Facebook / Paid Social,Leads,99
+2026-07-31,SUN,Marketing,Channel,Organic / Direct,Leads,58
+2026-07-31,SUN,Marketing,Channel,Other,Leads,11
+2026-07-31,SUN,Marketing,Channel,Referral,Leads,26
+2026-07-31,SUN,Marketing,Channel,SEO,Leads,138
+2026-07-31,SUN,Marketing,Program,Business,Applications,9
+2026-07-31,SUN,Marketing,Program,Business,Leads,98
+2026-07-31,SUN,Marketing,Program,Business Analytics,Applications,4
+2026-07-31,SUN,Marketing,Program,Business Analytics,Leads,45
+2026-07-31,SUN,Marketing,Program,Data Science,Applications,7
+2026-07-31,SUN,Marketing,Program,Data Science,Leads,61
+2026-07-31,SUN,Marketing,Program,Education,Applications,3
+2026-07-31,SUN,Marketing,Program,Education,Leads,33
+2026-07-31,SUN,Marketing,Program,Finance,Applications,3
+2026-07-31,SUN,Marketing,Program,Finance,Leads,35
+2026-07-31,SUN,Marketing,Program,Management,Applications,3
+2026-07-31,SUN,Marketing,Program,Management,Leads,35
+2026-07-31,SUN,Marketing,Program,Marketing,Applications,7
+2026-07-31,SUN,Marketing,Program,Marketing,Leads,64
+2026-08-07,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-08-07,SIM,Admissions,Advisor,Advisor 1,Contacts,151
+2026-08-07,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-08-07,SIM,Admissions,Advisor,Advisor 1,Handles,299
+2026-08-07,SIM,Admissions,Advisor,Advisor 1,ICs,49
+2026-08-07,SIM,Admissions,Advisor,Advisor 2,Apps,11
+2026-08-07,SIM,Admissions,Advisor,Advisor 2,Contacts,146
+2026-08-07,SIM,Admissions,Advisor,Advisor 2,ECs,13
+2026-08-07,SIM,Admissions,Advisor,Advisor 2,Handles,273
+2026-08-07,SIM,Admissions,Advisor,Advisor 2,ICs,57
+2026-08-07,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-08-07,SIM,Admissions,Advisor,Advisor 3,Contacts,112
+2026-08-07,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-08-07,SIM,Admissions,Advisor,Advisor 3,Handles,258
+2026-08-07,SIM,Admissions,Advisor,Advisor 3,ICs,33
+2026-08-07,SIM,Marketing,Channel,Email,Leads,7
+2026-08-07,SIM,Marketing,Channel,Facebook / Paid Social,Leads,30
+2026-08-07,SIM,Marketing,Channel,Organic / Direct,Leads,23
+2026-08-07,SIM,Marketing,Channel,Other,Leads,4
+2026-08-07,SIM,Marketing,Channel,Referral,Leads,7
+2026-08-07,SIM,Marketing,Channel,SEO,Leads,55
+2026-08-07,SIM,Marketing,Program,Business,Applications,4
+2026-08-07,SIM,Marketing,Program,Business,Leads,56
+2026-08-07,SIM,Marketing,Program,Data Science,Applications,3
+2026-08-07,SIM,Marketing,Program,Data Science,Leads,33
+2026-08-07,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-08-07,SIM,Marketing,Program,UNSW Articulation,Leads,27
+2026-08-07,SUN,Admissions,Advisor,Beiley Chen,Apps,21
+2026-08-07,SUN,Admissions,Advisor,Beiley Chen,Contacts,255
+2026-08-07,SUN,Admissions,Advisor,Beiley Chen,ECs,27
+2026-08-07,SUN,Admissions,Advisor,Beiley Chen,Handles,549
+2026-08-07,SUN,Admissions,Advisor,Beiley Chen,ICs,83
+2026-08-07,SUN,Admissions,Advisor,Josephine Jemes,Apps,37
+2026-08-07,SUN,Admissions,Advisor,Josephine Jemes,Contacts,229
+2026-08-07,SUN,Admissions,Advisor,Josephine Jemes,ECs,46
+2026-08-07,SUN,Admissions,Advisor,Josephine Jemes,Handles,474
+2026-08-07,SUN,Admissions,Advisor,Josephine Jemes,ICs,92
+2026-08-07,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,18
+2026-08-07,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,343
+2026-08-07,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,26
+2026-08-07,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,489
+2026-08-07,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,110
+2026-08-07,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-08-07,SUN,Admissions,Advisor,Ron Lim,Contacts,260
+2026-08-07,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-08-07,SUN,Admissions,Advisor,Ron Lim,Handles,451
+2026-08-07,SUN,Admissions,Advisor,Ron Lim,ICs,113
+2026-08-07,SUN,Marketing,Channel,Email,Leads,17
+2026-08-07,SUN,Marketing,Channel,Facebook / Paid Social,Leads,91
+2026-08-07,SUN,Marketing,Channel,Organic / Direct,Leads,59
+2026-08-07,SUN,Marketing,Channel,Other,Leads,10
+2026-08-07,SUN,Marketing,Channel,Referral,Leads,27
+2026-08-07,SUN,Marketing,Channel,SEO,Leads,139
+2026-08-07,SUN,Marketing,Program,Business,Applications,9
+2026-08-07,SUN,Marketing,Program,Business,Leads,94
+2026-08-07,SUN,Marketing,Program,Business Analytics,Applications,4
+2026-08-07,SUN,Marketing,Program,Business Analytics,Leads,40
+2026-08-07,SUN,Marketing,Program,Data Science,Applications,6
+2026-08-07,SUN,Marketing,Program,Data Science,Leads,70
+2026-08-07,SUN,Marketing,Program,Education,Applications,3
+2026-08-07,SUN,Marketing,Program,Education,Leads,28
+2026-08-07,SUN,Marketing,Program,Finance,Applications,3
+2026-08-07,SUN,Marketing,Program,Finance,Leads,37
+2026-08-07,SUN,Marketing,Program,Management,Applications,3
+2026-08-07,SUN,Marketing,Program,Management,Leads,38
+2026-08-07,SUN,Marketing,Program,Marketing,Applications,7
+2026-08-07,SUN,Marketing,Program,Marketing,Leads,73
+2026-08-14,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-08-14,SIM,Admissions,Advisor,Advisor 1,Contacts,159
+2026-08-14,SIM,Admissions,Advisor,Advisor 1,ECs,12
+2026-08-14,SIM,Admissions,Advisor,Advisor 1,Handles,313
+2026-08-14,SIM,Admissions,Advisor,Advisor 1,ICs,58
+2026-08-14,SIM,Admissions,Advisor,Advisor 2,Apps,12
+2026-08-14,SIM,Admissions,Advisor,Advisor 2,Contacts,146
+2026-08-14,SIM,Admissions,Advisor,Advisor 2,ECs,15
+2026-08-14,SIM,Admissions,Advisor,Advisor 2,Handles,274
+2026-08-14,SIM,Admissions,Advisor,Advisor 2,ICs,57
+2026-08-14,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-08-14,SIM,Admissions,Advisor,Advisor 3,Contacts,107
+2026-08-14,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-08-14,SIM,Admissions,Advisor,Advisor 3,Handles,242
+2026-08-14,SIM,Admissions,Advisor,Advisor 3,ICs,33
+2026-08-14,SIM,Marketing,Channel,Email,Leads,7
+2026-08-14,SIM,Marketing,Channel,Facebook / Paid Social,Leads,28
+2026-08-14,SIM,Marketing,Channel,Organic / Direct,Leads,22
+2026-08-14,SIM,Marketing,Channel,Other,Leads,3
+2026-08-14,SIM,Marketing,Channel,Referral,Leads,8
+2026-08-14,SIM,Marketing,Channel,SEO,Leads,54
+2026-08-14,SIM,Marketing,Program,Business,Applications,5
+2026-08-14,SIM,Marketing,Program,Business,Leads,55
+2026-08-14,SIM,Marketing,Program,Data Science,Applications,3
+2026-08-14,SIM,Marketing,Program,Data Science,Leads,35
+2026-08-14,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-08-14,SIM,Marketing,Program,UNSW Articulation,Leads,30
+2026-08-14,SUN,Admissions,Advisor,Beiley Chen,Apps,20
+2026-08-14,SUN,Admissions,Advisor,Beiley Chen,Contacts,257
+2026-08-14,SUN,Admissions,Advisor,Beiley Chen,ECs,27
+2026-08-14,SUN,Admissions,Advisor,Beiley Chen,Handles,549
+2026-08-14,SUN,Admissions,Advisor,Beiley Chen,ICs,96
+2026-08-14,SUN,Admissions,Advisor,Josephine Jemes,Apps,40
+2026-08-14,SUN,Admissions,Advisor,Josephine Jemes,Contacts,233
+2026-08-14,SUN,Admissions,Advisor,Josephine Jemes,ECs,49
+2026-08-14,SUN,Admissions,Advisor,Josephine Jemes,Handles,444
+2026-08-14,SUN,Admissions,Advisor,Josephine Jemes,ICs,99
+2026-08-14,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,16
+2026-08-14,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,300
+2026-08-14,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,23
+2026-08-14,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,458
+2026-08-14,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,96
+2026-08-14,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-08-14,SUN,Admissions,Advisor,Ron Lim,Contacts,286
+2026-08-14,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-08-14,SUN,Admissions,Advisor,Ron Lim,Handles,508
+2026-08-14,SUN,Admissions,Advisor,Ron Lim,ICs,138
+2026-08-14,SUN,Marketing,Channel,Email,Leads,14
+2026-08-14,SUN,Marketing,Channel,Facebook / Paid Social,Leads,113
+2026-08-14,SUN,Marketing,Channel,Organic / Direct,Leads,56
+2026-08-14,SUN,Marketing,Channel,Other,Leads,9
+2026-08-14,SUN,Marketing,Channel,Referral,Leads,28
+2026-08-14,SUN,Marketing,Channel,SEO,Leads,159
+2026-08-14,SUN,Marketing,Program,Business,Applications,10
+2026-08-14,SUN,Marketing,Program,Business,Leads,85
+2026-08-14,SUN,Marketing,Program,Business Analytics,Applications,4
+2026-08-14,SUN,Marketing,Program,Business Analytics,Leads,43
+2026-08-14,SUN,Marketing,Program,Data Science,Applications,7
+2026-08-14,SUN,Marketing,Program,Data Science,Leads,65
+2026-08-14,SUN,Marketing,Program,Education,Applications,3
+2026-08-14,SUN,Marketing,Program,Education,Leads,29
+2026-08-14,SUN,Marketing,Program,Finance,Applications,3
+2026-08-14,SUN,Marketing,Program,Finance,Leads,32
+2026-08-14,SUN,Marketing,Program,Management,Applications,3
+2026-08-14,SUN,Marketing,Program,Management,Leads,33
+2026-08-14,SUN,Marketing,Program,Marketing,Applications,6
+2026-08-14,SUN,Marketing,Program,Marketing,Leads,71
+2026-08-21,SIM,Admissions,Advisor,Advisor 1,Apps,7
+2026-08-21,SIM,Admissions,Advisor,Advisor 1,Contacts,150
+2026-08-21,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-08-21,SIM,Admissions,Advisor,Advisor 1,Handles,301
+2026-08-21,SIM,Admissions,Advisor,Advisor 1,ICs,50
+2026-08-21,SIM,Admissions,Advisor,Advisor 2,Apps,14
+2026-08-21,SIM,Admissions,Advisor,Advisor 2,Contacts,165
+2026-08-21,SIM,Admissions,Advisor,Advisor 2,ECs,16
+2026-08-21,SIM,Admissions,Advisor,Advisor 2,Handles,290
+2026-08-21,SIM,Admissions,Advisor,Advisor 2,ICs,69
+2026-08-21,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-08-21,SIM,Admissions,Advisor,Advisor 3,Contacts,118
+2026-08-21,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-08-21,SIM,Admissions,Advisor,Advisor 3,Handles,274
+2026-08-21,SIM,Admissions,Advisor,Advisor 3,ICs,33
+2026-08-21,SIM,Marketing,Channel,Email,Leads,7
+2026-08-21,SIM,Marketing,Channel,Facebook / Paid Social,Leads,25
+2026-08-21,SIM,Marketing,Channel,Organic / Direct,Leads,21
+2026-08-21,SIM,Marketing,Channel,Other,Leads,4
+2026-08-21,SIM,Marketing,Channel,Referral,Leads,7
+2026-08-21,SIM,Marketing,Channel,SEO,Leads,46
+2026-08-21,SIM,Marketing,Program,Business,Applications,4
+2026-08-21,SIM,Marketing,Program,Business,Leads,57
+2026-08-21,SIM,Marketing,Program,Data Science,Applications,3
+2026-08-21,SIM,Marketing,Program,Data Science,Leads,38
+2026-08-21,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-08-21,SIM,Marketing,Program,UNSW Articulation,Leads,30
+2026-08-21,SUN,Admissions,Advisor,Beiley Chen,Apps,19
+2026-08-21,SUN,Admissions,Advisor,Beiley Chen,Contacts,258
+2026-08-21,SUN,Admissions,Advisor,Beiley Chen,ECs,24
+2026-08-21,SUN,Admissions,Advisor,Beiley Chen,Handles,550
+2026-08-21,SUN,Admissions,Advisor,Beiley Chen,ICs,87
+2026-08-21,SUN,Admissions,Advisor,Josephine Jemes,Apps,47
+2026-08-21,SUN,Admissions,Advisor,Josephine Jemes,Contacts,255
+2026-08-21,SUN,Admissions,Advisor,Josephine Jemes,ECs,53
+2026-08-21,SUN,Admissions,Advisor,Josephine Jemes,Handles,493
+2026-08-21,SUN,Admissions,Advisor,Josephine Jemes,ICs,102
+2026-08-21,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,15
+2026-08-21,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,288
+2026-08-21,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,21
+2026-08-21,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,441
+2026-08-21,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,92
+2026-08-21,SUN,Admissions,Advisor,Ron Lim,Apps,4
+2026-08-21,SUN,Admissions,Advisor,Ron Lim,Contacts,268
+2026-08-21,SUN,Admissions,Advisor,Ron Lim,ECs,5
+2026-08-21,SUN,Admissions,Advisor,Ron Lim,Handles,479
+2026-08-21,SUN,Admissions,Advisor,Ron Lim,ICs,114
+2026-08-21,SUN,Marketing,Channel,Email,Leads,13
+2026-08-21,SUN,Marketing,Channel,Facebook / Paid Social,Leads,93
+2026-08-21,SUN,Marketing,Channel,Organic / Direct,Leads,59
+2026-08-21,SUN,Marketing,Channel,Other,Leads,11
+2026-08-21,SUN,Marketing,Channel,Referral,Leads,28
+2026-08-21,SUN,Marketing,Channel,SEO,Leads,160
+2026-08-21,SUN,Marketing,Program,Business,Applications,10
+2026-08-21,SUN,Marketing,Program,Business,Leads,92
+2026-08-21,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-08-21,SUN,Marketing,Program,Business Analytics,Leads,41
+2026-08-21,SUN,Marketing,Program,Data Science,Applications,7
+2026-08-21,SUN,Marketing,Program,Data Science,Leads,64
+2026-08-21,SUN,Marketing,Program,Education,Applications,3
+2026-08-21,SUN,Marketing,Program,Education,Leads,29
+2026-08-21,SUN,Marketing,Program,Finance,Applications,3
+2026-08-21,SUN,Marketing,Program,Finance,Leads,36
+2026-08-21,SUN,Marketing,Program,Management,Applications,3
+2026-08-21,SUN,Marketing,Program,Management,Leads,37
+2026-08-21,SUN,Marketing,Program,Marketing,Applications,6
+2026-08-21,SUN,Marketing,Program,Marketing,Leads,60
+2026-08-28,SIM,Admissions,Advisor,Advisor 1,Apps,7
+2026-08-28,SIM,Admissions,Advisor,Advisor 1,Contacts,139
+2026-08-28,SIM,Admissions,Advisor,Advisor 1,ECs,9
+2026-08-28,SIM,Admissions,Advisor,Advisor 1,Handles,281
+2026-08-28,SIM,Admissions,Advisor,Advisor 1,ICs,45
+2026-08-28,SIM,Admissions,Advisor,Advisor 2,Apps,13
+2026-08-28,SIM,Admissions,Advisor,Advisor 2,Contacts,153
+2026-08-28,SIM,Admissions,Advisor,Advisor 2,ECs,15
+2026-08-28,SIM,Admissions,Advisor,Advisor 2,Handles,292
+2026-08-28,SIM,Admissions,Advisor,Advisor 2,ICs,56
+2026-08-28,SIM,Admissions,Advisor,Advisor 3,Apps,5
+2026-08-28,SIM,Admissions,Advisor,Advisor 3,Contacts,111
+2026-08-28,SIM,Admissions,Advisor,Advisor 3,ECs,6
+2026-08-28,SIM,Admissions,Advisor,Advisor 3,Handles,242
+2026-08-28,SIM,Admissions,Advisor,Advisor 3,ICs,34
+2026-08-28,SIM,Marketing,Channel,Email,Leads,6
+2026-08-28,SIM,Marketing,Channel,Facebook / Paid Social,Leads,28
+2026-08-28,SIM,Marketing,Channel,Organic / Direct,Leads,21
+2026-08-28,SIM,Marketing,Channel,Other,Leads,3
+2026-08-28,SIM,Marketing,Channel,Referral,Leads,7
+2026-08-28,SIM,Marketing,Channel,SEO,Leads,45
+2026-08-28,SIM,Marketing,Program,Business,Applications,4
+2026-08-28,SIM,Marketing,Program,Business,Leads,60
+2026-08-28,SIM,Marketing,Program,Data Science,Applications,3
+2026-08-28,SIM,Marketing,Program,Data Science,Leads,41
+2026-08-28,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-08-28,SIM,Marketing,Program,UNSW Articulation,Leads,26
+2026-08-28,SUN,Admissions,Advisor,Beiley Chen,Apps,19
+2026-08-28,SUN,Admissions,Advisor,Beiley Chen,Contacts,255
+2026-08-28,SUN,Admissions,Advisor,Beiley Chen,ECs,26
+2026-08-28,SUN,Admissions,Advisor,Beiley Chen,Handles,510
+2026-08-28,SUN,Admissions,Advisor,Beiley Chen,ICs,92
+2026-08-28,SUN,Admissions,Advisor,Josephine Jemes,Apps,45
+2026-08-28,SUN,Admissions,Advisor,Josephine Jemes,Contacts,236
+2026-08-28,SUN,Admissions,Advisor,Josephine Jemes,ECs,54
+2026-08-28,SUN,Admissions,Advisor,Josephine Jemes,Handles,483
+2026-08-28,SUN,Admissions,Advisor,Josephine Jemes,ICs,99
+2026-08-28,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,21
+2026-08-28,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,349
+2026-08-28,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,30
+2026-08-28,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,505
+2026-08-28,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,109
+2026-08-28,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-08-28,SUN,Admissions,Advisor,Ron Lim,Contacts,266
+2026-08-28,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-08-28,SUN,Admissions,Advisor,Ron Lim,Handles,509
+2026-08-28,SUN,Admissions,Advisor,Ron Lim,ICs,119
+2026-08-28,SUN,Marketing,Channel,Email,Leads,18
+2026-08-28,SUN,Marketing,Channel,Facebook / Paid Social,Leads,84
+2026-08-28,SUN,Marketing,Channel,Organic / Direct,Leads,57
+2026-08-28,SUN,Marketing,Channel,Other,Leads,8
+2026-08-28,SUN,Marketing,Channel,Referral,Leads,22
+2026-08-28,SUN,Marketing,Channel,SEO,Leads,170
+2026-08-28,SUN,Marketing,Program,Business,Applications,10
+2026-08-28,SUN,Marketing,Program,Business,Leads,87
+2026-08-28,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-08-28,SUN,Marketing,Program,Business Analytics,Leads,44
+2026-08-28,SUN,Marketing,Program,Data Science,Applications,7
+2026-08-28,SUN,Marketing,Program,Data Science,Leads,69
+2026-08-28,SUN,Marketing,Program,Education,Applications,3
+2026-08-28,SUN,Marketing,Program,Education,Leads,32
+2026-08-28,SUN,Marketing,Program,Finance,Applications,3
+2026-08-28,SUN,Marketing,Program,Finance,Leads,35
+2026-08-28,SUN,Marketing,Program,Management,Applications,3
+2026-08-28,SUN,Marketing,Program,Management,Leads,33
+2026-08-28,SUN,Marketing,Program,Marketing,Applications,6
+2026-08-28,SUN,Marketing,Program,Marketing,Leads,62
+2026-09-04,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-09-04,SIM,Admissions,Advisor,Advisor 1,Contacts,148
+2026-09-04,SIM,Admissions,Advisor,Advisor 1,ECs,11
+2026-09-04,SIM,Admissions,Advisor,Advisor 1,Handles,300
+2026-09-04,SIM,Admissions,Advisor,Advisor 1,ICs,49
+2026-09-04,SIM,Admissions,Advisor,Advisor 2,Apps,13
+2026-09-04,SIM,Admissions,Advisor,Advisor 2,Contacts,157
+2026-09-04,SIM,Admissions,Advisor,Advisor 2,ECs,17
+2026-09-04,SIM,Admissions,Advisor,Advisor 2,Handles,283
+2026-09-04,SIM,Admissions,Advisor,Advisor 2,ICs,64
+2026-09-04,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-09-04,SIM,Admissions,Advisor,Advisor 3,Contacts,122
+2026-09-04,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-09-04,SIM,Admissions,Advisor,Advisor 3,Handles,275
+2026-09-04,SIM,Admissions,Advisor,Advisor 3,ICs,37
+2026-09-04,SIM,Marketing,Channel,Email,Leads,7
+2026-09-04,SIM,Marketing,Channel,Facebook / Paid Social,Leads,23
+2026-09-04,SIM,Marketing,Channel,Organic / Direct,Leads,20
+2026-09-04,SIM,Marketing,Channel,Other,Leads,4
+2026-09-04,SIM,Marketing,Channel,Referral,Leads,9
+2026-09-04,SIM,Marketing,Channel,SEO,Leads,53
+2026-09-04,SIM,Marketing,Program,Business,Applications,5
+2026-09-04,SIM,Marketing,Program,Business,Leads,53
+2026-09-04,SIM,Marketing,Program,Data Science,Applications,3
+2026-09-04,SIM,Marketing,Program,Data Science,Leads,37
+2026-09-04,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-09-04,SIM,Marketing,Program,UNSW Articulation,Leads,31
+2026-09-04,SUN,Admissions,Advisor,Beiley Chen,Apps,19
+2026-09-04,SUN,Admissions,Advisor,Beiley Chen,Contacts,239
+2026-09-04,SUN,Admissions,Advisor,Beiley Chen,ECs,26
+2026-09-04,SUN,Admissions,Advisor,Beiley Chen,Handles,505
+2026-09-04,SUN,Admissions,Advisor,Beiley Chen,ICs,85
+2026-09-04,SUN,Admissions,Advisor,Josephine Jemes,Apps,43
+2026-09-04,SUN,Admissions,Advisor,Josephine Jemes,Contacts,233
+2026-09-04,SUN,Admissions,Advisor,Josephine Jemes,ECs,49
+2026-09-04,SUN,Admissions,Advisor,Josephine Jemes,Handles,464
+2026-09-04,SUN,Admissions,Advisor,Josephine Jemes,ICs,91
+2026-09-04,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,14
+2026-09-04,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,309
+2026-09-04,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,22
+2026-09-04,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,443
+2026-09-04,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,88
+2026-09-04,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-09-04,SUN,Admissions,Advisor,Ron Lim,Contacts,260
+2026-09-04,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-09-04,SUN,Admissions,Advisor,Ron Lim,Handles,486
+2026-09-04,SUN,Admissions,Advisor,Ron Lim,ICs,121
+2026-09-04,SUN,Marketing,Channel,Email,Leads,15
+2026-09-04,SUN,Marketing,Channel,Facebook / Paid Social,Leads,82
+2026-09-04,SUN,Marketing,Channel,Organic / Direct,Leads,60
+2026-09-04,SUN,Marketing,Channel,Other,Leads,10
+2026-09-04,SUN,Marketing,Channel,Referral,Leads,20
+2026-09-04,SUN,Marketing,Channel,SEO,Leads,142
+2026-09-04,SUN,Marketing,Program,Business,Applications,11
+2026-09-04,SUN,Marketing,Program,Business,Leads,106
+2026-09-04,SUN,Marketing,Program,Business Analytics,Applications,4
+2026-09-04,SUN,Marketing,Program,Business Analytics,Leads,41
+2026-09-04,SUN,Marketing,Program,Data Science,Applications,6
+2026-09-04,SUN,Marketing,Program,Data Science,Leads,74
+2026-09-04,SUN,Marketing,Program,Education,Applications,3
+2026-09-04,SUN,Marketing,Program,Education,Leads,28
+2026-09-04,SUN,Marketing,Program,Finance,Applications,3
+2026-09-04,SUN,Marketing,Program,Finance,Leads,37
+2026-09-04,SUN,Marketing,Program,Management,Applications,3
+2026-09-04,SUN,Marketing,Program,Management,Leads,34
+2026-09-04,SUN,Marketing,Program,Marketing,Applications,7
+2026-09-04,SUN,Marketing,Program,Marketing,Leads,67
+2026-09-11,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-09-11,SIM,Admissions,Advisor,Advisor 1,Contacts,166
+2026-09-11,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-09-11,SIM,Admissions,Advisor,Advisor 1,Handles,321
+2026-09-11,SIM,Admissions,Advisor,Advisor 1,ICs,54
+2026-09-11,SIM,Admissions,Advisor,Advisor 2,Apps,10
+2026-09-11,SIM,Admissions,Advisor,Advisor 2,Contacts,138
+2026-09-11,SIM,Admissions,Advisor,Advisor 2,ECs,12
+2026-09-11,SIM,Admissions,Advisor,Advisor 2,Handles,261
+2026-09-11,SIM,Admissions,Advisor,Advisor 2,ICs,51
+2026-09-11,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-09-11,SIM,Admissions,Advisor,Advisor 3,Contacts,130
+2026-09-11,SIM,Admissions,Advisor,Advisor 3,ECs,6
+2026-09-11,SIM,Admissions,Advisor,Advisor 3,Handles,275
+2026-09-11,SIM,Admissions,Advisor,Advisor 3,ICs,40
+2026-09-11,SIM,Marketing,Channel,Email,Leads,6
+2026-09-11,SIM,Marketing,Channel,Facebook / Paid Social,Leads,28
+2026-09-11,SIM,Marketing,Channel,Organic / Direct,Leads,22
+2026-09-11,SIM,Marketing,Channel,Other,Leads,3
+2026-09-11,SIM,Marketing,Channel,Referral,Leads,9
+2026-09-11,SIM,Marketing,Channel,SEO,Leads,56
+2026-09-11,SIM,Marketing,Program,Business,Applications,4
+2026-09-11,SIM,Marketing,Program,Business,Leads,52
+2026-09-11,SIM,Marketing,Program,Data Science,Applications,3
+2026-09-11,SIM,Marketing,Program,Data Science,Leads,40
+2026-09-11,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-09-11,SIM,Marketing,Program,UNSW Articulation,Leads,29
+2026-09-11,SUN,Admissions,Advisor,Beiley Chen,Apps,19
+2026-09-11,SUN,Admissions,Advisor,Beiley Chen,Contacts,252
+2026-09-11,SUN,Admissions,Advisor,Beiley Chen,ECs,26
+2026-09-11,SUN,Admissions,Advisor,Beiley Chen,Handles,538
+2026-09-11,SUN,Admissions,Advisor,Beiley Chen,ICs,93
+2026-09-11,SUN,Admissions,Advisor,Josephine Jemes,Apps,45
+2026-09-11,SUN,Admissions,Advisor,Josephine Jemes,Contacts,237
+2026-09-11,SUN,Admissions,Advisor,Josephine Jemes,ECs,48
+2026-09-11,SUN,Admissions,Advisor,Josephine Jemes,Handles,457
+2026-09-11,SUN,Admissions,Advisor,Josephine Jemes,ICs,100
+2026-09-11,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,18
+2026-09-11,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,343
+2026-09-11,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,28
+2026-09-11,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,505
+2026-09-11,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,101
+2026-09-11,SUN,Admissions,Advisor,Ron Lim,Apps,6
+2026-09-11,SUN,Admissions,Advisor,Ron Lim,Contacts,268
+2026-09-11,SUN,Admissions,Advisor,Ron Lim,ECs,7
+2026-09-11,SUN,Admissions,Advisor,Ron Lim,Handles,478
+2026-09-11,SUN,Admissions,Advisor,Ron Lim,ICs,129
+2026-09-11,SUN,Marketing,Channel,Email,Leads,13
+2026-09-11,SUN,Marketing,Channel,Facebook / Paid Social,Leads,101
+2026-09-11,SUN,Marketing,Channel,Organic / Direct,Leads,64
+2026-09-11,SUN,Marketing,Channel,Other,Leads,10
+2026-09-11,SUN,Marketing,Channel,Referral,Leads,23
+2026-09-11,SUN,Marketing,Channel,SEO,Leads,157
+2026-09-11,SUN,Marketing,Program,Business,Applications,10
+2026-09-11,SUN,Marketing,Program,Business,Leads,106
+2026-09-11,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-09-11,SUN,Marketing,Program,Business Analytics,Leads,45
+2026-09-11,SUN,Marketing,Program,Data Science,Applications,7
+2026-09-11,SUN,Marketing,Program,Data Science,Leads,67
+2026-09-11,SUN,Marketing,Program,Education,Applications,3
+2026-09-11,SUN,Marketing,Program,Education,Leads,28
+2026-09-11,SUN,Marketing,Program,Finance,Applications,3
+2026-09-11,SUN,Marketing,Program,Finance,Leads,33
+2026-09-11,SUN,Marketing,Program,Management,Applications,3
+2026-09-11,SUN,Marketing,Program,Management,Leads,36
+2026-09-11,SUN,Marketing,Program,Marketing,Applications,7
+2026-09-11,SUN,Marketing,Program,Marketing,Leads,60
+2026-09-18,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-09-18,SIM,Admissions,Advisor,Advisor 1,Contacts,143
+2026-09-18,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-09-18,SIM,Admissions,Advisor,Advisor 1,Handles,278
+2026-09-18,SIM,Admissions,Advisor,Advisor 1,ICs,51
+2026-09-18,SIM,Admissions,Advisor,Advisor 2,Apps,12
+2026-09-18,SIM,Admissions,Advisor,Advisor 2,Contacts,145
+2026-09-18,SIM,Admissions,Advisor,Advisor 2,ECs,17
+2026-09-18,SIM,Admissions,Advisor,Advisor 2,Handles,260
+2026-09-18,SIM,Admissions,Advisor,Advisor 2,ICs,61
+2026-09-18,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-09-18,SIM,Admissions,Advisor,Advisor 3,Contacts,124
+2026-09-18,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-09-18,SIM,Admissions,Advisor,Advisor 3,Handles,265
+2026-09-18,SIM,Admissions,Advisor,Advisor 3,ICs,36
+2026-09-18,SIM,Marketing,Channel,Email,Leads,6
+2026-09-18,SIM,Marketing,Channel,Facebook / Paid Social,Leads,28
+2026-09-18,SIM,Marketing,Channel,Organic / Direct,Leads,20
+2026-09-18,SIM,Marketing,Channel,Other,Leads,4
+2026-09-18,SIM,Marketing,Channel,Referral,Leads,7
+2026-09-18,SIM,Marketing,Channel,SEO,Leads,52
+2026-09-18,SIM,Marketing,Program,Business,Applications,4
+2026-09-18,SIM,Marketing,Program,Business,Leads,54
+2026-09-18,SIM,Marketing,Program,Data Science,Applications,3
+2026-09-18,SIM,Marketing,Program,Data Science,Leads,35
+2026-09-18,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-09-18,SIM,Marketing,Program,UNSW Articulation,Leads,30
+2026-09-18,SUN,Admissions,Advisor,Beiley Chen,Apps,20
+2026-09-18,SUN,Admissions,Advisor,Beiley Chen,Contacts,260
+2026-09-18,SUN,Admissions,Advisor,Beiley Chen,ECs,26
+2026-09-18,SUN,Admissions,Advisor,Beiley Chen,Handles,542
+2026-09-18,SUN,Admissions,Advisor,Beiley Chen,ICs,87
+2026-09-18,SUN,Admissions,Advisor,Josephine Jemes,Apps,45
+2026-09-18,SUN,Admissions,Advisor,Josephine Jemes,Contacts,221
+2026-09-18,SUN,Admissions,Advisor,Josephine Jemes,ECs,48
+2026-09-18,SUN,Admissions,Advisor,Josephine Jemes,Handles,446
+2026-09-18,SUN,Admissions,Advisor,Josephine Jemes,ICs,95
+2026-09-18,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,20
+2026-09-18,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,334
+2026-09-18,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,27
+2026-09-18,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,497
+2026-09-18,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,99
+2026-09-18,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-09-18,SUN,Admissions,Advisor,Ron Lim,Contacts,265
+2026-09-18,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-09-18,SUN,Admissions,Advisor,Ron Lim,Handles,475
+2026-09-18,SUN,Admissions,Advisor,Ron Lim,ICs,128
+2026-09-18,SUN,Marketing,Channel,Email,Leads,12
+2026-09-18,SUN,Marketing,Channel,Facebook / Paid Social,Leads,93
+2026-09-18,SUN,Marketing,Channel,Organic / Direct,Leads,61
+2026-09-18,SUN,Marketing,Channel,Other,Leads,12
+2026-09-18,SUN,Marketing,Channel,Referral,Leads,23
+2026-09-18,SUN,Marketing,Channel,SEO,Leads,144
+2026-09-18,SUN,Marketing,Program,Business,Applications,9
+2026-09-18,SUN,Marketing,Program,Business,Leads,106
+2026-09-18,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-09-18,SUN,Marketing,Program,Business Analytics,Leads,51
+2026-09-18,SUN,Marketing,Program,Data Science,Applications,7
+2026-09-18,SUN,Marketing,Program,Data Science,Leads,70
+2026-09-18,SUN,Marketing,Program,Education,Applications,3
+2026-09-18,SUN,Marketing,Program,Education,Leads,30
+2026-09-18,SUN,Marketing,Program,Finance,Applications,3
+2026-09-18,SUN,Marketing,Program,Finance,Leads,38
+2026-09-18,SUN,Marketing,Program,Management,Applications,3
+2026-09-18,SUN,Marketing,Program,Management,Leads,34
+2026-09-18,SUN,Marketing,Program,Marketing,Applications,7
+2026-09-18,SUN,Marketing,Program,Marketing,Leads,59
+2026-09-25,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-09-25,SIM,Admissions,Advisor,Advisor 1,Contacts,154
+2026-09-25,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-09-25,SIM,Admissions,Advisor,Advisor 1,Handles,314
+2026-09-25,SIM,Admissions,Advisor,Advisor 1,ICs,51
+2026-09-25,SIM,Admissions,Advisor,Advisor 2,Apps,12
+2026-09-25,SIM,Admissions,Advisor,Advisor 2,Contacts,151
+2026-09-25,SIM,Admissions,Advisor,Advisor 2,ECs,15
+2026-09-25,SIM,Admissions,Advisor,Advisor 2,Handles,265
+2026-09-25,SIM,Admissions,Advisor,Advisor 2,ICs,58
+2026-09-25,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-09-25,SIM,Admissions,Advisor,Advisor 3,Contacts,121
+2026-09-25,SIM,Admissions,Advisor,Advisor 3,ECs,6
+2026-09-25,SIM,Admissions,Advisor,Advisor 3,Handles,260
+2026-09-25,SIM,Admissions,Advisor,Advisor 3,ICs,37
+2026-09-25,SIM,Marketing,Channel,Email,Leads,5
+2026-09-25,SIM,Marketing,Channel,Facebook / Paid Social,Leads,22
+2026-09-25,SIM,Marketing,Channel,Organic / Direct,Leads,22
+2026-09-25,SIM,Marketing,Channel,Other,Leads,3
+2026-09-25,SIM,Marketing,Channel,Referral,Leads,8
+2026-09-25,SIM,Marketing,Channel,SEO,Leads,61
+2026-09-25,SIM,Marketing,Program,Business,Applications,5
+2026-09-25,SIM,Marketing,Program,Business,Leads,54
+2026-09-25,SIM,Marketing,Program,Data Science,Applications,3
+2026-09-25,SIM,Marketing,Program,Data Science,Leads,41
+2026-09-25,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-09-25,SIM,Marketing,Program,UNSW Articulation,Leads,29
+2026-09-25,SUN,Admissions,Advisor,Beiley Chen,Apps,24
+2026-09-25,SUN,Admissions,Advisor,Beiley Chen,Contacts,278
+2026-09-25,SUN,Admissions,Advisor,Beiley Chen,ECs,31
+2026-09-25,SUN,Admissions,Advisor,Beiley Chen,Handles,551
+2026-09-25,SUN,Admissions,Advisor,Beiley Chen,ICs,94
+2026-09-25,SUN,Admissions,Advisor,Josephine Jemes,Apps,42
+2026-09-25,SUN,Admissions,Advisor,Josephine Jemes,Contacts,219
+2026-09-25,SUN,Admissions,Advisor,Josephine Jemes,ECs,43
+2026-09-25,SUN,Admissions,Advisor,Josephine Jemes,Handles,447
+2026-09-25,SUN,Admissions,Advisor,Josephine Jemes,ICs,85
+2026-09-25,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,19
+2026-09-25,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,318
+2026-09-25,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,25
+2026-09-25,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,487
+2026-09-25,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,98
+2026-09-25,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-09-25,SUN,Admissions,Advisor,Ron Lim,Contacts,255
+2026-09-25,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-09-25,SUN,Admissions,Advisor,Ron Lim,Handles,456
+2026-09-25,SUN,Admissions,Advisor,Ron Lim,ICs,122
+2026-09-25,SUN,Marketing,Channel,Email,Leads,13
+2026-09-25,SUN,Marketing,Channel,Facebook / Paid Social,Leads,96
+2026-09-25,SUN,Marketing,Channel,Organic / Direct,Leads,62
+2026-09-25,SUN,Marketing,Channel,Other,Leads,12
+2026-09-25,SUN,Marketing,Channel,Referral,Leads,22
+2026-09-25,SUN,Marketing,Channel,SEO,Leads,154
+2026-09-25,SUN,Marketing,Program,Business,Applications,11
+2026-09-25,SUN,Marketing,Program,Business,Leads,97
+2026-09-25,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-09-25,SUN,Marketing,Program,Business Analytics,Leads,45
+2026-09-25,SUN,Marketing,Program,Data Science,Applications,7
+2026-09-25,SUN,Marketing,Program,Data Science,Leads,82
+2026-09-25,SUN,Marketing,Program,Education,Applications,3
+2026-09-25,SUN,Marketing,Program,Education,Leads,30
+2026-09-25,SUN,Marketing,Program,Finance,Applications,3
+2026-09-25,SUN,Marketing,Program,Finance,Leads,32
+2026-09-25,SUN,Marketing,Program,Management,Applications,3
+2026-09-25,SUN,Marketing,Program,Management,Leads,34
+2026-09-25,SUN,Marketing,Program,Marketing,Applications,7
+2026-09-25,SUN,Marketing,Program,Marketing,Leads,68
+2026-10-02,SIM,Admissions,Advisor,Advisor 1,Apps,11
+2026-10-02,SIM,Admissions,Advisor,Advisor 1,Contacts,163
+2026-10-02,SIM,Admissions,Advisor,Advisor 1,ECs,13
+2026-10-02,SIM,Admissions,Advisor,Advisor 1,Handles,318
+2026-10-02,SIM,Admissions,Advisor,Advisor 1,ICs,60
+2026-10-02,SIM,Admissions,Advisor,Advisor 2,Apps,12
+2026-10-02,SIM,Admissions,Advisor,Advisor 2,Contacts,155
+2026-10-02,SIM,Admissions,Advisor,Advisor 2,ECs,15
+2026-10-02,SIM,Admissions,Advisor,Advisor 2,Handles,285
+2026-10-02,SIM,Admissions,Advisor,Advisor 2,ICs,60
+2026-10-02,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-10-02,SIM,Admissions,Advisor,Advisor 3,Contacts,118
+2026-10-02,SIM,Admissions,Advisor,Advisor 3,ECs,6
+2026-10-02,SIM,Admissions,Advisor,Advisor 3,Handles,258
+2026-10-02,SIM,Admissions,Advisor,Advisor 3,ICs,36
+2026-10-02,SIM,Marketing,Channel,Email,Leads,5
+2026-10-02,SIM,Marketing,Channel,Facebook / Paid Social,Leads,24
+2026-10-02,SIM,Marketing,Channel,Organic / Direct,Leads,21
+2026-10-02,SIM,Marketing,Channel,Other,Leads,4
+2026-10-02,SIM,Marketing,Channel,Referral,Leads,8
+2026-10-02,SIM,Marketing,Channel,SEO,Leads,61
+2026-10-02,SIM,Marketing,Program,Business,Applications,4
+2026-10-02,SIM,Marketing,Program,Business,Leads,62
+2026-10-02,SIM,Marketing,Program,Data Science,Applications,3
+2026-10-02,SIM,Marketing,Program,Data Science,Leads,40
+2026-10-02,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-10-02,SIM,Marketing,Program,UNSW Articulation,Leads,28
+2026-10-02,SUN,Admissions,Advisor,Beiley Chen,Apps,20
+2026-10-02,SUN,Admissions,Advisor,Beiley Chen,Contacts,226
+2026-10-02,SUN,Admissions,Advisor,Beiley Chen,ECs,25
+2026-10-02,SUN,Admissions,Advisor,Beiley Chen,Handles,481
+2026-10-02,SUN,Admissions,Advisor,Beiley Chen,ICs,80
+2026-10-02,SUN,Admissions,Advisor,Josephine Jemes,Apps,40
+2026-10-02,SUN,Admissions,Advisor,Josephine Jemes,Contacts,247
+2026-10-02,SUN,Admissions,Advisor,Josephine Jemes,ECs,47
+2026-10-02,SUN,Admissions,Advisor,Josephine Jemes,Handles,495
+2026-10-02,SUN,Admissions,Advisor,Josephine Jemes,ICs,93
+2026-10-02,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,15
+2026-10-02,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,339
+2026-10-02,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,23
+2026-10-02,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,506
+2026-10-02,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,100
+2026-10-02,SUN,Admissions,Advisor,Ron Lim,Apps,4
+2026-10-02,SUN,Admissions,Advisor,Ron Lim,Contacts,237
+2026-10-02,SUN,Admissions,Advisor,Ron Lim,ECs,5
+2026-10-02,SUN,Admissions,Advisor,Ron Lim,Handles,446
+2026-10-02,SUN,Admissions,Advisor,Ron Lim,ICs,103
+2026-10-02,SUN,Marketing,Channel,Email,Leads,16
+2026-10-02,SUN,Marketing,Channel,Facebook / Paid Social,Leads,92
+2026-10-02,SUN,Marketing,Channel,Organic / Direct,Leads,60
+2026-10-02,SUN,Marketing,Channel,Other,Leads,9
+2026-10-02,SUN,Marketing,Channel,Referral,Leads,29
+2026-10-02,SUN,Marketing,Channel,SEO,Leads,168
+2026-10-02,SUN,Marketing,Program,Business,Applications,10
+2026-10-02,SUN,Marketing,Program,Business,Leads,92
+2026-10-02,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-10-02,SUN,Marketing,Program,Business Analytics,Leads,51
+2026-10-02,SUN,Marketing,Program,Data Science,Applications,8
+2026-10-02,SUN,Marketing,Program,Data Science,Leads,78
+2026-10-02,SUN,Marketing,Program,Education,Applications,3
+2026-10-02,SUN,Marketing,Program,Education,Leads,29
+2026-10-02,SUN,Marketing,Program,Finance,Applications,3
+2026-10-02,SUN,Marketing,Program,Finance,Leads,33
+2026-10-02,SUN,Marketing,Program,Management,Applications,3
+2026-10-02,SUN,Marketing,Program,Management,Leads,37
+2026-10-02,SUN,Marketing,Program,Marketing,Applications,6
+2026-10-02,SUN,Marketing,Program,Marketing,Leads,63
+2026-10-09,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-10-09,SIM,Admissions,Advisor,Advisor 1,Contacts,152
+2026-10-09,SIM,Admissions,Advisor,Advisor 1,ECs,11
+2026-10-09,SIM,Admissions,Advisor,Advisor 1,Handles,301
+2026-10-09,SIM,Admissions,Advisor,Advisor 1,ICs,52
+2026-10-09,SIM,Admissions,Advisor,Advisor 2,Apps,11
+2026-10-09,SIM,Admissions,Advisor,Advisor 2,Contacts,153
+2026-10-09,SIM,Admissions,Advisor,Advisor 2,ECs,14
+2026-10-09,SIM,Admissions,Advisor,Advisor 2,Handles,288
+2026-10-09,SIM,Admissions,Advisor,Advisor 2,ICs,61
+2026-10-09,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-10-09,SIM,Admissions,Advisor,Advisor 3,Contacts,116
+2026-10-09,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-10-09,SIM,Admissions,Advisor,Advisor 3,Handles,262
+2026-10-09,SIM,Admissions,Advisor,Advisor 3,ICs,34
+2026-10-09,SIM,Marketing,Channel,Email,Leads,6
+2026-10-09,SIM,Marketing,Channel,Facebook / Paid Social,Leads,22
+2026-10-09,SIM,Marketing,Channel,Organic / Direct,Leads,20
+2026-10-09,SIM,Marketing,Channel,Other,Leads,5
+2026-10-09,SIM,Marketing,Channel,Referral,Leads,8
+2026-10-09,SIM,Marketing,Channel,SEO,Leads,61
+2026-10-09,SIM,Marketing,Program,Business,Applications,5
+2026-10-09,SIM,Marketing,Program,Business,Leads,61
+2026-10-09,SIM,Marketing,Program,Data Science,Applications,3
+2026-10-09,SIM,Marketing,Program,Data Science,Leads,37
+2026-10-09,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-10-09,SIM,Marketing,Program,UNSW Articulation,Leads,29
+2026-10-09,SUN,Admissions,Advisor,Beiley Chen,Apps,19
+2026-10-09,SUN,Admissions,Advisor,Beiley Chen,Contacts,222
+2026-10-09,SUN,Admissions,Advisor,Beiley Chen,ECs,24
+2026-10-09,SUN,Admissions,Advisor,Beiley Chen,Handles,484
+2026-10-09,SUN,Admissions,Advisor,Beiley Chen,ICs,79
+2026-10-09,SUN,Admissions,Advisor,Josephine Jemes,Apps,39
+2026-10-09,SUN,Admissions,Advisor,Josephine Jemes,Contacts,228
+2026-10-09,SUN,Admissions,Advisor,Josephine Jemes,ECs,46
+2026-10-09,SUN,Admissions,Advisor,Josephine Jemes,Handles,453
+2026-10-09,SUN,Admissions,Advisor,Josephine Jemes,ICs,92
+2026-10-09,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,19
+2026-10-09,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,355
+2026-10-09,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,27
+2026-10-09,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,505
+2026-10-09,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,106
+2026-10-09,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-10-09,SUN,Admissions,Advisor,Ron Lim,Contacts,277
+2026-10-09,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-10-09,SUN,Admissions,Advisor,Ron Lim,Handles,514
+2026-10-09,SUN,Admissions,Advisor,Ron Lim,ICs,117
+2026-10-09,SUN,Marketing,Channel,Email,Leads,17
+2026-10-09,SUN,Marketing,Channel,Facebook / Paid Social,Leads,86
+2026-10-09,SUN,Marketing,Channel,Organic / Direct,Leads,61
+2026-10-09,SUN,Marketing,Channel,Other,Leads,10
+2026-10-09,SUN,Marketing,Channel,Referral,Leads,29
+2026-10-09,SUN,Marketing,Channel,SEO,Leads,151
+2026-10-09,SUN,Marketing,Program,Business,Applications,11
+2026-10-09,SUN,Marketing,Program,Business,Leads,110
+2026-10-09,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-10-09,SUN,Marketing,Program,Business Analytics,Leads,48
+2026-10-09,SUN,Marketing,Program,Data Science,Applications,8
+2026-10-09,SUN,Marketing,Program,Data Science,Leads,77
+2026-10-09,SUN,Marketing,Program,Education,Applications,3
+2026-10-09,SUN,Marketing,Program,Education,Leads,28
+2026-10-09,SUN,Marketing,Program,Finance,Applications,3
+2026-10-09,SUN,Marketing,Program,Finance,Leads,36
+2026-10-09,SUN,Marketing,Program,Management,Applications,3
+2026-10-09,SUN,Marketing,Program,Management,Leads,32
+2026-10-09,SUN,Marketing,Program,Marketing,Applications,6
+2026-10-09,SUN,Marketing,Program,Marketing,Leads,61
+2026-10-16,SIM,Admissions,Advisor,Advisor 1,Apps,7
+2026-10-16,SIM,Admissions,Advisor,Advisor 1,Contacts,151
+2026-10-16,SIM,Admissions,Advisor,Advisor 1,ECs,9
+2026-10-16,SIM,Admissions,Advisor,Advisor 1,Handles,298
+2026-10-16,SIM,Admissions,Advisor,Advisor 1,ICs,51
+2026-10-16,SIM,Admissions,Advisor,Advisor 2,Apps,14
+2026-10-16,SIM,Admissions,Advisor,Advisor 2,Contacts,155
+2026-10-16,SIM,Admissions,Advisor,Advisor 2,ECs,16
+2026-10-16,SIM,Admissions,Advisor,Advisor 2,Handles,270
+2026-10-16,SIM,Admissions,Advisor,Advisor 2,ICs,61
+2026-10-16,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-10-16,SIM,Admissions,Advisor,Advisor 3,Contacts,128
+2026-10-16,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-10-16,SIM,Admissions,Advisor,Advisor 3,Handles,272
+2026-10-16,SIM,Admissions,Advisor,Advisor 3,ICs,38
+2026-10-16,SIM,Marketing,Channel,Email,Leads,5
+2026-10-16,SIM,Marketing,Channel,Facebook / Paid Social,Leads,28
+2026-10-16,SIM,Marketing,Channel,Organic / Direct,Leads,19
+2026-10-16,SIM,Marketing,Channel,Other,Leads,4
+2026-10-16,SIM,Marketing,Channel,Referral,Leads,7
+2026-10-16,SIM,Marketing,Channel,SEO,Leads,54
+2026-10-16,SIM,Marketing,Program,Business,Applications,5
+2026-10-16,SIM,Marketing,Program,Business,Leads,58
+2026-10-16,SIM,Marketing,Program,Data Science,Applications,3
+2026-10-16,SIM,Marketing,Program,Data Science,Leads,42
+2026-10-16,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-10-16,SIM,Marketing,Program,UNSW Articulation,Leads,31
+2026-10-16,SUN,Admissions,Advisor,Beiley Chen,Apps,20
+2026-10-16,SUN,Admissions,Advisor,Beiley Chen,Contacts,249
+2026-10-16,SUN,Admissions,Advisor,Beiley Chen,ECs,28
+2026-10-16,SUN,Admissions,Advisor,Beiley Chen,Handles,531
+2026-10-16,SUN,Admissions,Advisor,Beiley Chen,ICs,91
+2026-10-16,SUN,Admissions,Advisor,Josephine Jemes,Apps,39
+2026-10-16,SUN,Admissions,Advisor,Josephine Jemes,Contacts,223
+2026-10-16,SUN,Admissions,Advisor,Josephine Jemes,ECs,47
+2026-10-16,SUN,Admissions,Advisor,Josephine Jemes,Handles,461
+2026-10-16,SUN,Admissions,Advisor,Josephine Jemes,ICs,92
+2026-10-16,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,17
+2026-10-16,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,338
+2026-10-16,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,25
+2026-10-16,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,493
+2026-10-16,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,94
+2026-10-16,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-10-16,SUN,Admissions,Advisor,Ron Lim,Contacts,275
+2026-10-16,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-10-16,SUN,Admissions,Advisor,Ron Lim,Handles,478
+2026-10-16,SUN,Admissions,Advisor,Ron Lim,ICs,124
+2026-10-16,SUN,Marketing,Channel,Email,Leads,15
+2026-10-16,SUN,Marketing,Channel,Facebook / Paid Social,Leads,95
+2026-10-16,SUN,Marketing,Channel,Organic / Direct,Leads,70
+2026-10-16,SUN,Marketing,Channel,Other,Leads,8
+2026-10-16,SUN,Marketing,Channel,Referral,Leads,23
+2026-10-16,SUN,Marketing,Channel,SEO,Leads,160
+2026-10-16,SUN,Marketing,Program,Business,Applications,11
+2026-10-16,SUN,Marketing,Program,Business,Leads,113
+2026-10-16,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-10-16,SUN,Marketing,Program,Business Analytics,Leads,49
+2026-10-16,SUN,Marketing,Program,Data Science,Applications,8
+2026-10-16,SUN,Marketing,Program,Data Science,Leads,79
+2026-10-16,SUN,Marketing,Program,Education,Applications,3
+2026-10-16,SUN,Marketing,Program,Education,Leads,33
+2026-10-16,SUN,Marketing,Program,Finance,Applications,3
+2026-10-16,SUN,Marketing,Program,Finance,Leads,36
+2026-10-16,SUN,Marketing,Program,Management,Applications,3
+2026-10-16,SUN,Marketing,Program,Management,Leads,35
+2026-10-16,SUN,Marketing,Program,Marketing,Applications,6
+2026-10-16,SUN,Marketing,Program,Marketing,Leads,64
+2026-10-23,SIM,Admissions,Advisor,Advisor 1,Apps,10
+2026-10-23,SIM,Admissions,Advisor,Advisor 1,Contacts,159
+2026-10-23,SIM,Admissions,Advisor,Advisor 1,ECs,12
+2026-10-23,SIM,Admissions,Advisor,Advisor 1,Handles,322
+2026-10-23,SIM,Admissions,Advisor,Advisor 1,ICs,58
+2026-10-23,SIM,Admissions,Advisor,Advisor 2,Apps,11
+2026-10-23,SIM,Admissions,Advisor,Advisor 2,Contacts,163
+2026-10-23,SIM,Admissions,Advisor,Advisor 2,ECs,14
+2026-10-23,SIM,Admissions,Advisor,Advisor 2,Handles,287
+2026-10-23,SIM,Admissions,Advisor,Advisor 2,ICs,62
+2026-10-23,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-10-23,SIM,Admissions,Advisor,Advisor 3,Contacts,119
+2026-10-23,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-10-23,SIM,Admissions,Advisor,Advisor 3,Handles,276
+2026-10-23,SIM,Admissions,Advisor,Advisor 3,ICs,38
+2026-10-23,SIM,Marketing,Channel,Email,Leads,6
+2026-10-23,SIM,Marketing,Channel,Facebook / Paid Social,Leads,24
+2026-10-23,SIM,Marketing,Channel,Organic / Direct,Leads,18
+2026-10-23,SIM,Marketing,Channel,Other,Leads,5
+2026-10-23,SIM,Marketing,Channel,Referral,Leads,8
+2026-10-23,SIM,Marketing,Channel,SEO,Leads,55
+2026-10-23,SIM,Marketing,Program,Business,Applications,5
+2026-10-23,SIM,Marketing,Program,Business,Leads,65
+2026-10-23,SIM,Marketing,Program,Data Science,Applications,4
+2026-10-23,SIM,Marketing,Program,Data Science,Leads,43
+2026-10-23,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-10-23,SIM,Marketing,Program,UNSW Articulation,Leads,27
+2026-10-23,SUN,Admissions,Advisor,Beiley Chen,Apps,23
+2026-10-23,SUN,Admissions,Advisor,Beiley Chen,Contacts,270
+2026-10-23,SUN,Admissions,Advisor,Beiley Chen,ECs,30
+2026-10-23,SUN,Admissions,Advisor,Beiley Chen,Handles,555
+2026-10-23,SUN,Admissions,Advisor,Beiley Chen,ICs,96
+2026-10-23,SUN,Admissions,Advisor,Josephine Jemes,Apps,46
+2026-10-23,SUN,Admissions,Advisor,Josephine Jemes,Contacts,255
+2026-10-23,SUN,Admissions,Advisor,Josephine Jemes,ECs,50
+2026-10-23,SUN,Admissions,Advisor,Josephine Jemes,Handles,496
+2026-10-23,SUN,Admissions,Advisor,Josephine Jemes,ICs,95
+2026-10-23,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,15
+2026-10-23,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,301
+2026-10-23,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,21
+2026-10-23,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,460
+2026-10-23,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,91
+2026-10-23,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-10-23,SUN,Admissions,Advisor,Ron Lim,Contacts,265
+2026-10-23,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-10-23,SUN,Admissions,Advisor,Ron Lim,Handles,505
+2026-10-23,SUN,Admissions,Advisor,Ron Lim,ICs,118
+2026-10-23,SUN,Marketing,Channel,Email,Leads,12
+2026-10-23,SUN,Marketing,Channel,Facebook / Paid Social,Leads,78
+2026-10-23,SUN,Marketing,Channel,Organic / Direct,Leads,67
+2026-10-23,SUN,Marketing,Channel,Other,Leads,12
+2026-10-23,SUN,Marketing,Channel,Referral,Leads,27
+2026-10-23,SUN,Marketing,Channel,SEO,Leads,181
+2026-10-23,SUN,Marketing,Program,Business,Applications,10
+2026-10-23,SUN,Marketing,Program,Business,Leads,96
+2026-10-23,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-10-23,SUN,Marketing,Program,Business Analytics,Leads,55
+2026-10-23,SUN,Marketing,Program,Data Science,Applications,8
+2026-10-23,SUN,Marketing,Program,Data Science,Leads,75
+2026-10-23,SUN,Marketing,Program,Education,Applications,3
+2026-10-23,SUN,Marketing,Program,Education,Leads,30
+2026-10-23,SUN,Marketing,Program,Finance,Applications,3
+2026-10-23,SUN,Marketing,Program,Finance,Leads,33
+2026-10-23,SUN,Marketing,Program,Management,Applications,3
+2026-10-23,SUN,Marketing,Program,Management,Leads,38
+2026-10-23,SUN,Marketing,Program,Marketing,Applications,6
+2026-10-23,SUN,Marketing,Program,Marketing,Leads,64
+2026-10-30,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-10-30,SIM,Admissions,Advisor,Advisor 1,Contacts,144
+2026-10-30,SIM,Admissions,Advisor,Advisor 1,ECs,11
+2026-10-30,SIM,Admissions,Advisor,Advisor 1,Handles,279
+2026-10-30,SIM,Admissions,Advisor,Advisor 1,ICs,54
+2026-10-30,SIM,Admissions,Advisor,Advisor 2,Apps,13
+2026-10-30,SIM,Admissions,Advisor,Advisor 2,Contacts,155
+2026-10-30,SIM,Admissions,Advisor,Advisor 2,ECs,17
+2026-10-30,SIM,Admissions,Advisor,Advisor 2,Handles,279
+2026-10-30,SIM,Admissions,Advisor,Advisor 2,ICs,65
+2026-10-30,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-10-30,SIM,Admissions,Advisor,Advisor 3,Contacts,120
+2026-10-30,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-10-30,SIM,Admissions,Advisor,Advisor 3,Handles,258
+2026-10-30,SIM,Admissions,Advisor,Advisor 3,ICs,38
+2026-10-30,SIM,Marketing,Channel,Email,Leads,6
+2026-10-30,SIM,Marketing,Channel,Facebook / Paid Social,Leads,20
+2026-10-30,SIM,Marketing,Channel,Organic / Direct,Leads,21
+2026-10-30,SIM,Marketing,Channel,Other,Leads,5
+2026-10-30,SIM,Marketing,Channel,Referral,Leads,9
+2026-10-30,SIM,Marketing,Channel,SEO,Leads,53
+2026-10-30,SIM,Marketing,Program,Business,Applications,5
+2026-10-30,SIM,Marketing,Program,Business,Leads,67
+2026-10-30,SIM,Marketing,Program,Data Science,Applications,3
+2026-10-30,SIM,Marketing,Program,Data Science,Leads,42
+2026-10-30,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-10-30,SIM,Marketing,Program,UNSW Articulation,Leads,30
+2026-10-30,SUN,Admissions,Advisor,Beiley Chen,Apps,25
+2026-10-30,SUN,Admissions,Advisor,Beiley Chen,Contacts,274
+2026-10-30,SUN,Admissions,Advisor,Beiley Chen,ECs,31
+2026-10-30,SUN,Admissions,Advisor,Beiley Chen,Handles,561
+2026-10-30,SUN,Admissions,Advisor,Beiley Chen,ICs,101
+2026-10-30,SUN,Admissions,Advisor,Josephine Jemes,Apps,46
+2026-10-30,SUN,Admissions,Advisor,Josephine Jemes,Contacts,243
+2026-10-30,SUN,Admissions,Advisor,Josephine Jemes,ECs,49
+2026-10-30,SUN,Admissions,Advisor,Josephine Jemes,Handles,472
+2026-10-30,SUN,Admissions,Advisor,Josephine Jemes,ICs,95
+2026-10-30,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,17
+2026-10-30,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,325
+2026-10-30,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,25
+2026-10-30,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,492
+2026-10-30,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,93
+2026-10-30,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-10-30,SUN,Admissions,Advisor,Ron Lim,Contacts,249
+2026-10-30,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-10-30,SUN,Admissions,Advisor,Ron Lim,Handles,472
+2026-10-30,SUN,Admissions,Advisor,Ron Lim,ICs,120
+2026-10-30,SUN,Marketing,Channel,Email,Leads,14
+2026-10-30,SUN,Marketing,Channel,Facebook / Paid Social,Leads,81
+2026-10-30,SUN,Marketing,Channel,Organic / Direct,Leads,66
+2026-10-30,SUN,Marketing,Channel,Other,Leads,12
+2026-10-30,SUN,Marketing,Channel,Referral,Leads,24
+2026-10-30,SUN,Marketing,Channel,SEO,Leads,180
+2026-10-30,SUN,Marketing,Program,Business,Applications,10
+2026-10-30,SUN,Marketing,Program,Business,Leads,105
+2026-10-30,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-10-30,SUN,Marketing,Program,Business Analytics,Leads,56
+2026-10-30,SUN,Marketing,Program,Data Science,Applications,8
+2026-10-30,SUN,Marketing,Program,Data Science,Leads,78
+2026-10-30,SUN,Marketing,Program,Education,Applications,3
+2026-10-30,SUN,Marketing,Program,Education,Leads,32
+2026-10-30,SUN,Marketing,Program,Finance,Applications,3
+2026-10-30,SUN,Marketing,Program,Finance,Leads,32
+2026-10-30,SUN,Marketing,Program,Management,Applications,3
+2026-10-30,SUN,Marketing,Program,Management,Leads,38
+2026-10-30,SUN,Marketing,Program,Marketing,Applications,6
+2026-10-30,SUN,Marketing,Program,Marketing,Leads,56
+2026-11-06,SIM,Admissions,Advisor,Advisor 1,Apps,9
+2026-11-06,SIM,Admissions,Advisor,Advisor 1,Contacts,152
+2026-11-06,SIM,Admissions,Advisor,Advisor 1,ECs,11
+2026-11-06,SIM,Admissions,Advisor,Advisor 1,Handles,299
+2026-11-06,SIM,Admissions,Advisor,Advisor 1,ICs,49
+2026-11-06,SIM,Admissions,Advisor,Advisor 2,Apps,14
+2026-11-06,SIM,Admissions,Advisor,Advisor 2,Contacts,157
+2026-11-06,SIM,Admissions,Advisor,Advisor 2,ECs,17
+2026-11-06,SIM,Admissions,Advisor,Advisor 2,Handles,277
+2026-11-06,SIM,Admissions,Advisor,Advisor 2,ICs,63
+2026-11-06,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-11-06,SIM,Admissions,Advisor,Advisor 3,Contacts,126
+2026-11-06,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-11-06,SIM,Admissions,Advisor,Advisor 3,Handles,273
+2026-11-06,SIM,Admissions,Advisor,Advisor 3,ICs,36
+2026-11-06,SIM,Marketing,Channel,Email,Leads,6
+2026-11-06,SIM,Marketing,Channel,Facebook / Paid Social,Leads,21
+2026-11-06,SIM,Marketing,Channel,Organic / Direct,Leads,22
+2026-11-06,SIM,Marketing,Channel,Other,Leads,4
+2026-11-06,SIM,Marketing,Channel,Referral,Leads,8
+2026-11-06,SIM,Marketing,Channel,SEO,Leads,58
+2026-11-06,SIM,Marketing,Program,Business,Applications,5
+2026-11-06,SIM,Marketing,Program,Business,Leads,60
+2026-11-06,SIM,Marketing,Program,Data Science,Applications,4
+2026-11-06,SIM,Marketing,Program,Data Science,Leads,38
+2026-11-06,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-11-06,SIM,Marketing,Program,UNSW Articulation,Leads,28
+2026-11-06,SUN,Admissions,Advisor,Beiley Chen,Apps,20
+2026-11-06,SUN,Admissions,Advisor,Beiley Chen,Contacts,263
+2026-11-06,SUN,Admissions,Advisor,Beiley Chen,ECs,26
+2026-11-06,SUN,Admissions,Advisor,Beiley Chen,Handles,541
+2026-11-06,SUN,Admissions,Advisor,Beiley Chen,ICs,89
+2026-11-06,SUN,Admissions,Advisor,Josephine Jemes,Apps,39
+2026-11-06,SUN,Admissions,Advisor,Josephine Jemes,Contacts,243
+2026-11-06,SUN,Admissions,Advisor,Josephine Jemes,ECs,44
+2026-11-06,SUN,Admissions,Advisor,Josephine Jemes,Handles,463
+2026-11-06,SUN,Admissions,Advisor,Josephine Jemes,ICs,97
+2026-11-06,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,15
+2026-11-06,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,284
+2026-11-06,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,20
+2026-11-06,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,433
+2026-11-06,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,91
+2026-11-06,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-11-06,SUN,Admissions,Advisor,Ron Lim,Contacts,257
+2026-11-06,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-11-06,SUN,Admissions,Advisor,Ron Lim,Handles,447
+2026-11-06,SUN,Admissions,Advisor,Ron Lim,ICs,125
+2026-11-06,SUN,Marketing,Channel,Email,Leads,18
+2026-11-06,SUN,Marketing,Channel,Facebook / Paid Social,Leads,86
+2026-11-06,SUN,Marketing,Channel,Organic / Direct,Leads,61
+2026-11-06,SUN,Marketing,Channel,Other,Leads,9
+2026-11-06,SUN,Marketing,Channel,Referral,Leads,29
+2026-11-06,SUN,Marketing,Channel,SEO,Leads,168
+2026-11-06,SUN,Marketing,Program,Business,Applications,10
+2026-11-06,SUN,Marketing,Program,Business,Leads,97
+2026-11-06,SUN,Marketing,Program,Business Analytics,Applications,6
+2026-11-06,SUN,Marketing,Program,Business Analytics,Leads,52
+2026-11-06,SUN,Marketing,Program,Data Science,Applications,8
+2026-11-06,SUN,Marketing,Program,Data Science,Leads,81
+2026-11-06,SUN,Marketing,Program,Education,Applications,3
+2026-11-06,SUN,Marketing,Program,Education,Leads,30
+2026-11-06,SUN,Marketing,Program,Finance,Applications,3
+2026-11-06,SUN,Marketing,Program,Finance,Leads,38
+2026-11-06,SUN,Marketing,Program,Management,Applications,3
+2026-11-06,SUN,Marketing,Program,Management,Leads,32
+2026-11-06,SUN,Marketing,Program,Marketing,Applications,6
+2026-11-06,SUN,Marketing,Program,Marketing,Leads,54
+2026-11-13,SIM,Admissions,Advisor,Advisor 1,Apps,7
+2026-11-13,SIM,Admissions,Advisor,Advisor 1,Contacts,144
+2026-11-13,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-11-13,SIM,Admissions,Advisor,Advisor 1,Handles,295
+2026-11-13,SIM,Admissions,Advisor,Advisor 1,ICs,48
+2026-11-13,SIM,Admissions,Advisor,Advisor 2,Apps,13
+2026-11-13,SIM,Admissions,Advisor,Advisor 2,Contacts,148
+2026-11-13,SIM,Admissions,Advisor,Advisor 2,ECs,16
+2026-11-13,SIM,Admissions,Advisor,Advisor 2,Handles,270
+2026-11-13,SIM,Admissions,Advisor,Advisor 2,ICs,63
+2026-11-13,SIM,Admissions,Advisor,Advisor 3,Apps,4
+2026-11-13,SIM,Admissions,Advisor,Advisor 3,Contacts,124
+2026-11-13,SIM,Admissions,Advisor,Advisor 3,ECs,6
+2026-11-13,SIM,Admissions,Advisor,Advisor 3,Handles,266
+2026-11-13,SIM,Admissions,Advisor,Advisor 3,ICs,39
+2026-11-13,SIM,Marketing,Channel,Email,Leads,5
+2026-11-13,SIM,Marketing,Channel,Facebook / Paid Social,Leads,25
+2026-11-13,SIM,Marketing,Channel,Organic / Direct,Leads,20
+2026-11-13,SIM,Marketing,Channel,Other,Leads,3
+2026-11-13,SIM,Marketing,Channel,Referral,Leads,9
+2026-11-13,SIM,Marketing,Channel,SEO,Leads,64
+2026-11-13,SIM,Marketing,Program,Business,Applications,5
+2026-11-13,SIM,Marketing,Program,Business,Leads,67
+2026-11-13,SIM,Marketing,Program,Data Science,Applications,3
+2026-11-13,SIM,Marketing,Program,Data Science,Leads,46
+2026-11-13,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-11-13,SIM,Marketing,Program,UNSW Articulation,Leads,28
+2026-11-13,SUN,Admissions,Advisor,Beiley Chen,Apps,19
+2026-11-13,SUN,Admissions,Advisor,Beiley Chen,Contacts,253
+2026-11-13,SUN,Admissions,Advisor,Beiley Chen,ECs,24
+2026-11-13,SUN,Admissions,Advisor,Beiley Chen,Handles,515
+2026-11-13,SUN,Admissions,Advisor,Beiley Chen,ICs,83
+2026-11-13,SUN,Admissions,Advisor,Josephine Jemes,Apps,45
+2026-11-13,SUN,Admissions,Advisor,Josephine Jemes,Contacts,229
+2026-11-13,SUN,Admissions,Advisor,Josephine Jemes,ECs,52
+2026-11-13,SUN,Admissions,Advisor,Josephine Jemes,Handles,454
+2026-11-13,SUN,Admissions,Advisor,Josephine Jemes,ICs,97
+2026-11-13,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,14
+2026-11-13,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,310
+2026-11-13,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,21
+2026-11-13,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,473
+2026-11-13,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,87
+2026-11-13,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-11-13,SUN,Admissions,Advisor,Ron Lim,Contacts,257
+2026-11-13,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-11-13,SUN,Admissions,Advisor,Ron Lim,Handles,490
+2026-11-13,SUN,Admissions,Advisor,Ron Lim,ICs,120
+2026-11-13,SUN,Marketing,Channel,Email,Leads,15
+2026-11-13,SUN,Marketing,Channel,Facebook / Paid Social,Leads,79
+2026-11-13,SUN,Marketing,Channel,Organic / Direct,Leads,69
+2026-11-13,SUN,Marketing,Channel,Other,Leads,11
+2026-11-13,SUN,Marketing,Channel,Referral,Leads,25
+2026-11-13,SUN,Marketing,Channel,SEO,Leads,187
+2026-11-13,SUN,Marketing,Program,Business,Applications,11
+2026-11-13,SUN,Marketing,Program,Business,Leads,113
+2026-11-13,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-11-13,SUN,Marketing,Program,Business Analytics,Leads,55
+2026-11-13,SUN,Marketing,Program,Data Science,Applications,8
+2026-11-13,SUN,Marketing,Program,Data Science,Leads,87
+2026-11-13,SUN,Marketing,Program,Education,Applications,3
+2026-11-13,SUN,Marketing,Program,Education,Leads,27
+2026-11-13,SUN,Marketing,Program,Finance,Applications,3
+2026-11-13,SUN,Marketing,Program,Finance,Leads,33
+2026-11-13,SUN,Marketing,Program,Management,Applications,3
+2026-11-13,SUN,Marketing,Program,Management,Leads,33
+2026-11-13,SUN,Marketing,Program,Marketing,Applications,6
+2026-11-13,SUN,Marketing,Program,Marketing,Leads,58
+2026-11-20,SIM,Admissions,Advisor,Advisor 1,Apps,8
+2026-11-20,SIM,Admissions,Advisor,Advisor 1,Contacts,152
+2026-11-20,SIM,Admissions,Advisor,Advisor 1,ECs,11
+2026-11-20,SIM,Admissions,Advisor,Advisor 1,Handles,309
+2026-11-20,SIM,Admissions,Advisor,Advisor 1,ICs,49
+2026-11-20,SIM,Admissions,Advisor,Advisor 2,Apps,13
+2026-11-20,SIM,Admissions,Advisor,Advisor 2,Contacts,162
+2026-11-20,SIM,Admissions,Advisor,Advisor 2,ECs,18
+2026-11-20,SIM,Admissions,Advisor,Advisor 2,Handles,291
+2026-11-20,SIM,Admissions,Advisor,Advisor 2,ICs,69
+2026-11-20,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-11-20,SIM,Admissions,Advisor,Advisor 3,Contacts,113
+2026-11-20,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-11-20,SIM,Admissions,Advisor,Advisor 3,Handles,253
+2026-11-20,SIM,Admissions,Advisor,Advisor 3,ICs,33
+2026-11-20,SIM,Marketing,Channel,Email,Leads,6
+2026-11-20,SIM,Marketing,Channel,Facebook / Paid Social,Leads,22
+2026-11-20,SIM,Marketing,Channel,Organic / Direct,Leads,21
+2026-11-20,SIM,Marketing,Channel,Other,Leads,3
+2026-11-20,SIM,Marketing,Channel,Referral,Leads,9
+2026-11-20,SIM,Marketing,Channel,SEO,Leads,72
+2026-11-20,SIM,Marketing,Program,Business,Applications,5
+2026-11-20,SIM,Marketing,Program,Business,Leads,70
+2026-11-20,SIM,Marketing,Program,Data Science,Applications,4
+2026-11-20,SIM,Marketing,Program,Data Science,Leads,45
+2026-11-20,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-11-20,SIM,Marketing,Program,UNSW Articulation,Leads,28
+2026-11-20,SUN,Admissions,Advisor,Beiley Chen,Apps,18
+2026-11-20,SUN,Admissions,Advisor,Beiley Chen,Contacts,226
+2026-11-20,SUN,Admissions,Advisor,Beiley Chen,ECs,22
+2026-11-20,SUN,Admissions,Advisor,Beiley Chen,Handles,487
+2026-11-20,SUN,Admissions,Advisor,Beiley Chen,ICs,74
+2026-11-20,SUN,Admissions,Advisor,Josephine Jemes,Apps,39
+2026-11-20,SUN,Admissions,Advisor,Josephine Jemes,Contacts,219
+2026-11-20,SUN,Admissions,Advisor,Josephine Jemes,ECs,45
+2026-11-20,SUN,Admissions,Advisor,Josephine Jemes,Handles,437
+2026-11-20,SUN,Admissions,Advisor,Josephine Jemes,ICs,87
+2026-11-20,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,15
+2026-11-20,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,323
+2026-11-20,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,20
+2026-11-20,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,467
+2026-11-20,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,90
+2026-11-20,SUN,Admissions,Advisor,Ron Lim,Apps,5
+2026-11-20,SUN,Admissions,Advisor,Ron Lim,Contacts,256
+2026-11-20,SUN,Admissions,Advisor,Ron Lim,ECs,6
+2026-11-20,SUN,Admissions,Advisor,Ron Lim,Handles,446
+2026-11-20,SUN,Admissions,Advisor,Ron Lim,ICs,109
+2026-11-20,SUN,Marketing,Channel,Email,Leads,18
+2026-11-20,SUN,Marketing,Channel,Facebook / Paid Social,Leads,83
+2026-11-20,SUN,Marketing,Channel,Organic / Direct,Leads,62
+2026-11-20,SUN,Marketing,Channel,Other,Leads,11
+2026-11-20,SUN,Marketing,Channel,Referral,Leads,23
+2026-11-20,SUN,Marketing,Channel,SEO,Leads,200
+2026-11-20,SUN,Marketing,Program,Business,Applications,10
+2026-11-20,SUN,Marketing,Program,Business,Leads,115
+2026-11-20,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-11-20,SUN,Marketing,Program,Business Analytics,Leads,49
+2026-11-20,SUN,Marketing,Program,Data Science,Applications,8
+2026-11-20,SUN,Marketing,Program,Data Science,Leads,83
+2026-11-20,SUN,Marketing,Program,Education,Applications,3
+2026-11-20,SUN,Marketing,Program,Education,Leads,33
+2026-11-20,SUN,Marketing,Program,Finance,Applications,3
+2026-11-20,SUN,Marketing,Program,Finance,Leads,36
+2026-11-20,SUN,Marketing,Program,Management,Applications,3
+2026-11-20,SUN,Marketing,Program,Management,Leads,33
+2026-11-20,SUN,Marketing,Program,Marketing,Applications,5
+2026-11-20,SUN,Marketing,Program,Marketing,Leads,57
+2026-11-27,SIM,Admissions,Advisor,Advisor 1,Apps,7
+2026-11-27,SIM,Admissions,Advisor,Advisor 1,Contacts,149
+2026-11-27,SIM,Admissions,Advisor,Advisor 1,ECs,10
+2026-11-27,SIM,Admissions,Advisor,Advisor 1,Handles,300
+2026-11-27,SIM,Admissions,Advisor,Advisor 1,ICs,49
+2026-11-27,SIM,Admissions,Advisor,Advisor 2,Apps,10
+2026-11-27,SIM,Admissions,Advisor,Advisor 2,Contacts,138
+2026-11-27,SIM,Admissions,Advisor,Advisor 2,ECs,13
+2026-11-27,SIM,Admissions,Advisor,Advisor 2,Handles,263
+2026-11-27,SIM,Admissions,Advisor,Advisor 2,ICs,55
+2026-11-27,SIM,Admissions,Advisor,Advisor 3,Apps,3
+2026-11-27,SIM,Admissions,Advisor,Advisor 3,Contacts,116
+2026-11-27,SIM,Admissions,Advisor,Advisor 3,ECs,5
+2026-11-27,SIM,Admissions,Advisor,Advisor 3,Handles,259
+2026-11-27,SIM,Admissions,Advisor,Advisor 3,ICs,34
+2026-11-27,SIM,Marketing,Channel,Email,Leads,5
+2026-11-27,SIM,Marketing,Channel,Facebook / Paid Social,Leads,24
+2026-11-27,SIM,Marketing,Channel,Organic / Direct,Leads,19
+2026-11-27,SIM,Marketing,Channel,Other,Leads,4
+2026-11-27,SIM,Marketing,Channel,Referral,Leads,9
+2026-11-27,SIM,Marketing,Channel,SEO,Leads,58
+2026-11-27,SIM,Marketing,Program,Business,Applications,6
+2026-11-27,SIM,Marketing,Program,Business,Leads,62
+2026-11-27,SIM,Marketing,Program,Data Science,Applications,3
+2026-11-27,SIM,Marketing,Program,Data Science,Leads,41
+2026-11-27,SIM,Marketing,Program,UNSW Articulation,Applications,2
+2026-11-27,SIM,Marketing,Program,UNSW Articulation,Leads,29
+2026-11-27,SUN,Admissions,Advisor,Beiley Chen,Apps,22
+2026-11-27,SUN,Admissions,Advisor,Beiley Chen,Contacts,256
+2026-11-27,SUN,Admissions,Advisor,Beiley Chen,ECs,31
+2026-11-27,SUN,Admissions,Advisor,Beiley Chen,Handles,531
+2026-11-27,SUN,Admissions,Advisor,Beiley Chen,ICs,96
+2026-11-27,SUN,Admissions,Advisor,Josephine Jemes,Apps,41
+2026-11-27,SUN,Admissions,Advisor,Josephine Jemes,Contacts,228
+2026-11-27,SUN,Admissions,Advisor,Josephine Jemes,ECs,43
+2026-11-27,SUN,Admissions,Advisor,Josephine Jemes,Handles,450
+2026-11-27,SUN,Admissions,Advisor,Josephine Jemes,ICs,86
+2026-11-27,SUN,Admissions,Advisor,Nadia Ali Yasak,Apps,14
+2026-11-27,SUN,Admissions,Advisor,Nadia Ali Yasak,Contacts,320
+2026-11-27,SUN,Admissions,Advisor,Nadia Ali Yasak,ECs,22
+2026-11-27,SUN,Admissions,Advisor,Nadia Ali Yasak,Handles,483
+2026-11-27,SUN,Admissions,Advisor,Nadia Ali Yasak,ICs,93
+2026-11-27,SUN,Admissions,Advisor,Ron Lim,Apps,4
+2026-11-27,SUN,Admissions,Advisor,Ron Lim,Contacts,249
+2026-11-27,SUN,Admissions,Advisor,Ron Lim,ECs,5
+2026-11-27,SUN,Admissions,Advisor,Ron Lim,Handles,453
+2026-11-27,SUN,Admissions,Advisor,Ron Lim,ICs,105
+2026-11-27,SUN,Marketing,Channel,Email,Leads,17
+2026-11-27,SUN,Marketing,Channel,Facebook / Paid Social,Leads,75
+2026-11-27,SUN,Marketing,Channel,Organic / Direct,Leads,65
+2026-11-27,SUN,Marketing,Channel,Other,Leads,8
+2026-11-27,SUN,Marketing,Channel,Referral,Leads,22
+2026-11-27,SUN,Marketing,Channel,SEO,Leads,166
+2026-11-27,SUN,Marketing,Program,Business,Applications,11
+2026-11-27,SUN,Marketing,Program,Business,Leads,102
+2026-11-27,SUN,Marketing,Program,Business Analytics,Applications,5
+2026-11-27,SUN,Marketing,Program,Business Analytics,Leads,52
+2026-11-27,SUN,Marketing,Program,Data Science,Applications,10
+2026-11-27,SUN,Marketing,Program,Data Science,Leads,84
+2026-11-27,SUN,Marketing,Program,Education,Applications,3
+2026-11-27,SUN,Marketing,Program,Education,Leads,32
+2026-11-27,SUN,Marketing,Program,Finance,Applications,3
+2026-11-27,SUN,Marketing,Program,Finance,Leads,36
+2026-11-27,SUN,Marketing,Program,Management,Applications,3
+2026-11-27,SUN,Marketing,Program,Management,Leads,38
+2026-11-27,SUN,Marketing,Program,Marketing,Applications,6
+2026-11-27,SUN,Marketing,Program,Marketing,Leads,57
