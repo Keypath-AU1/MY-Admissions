@@ -32,6 +32,9 @@ a{color:inherit;}
 .ls-card:hover{border-color:var(--cyan);background:rgba(0,174,239,.1);}
 .ls-card.active{border-color:var(--cyan);background:rgba(0,174,239,.16);}
 .ls-card h4{margin:0 0 4px;font-size:15px;}
+.logo-badge{display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:10.5px;letter-spacing:1px;border-radius:6px;padding:3px 7px;margin-right:6px;vertical-align:middle;}
+.logo-unsw{background:#000;color:var(--unsw);}
+.logo-sim{background:var(--red);color:#fff;}
 .ls-card p{margin:0;font-size:12.5px;color:#c3c7de;line-height:1.4;}
 .prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .prog-card{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:12px;padding:14px;cursor:pointer;transition:.15s;text-align:left;}
@@ -39,6 +42,7 @@ a{color:inherit;}
 .prog-card.active{border-color:var(--yellow);background:rgba(245,193,35,.14);}
 .prog-card .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1px;background:var(--navy-t);color:#fff;padding:2px 7px;border-radius:20px;margin-bottom:6px;}
 .prog-card h5{margin:0 0 4px;font-size:13.5px;line-height:1.3;}
+.prog-icon{font-size:22px;margin-bottom:6px;line-height:1;}
 .prog-card .meta{font-size:11px;color:#b7bcd6;}
 .sel-start{display:block;width:100%;max-width:320px;margin:30px auto 0;background:var(--yellow);color:var(--navy);border:none;border-radius:10px;padding:15px;font-size:16px;font-weight:800;cursor:pointer;text-align:center;}
 .sel-start:disabled{opacity:.35;cursor:not-allowed;}
@@ -181,11 +185,11 @@ a{color:inherit;}
       <div class="sel-label">STEP 1 — WHERE DID THIS LEAD COME FROM?</div>
       <div class="ls-grid">
         <div class="ls-card" data-ls="unsw" onclick="selectLS('unsw')">
-          <h4>🎯 SIM × UNSW ad</h4>
+          <h4><span class="logo-badge logo-unsw">UNSW</span> SIM × UNSW ad</h4>
           <p>Prospect clicked an ad that already mentioned the UNSW articulation / Masters pathway. They are primed for the UNSW outcome — open with UNSW, position SIM as the credible on-ramp.</p>
         </div>
         <div class="ls-card" data-ls="sim" onclick="selectLS('sim')">
-          <h4>🏫 SIM-only ad</h4>
+          <h4><span class="logo-badge logo-sim">SIM</span> SIM-only ad</h4>
           <p>Prospect responded to a SIM Online ad with no UNSW mention. Build value in the SIM programme first — the UNSW articulation is introduced later as an upsell.</p>
         </div>
       </div>
@@ -339,6 +343,7 @@ a{color:inherit;}
           <div class="qb"><div class="ql">Q</div><div class="qt">What's the one skill area you feel is holding you back the most right now?</div></div>
           <div class="hint">→ Link their answer to programme learning outcomes:</div>
           <div id="gapMap"></div>
+          <div class="note">Skill-gap linkage auto-matches to whichever programme is selected — now includes technical/security, marketing, people/leadership, analytics, data science, IT leadership, and general management.</div>
         </div>
       </div>
     </section>
@@ -347,7 +352,7 @@ a{color:inherit;}
 
     <!-- S3 -->
     <section class="sec" id="s3">
-      <div class="sec-hdr"><div class="sec-num">3</div><div><h2>Programme Alignment — <span class="prog-name-slot" data-slot="name"></span></h2><span class="timing">5–7 minutes</span></div></div>
+      <div class="sec-hdr"><div class="sec-num">3</div><div><h2>Programme Alignment — <span class="prog-name-slot" data-slot="short"></span></h2><span class="timing">5–7 minutes</span></div></div>
 
       <div class="card">
         <div class="tog" onclick="tSub(this)"><h3>Programme overview</h3><span class="chv">▾</span></div>
@@ -535,37 +540,43 @@ a{color:inherit;}
 
 <script>
 const PROGRAMMES = [
-  {id:'cyber', short:'Cybersecurity Management', name:'Graduate Certificate in Cybersecurity Management', units:4, months:8,
+  {id:'cyber', short:'Cybersecurity Management', name:'Graduate Certificate in Cybersecurity Management', units:4, months:8, icon:'🔐',
     overview:"A focused postgraduate qualification addressing one of Singapore's most in-demand skill areas — cyber and information security governance, risk and management.",
     entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
     usp:["Targets a persistent, high-demand skills gap in the Singapore market","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
     unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of IT / Master of Cyber Security)",
     gap:"Technical / security skills"},
-  {id:'digmkt', short:'Digital Marketing', name:'Graduate Certificate in Digital Marketing', units:4, months:8,
+  {id:'digmkt', short:'Digital Marketing', name:'Graduate Certificate in Digital Marketing', units:4, months:8, icon:'📣',
     overview:"A focused postgraduate qualification covering modern digital marketing strategy, channels, and analytics.",
     entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
     usp:["Practical, channel-relevant curriculum for a fast-moving discipline","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
     unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of Marketing / Master of Commerce)",
     gap:"Marketing / commercial skills"},
-  {id:'hr', short:'Human Resource Management', name:'Graduate Certificate in Human Resource Management', units:4, months:8,
+  {id:'hr', short:'Human Resource Management', name:'Graduate Certificate in Human Resource Management', units:4, months:8, icon:'🤝',
     overview:"A focused postgraduate qualification in modern HR practice — talent, performance, and organisational management.",
     entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
     usp:["Directly relevant for HR practitioners moving into strategic / leadership HR roles","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
     unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of HR Management / Master of Commerce)",
     gap:"People / leadership skills"},
-  {id:'analytics', short:'Analytics', name:'Graduate Certificate in Analytics', units:4, months:8,
+  {id:'analytics', short:'Analytics', name:'Graduate Certificate in Analytics', units:4, months:8, icon:'📊',
     overview:"A focused postgraduate qualification building practical data and business analytics capability.",
     entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway / quantitative-background expectations for non-degree holders.",
     usp:["Addresses one of the fastest-growing skill demands across every industry","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
     unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of Data Science &amp; Decisions / Master of Business Analytics)",
     gap:"Data / analytical skills"},
-  {id:'itm', short:'Information Technology Management', name:'Graduate Certificate in Information Technology Management', units:4, months:8,
+  {id:'datasci', short:'Data Science', name:'Graduate Certificate in Data Science', units:4, months:8, icon:'🧠',
+    overview:"A focused postgraduate qualification building hands-on data science capability — statistical methods, machine learning fundamentals, and applied data-driven problem solving.",
+    entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant quantitative-background expectations / work-experience pathway for non-degree holders.",
+    usp:["Covers core data science methods distinct from the broader Analytics programme's business-analytics focus","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
+    unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of Data Science &amp; Decisions / Master of Data Science)",
+    gap:"Data science / technical modelling skills"},
+  {id:'itm', short:'Information Technology Management', name:'Graduate Certificate in Information Technology Management', units:4, months:8, icon:'💻',
     overview:"A focused postgraduate qualification in IT strategy, governance, and management for professionals moving into IT leadership.",
     entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
     usp:["Suited to technical professionals moving into IT management/leadership","Delivered 100% online — study around a full-time role","Stackable toward the UNSW Master's articulation pathway"],
     unswTarget:"CONFIRM UNSW MASTERS MAPPING (e.g. Master of IT / Master of IT Management)",
     gap:"IT leadership / management skills"},
-  {id:'busmgmt', short:'Business Management', name:'Graduate Diploma in Business Management', units:8, months:16,
+  {id:'busmgmt', short:'Business Management', name:'Graduate Diploma in Business Management', units:8, months:16, icon:'💼',
     overview:"A broader postgraduate qualification (8 units / 16 months) covering core business management disciplines — ideal for those seeking a more comprehensive step toward a full Master's.",
     entry:"Bachelor's degree (any discipline) from a recognised institution. <span class=\"confirm\">CONFIRM</span> relevant work-experience pathway for non-degree holders.",
     usp:["Broader curriculum than the 4-unit Graduate Certificates — a bigger step toward the UNSW Master's","Delivered 100% online — study around a full-time role","Strong fit for prospects who already know they want the full Master's outcome"],
@@ -579,9 +590,8 @@ function renderProgGrid(){
   const grid = document.getElementById('progGrid');
   grid.innerHTML = PROGRAMMES.map(p => `
     <div class="prog-card" data-prog="${p.id}" onclick="selectProg('${p.id}')">
-      <span class="tag">${p.units} UNITS · ${p.months} MO</span>
-      <h5>${p.name}</h5>
-      <div class="meta">E-Learning · Graduate ${p.units===8?'Diploma':'Certificate'}</div>
+      <div class="prog-icon">${p.icon}</div>
+      <h5>${p.short}</h5>
     </div>`).join('');
 }
 renderProgGrid();
@@ -629,6 +639,7 @@ function startCall(){
     "Marketing / commercial skills":"Their gap maps directly to the digital marketing strategy and channel modules in this programme.",
     "People / leadership skills":"Their gap maps directly to the talent/performance/organisational management modules in this programme.",
     "Data / analytical skills":"Their gap maps directly to the applied analytics and data-driven decision-making modules in this programme.",
+    "Data science / technical modelling skills":"Their gap maps directly to the statistical methods, machine learning fundamentals, and applied modelling content in this programme.",
     "IT leadership / management skills":"Their gap maps directly to the IT governance and strategy modules in this programme.",
     "General management / leadership skills":"Their gap maps across the broader business management curriculum — this is the widest-coverage of the six programmes."
   };
