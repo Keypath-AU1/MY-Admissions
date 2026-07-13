@@ -1,498 +1,124 @@
-Account,Program,Short Name (Program) (Program),Status Reason,Lead Channel,Lead Source,Created On,Contacted Date,Interview Completed Date,Evaluation Completed Date,File Completed Date
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Referral,None,2026-07-03 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,SEO,None,2026-06-26 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Facebook,2026-07-18 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,Google,2026-07-18 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,08 - File Complete,Referral,None,2026-06-28 00:00:00,2026-06-28 00:00:00,2026-07-02 00:00:00,2026-07-02 00:00:00,2026-07-02 00:00:00
-Sunway University - Online,Master of Marketing,MMKTG,08 - File Complete,PPC,Facebook,2026-07-19 00:00:00,2026-07-21 00:00:00,2026-07-25 00:00:00,2026-07-27 00:00:00,2026-07-27 00:00:00
-Sunway University - Online,Master of Data Science,MDS,05 - Interview Completed,PPC,Facebook,2026-07-25 00:00:00,2026-07-25 00:00:00,2026-07-27 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,LinkedIn,2026-07-10 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,PPC,LinkedIn,2026-06-24 00:00:00,2026-06-25 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,Google,2026-07-17 00:00:00,2026-07-18 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,Creative,None,2026-06-17 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Google,2026-07-11 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,Referral,None,2026-07-19 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,01 - New,PPC,Google,2026-07-24 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,08 - File Complete,PPC,LinkedIn,2026-07-21 00:00:00,2026-07-22 00:00:00,2026-07-25 00:00:00,2026-07-27 00:00:00,2026-07-28 00:00:00
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,SEO,None,2026-06-24 00:00:00,2026-06-24 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Traditional,None,2026-06-22 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,05 - Interview Completed,Creative,None,2026-06-29 00:00:00,2026-07-02 00:00:00,2026-07-04 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,SEO,None,2026-07-19 00:00:00,2026-07-21 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,Referral,None,2026-06-15 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,PPC,Google,2026-06-30 00:00:00,2026-07-02 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,None,2026-07-14 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,LinkedIn,2026-07-19 00:00:00,2026-07-21 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,Referral,None,2026-07-05 00:00:00,2026-07-06 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,Facebook,2026-07-06 00:00:00,2026-07-09 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,Creative,None,2026-07-20 00:00:00,2026-07-22 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,LinkedIn,2026-07-21 00:00:00,2026-07-22 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,PPC,Google,2026-07-17 00:00:00,2026-07-18 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Google,2026-07-06 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,SEO,None,2026-06-22 00:00:00,2026-06-25 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,None,2026-07-08 00:00:00,2026-07-08 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,Facebook,2026-07-13 00:00:00,2026-07-14 00:00:00,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,SEO,None,2026-07-09 00:00:00,2026-07-10 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,None,2026-06-24 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,None,2026-07-03 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,Facebook,2026-06-22 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,Facebook,2026-07-22 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,05 - Interview Completed,PPC,None,2026-07-15 00:00:00,2026-07-15 00:00:00,2026-07-19 00:00:00,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,08 - File Complete,SEO,None,2026-06-18 00:00:00,2026-06-19 00:00:00,2026-06-19 00:00:00,2026-06-19 00:00:00,2026-06-21 00:00:00
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,PPC,Google,2026-07-09 00:00:00,2026-07-12 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,LinkedIn,2026-06-22 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,Facebook,2026-06-22 00:00:00,2026-06-22 00:00:00,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,Referral,None,2026-07-02 00:00:00,2026-07-05 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,03 - Contacted,SEO,None,2026-07-16 00:00:00,2026-07-18 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,None,2026-07-05 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,Creative,None,2026-07-20 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,SEO,None,2026-07-06 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,Facebook,2026-07-24 00:00:00,2026-07-25 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,SEO,None,2026-07-22 00:00:00,2026-07-22 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,SEO,None,2026-06-25 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,05 - Interview Completed,PPC,Facebook,2026-06-28 00:00:00,2026-06-29 00:00:00,2026-06-29 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,None,2026-06-26 00:00:00,2026-06-27 00:00:00,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,PPC,Google,2026-06-17 00:00:00,2026-06-19 00:00:00,2026-06-23 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Referral,None,2026-07-24 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,SEO,None,2026-06-29 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,Facebook,2026-06-17 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,PPC,None,2026-07-21 00:00:00,2026-07-23 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,SEO,None,2026-06-28 00:00:00,2026-07-01 00:00:00,,,
-Sunway University - Online,Master of Education,MED,01 - New,SEO,None,2026-06-30 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,PPC,None,2026-07-06 00:00:00,2026-07-07 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Referral,None,2026-07-05 00:00:00,2026-07-07 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,Google,2026-06-18 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Google,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,None,2026-06-23 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,05 - Interview Completed,PPC,LinkedIn,2026-07-23 00:00:00,2026-07-26 00:00:00,2026-07-28 00:00:00,,
-Sunway University - Online,Master of Data Science,MDS,08 - File Complete,PPC,Google,2026-07-05 00:00:00,2026-07-07 00:00:00,2026-07-07 00:00:00,2026-07-10 00:00:00,2026-07-13 00:00:00
-Sunway University - Online,Master of Data Science,MDS,01 - New,Referral,None,2026-06-21 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,PPC,LinkedIn,2026-07-26 00:00:00,2026-07-26 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,PPC,Facebook,2026-07-10 00:00:00,2026-07-13 00:00:00,2026-07-16 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,Facebook,2026-06-26 00:00:00,2026-06-26 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,Referral,None,2026-06-29 00:00:00,2026-06-30 00:00:00,2026-07-03 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,Referral,None,2026-06-27 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,SEO,None,2026-07-10 00:00:00,2026-07-13 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,Facebook,2026-07-09 00:00:00,2026-07-11 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,Referral,None,2026-06-24 00:00:00,2026-06-27 00:00:00,2026-06-28 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,PPC,Google,2026-07-02 00:00:00,2026-07-04 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Facebook,2026-07-13 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,01 - New,Creative,None,2026-07-16 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Creative,None,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,SEO,None,2026-06-16 00:00:00,2026-06-19 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,Referral,None,2026-07-14 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,PPC,LinkedIn,2026-07-19 00:00:00,2026-07-20 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,SEO,None,2026-07-03 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,PPC,LinkedIn,2026-07-25 00:00:00,2026-07-25 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,SEO,None,2026-06-28 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,None,2026-06-30 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,LinkedIn,2026-07-10 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,Google,2026-06-16 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,08 - File Complete,SEO,None,2026-06-23 00:00:00,2026-06-24 00:00:00,2026-06-27 00:00:00,2026-06-27 00:00:00,2026-06-30 00:00:00
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,Referral,None,2026-06-24 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Facebook,2026-06-21 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,Google,2026-07-08 00:00:00,2026-07-08 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,PPC,Google,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Traditional,None,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,08 - File Complete,PPC,Google,2026-06-21 00:00:00,2026-06-23 00:00:00,2026-06-27 00:00:00,2026-06-30 00:00:00,2026-07-02 00:00:00
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,Creative,None,2026-07-07 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,SEO,None,2026-07-24 00:00:00,2026-07-26 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,PPC,Google,2026-07-22 00:00:00,2026-07-23 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,01 - New,PPC,Google,2026-06-25 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,SEO,None,2026-07-09 00:00:00,2026-07-10 00:00:00,2026-07-10 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,Google,2026-06-16 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,Google,2026-06-25 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,PPC,Google,2026-06-23 00:00:00,2026-06-23 00:00:00,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,None,2026-07-11 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,Referral,None,2026-07-07 00:00:00,2026-07-08 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,SEO,None,2026-07-11 00:00:00,2026-07-11 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,Facebook,2026-07-04 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,PPC,Facebook,2026-07-20 00:00:00,2026-07-21 00:00:00,2026-07-22 00:00:00,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,Traditional,None,2026-07-15 00:00:00,2026-07-16 00:00:00,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,PPC,LinkedIn,2026-07-12 00:00:00,2026-07-14 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,Facebook,2026-07-18 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,SEO,None,2026-07-06 00:00:00,2026-07-07 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,LinkedIn,2026-07-21 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,01 - New,PPC,Facebook,2026-06-20 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,08 - File Complete,PPC,Facebook,2026-07-09 00:00:00,2026-07-09 00:00:00,2026-07-11 00:00:00,2026-07-14 00:00:00,2026-07-15 00:00:00
-Sunway University - Online,Master of Education,MED,01 - New,PPC,Google,2026-06-18 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,01 - New,SEO,None,2026-07-03 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-06-23 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,05 - Interview Completed,PPC,Facebook,2026-06-22 00:00:00,2026-06-23 00:00:00,2026-06-23 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Google,2026-07-23 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,None,2026-06-28 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,LinkedIn,2026-06-27 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,01 - New,Creative,None,2026-06-30 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,01 - New,SEO,None,2026-06-17 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Google,2026-06-22 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,Creative,None,2026-07-14 00:00:00,2026-07-16 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,Referral,None,2026-07-09 00:00:00,2026-07-11 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,LinkedIn,2026-06-17 00:00:00,2026-06-20 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,03 - Contacted,PPC,Facebook,2026-06-26 00:00:00,2026-06-26 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,SEO,None,2026-07-07 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,SEO,None,2026-06-27 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,SEO,None,2026-07-21 00:00:00,2026-07-24 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,05 - Interview Completed,PPC,None,2026-06-21 00:00:00,2026-06-21 00:00:00,2026-06-25 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,SEO,None,2026-06-25 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,03 - Contacted,SEO,None,2026-06-22 00:00:00,2026-06-25 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,08 - File Complete,PPC,Google,2026-06-18 00:00:00,2026-06-18 00:00:00,2026-06-19 00:00:00,2026-06-21 00:00:00,2026-06-22 00:00:00
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,None,2026-07-10 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,PPC,Google,2026-07-06 00:00:00,2026-07-06 00:00:00,2026-07-09 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,SEO,None,2026-07-25 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,PPC,LinkedIn,2026-06-17 00:00:00,2026-06-20 00:00:00,2026-06-23 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Creative,None,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,LinkedIn,2026-07-20 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,None,2026-07-04 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,Google,2026-06-30 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,03 - Contacted,Creative,None,2026-07-22 00:00:00,2026-07-24 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Google,2026-07-18 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Referral,None,2026-07-22 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,Google,2026-07-20 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,SEO,None,2026-07-07 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,08 - File Complete,PPC,Google,2026-06-19 00:00:00,2026-06-20 00:00:00,2026-06-21 00:00:00,2026-06-21 00:00:00,2026-06-24 00:00:00
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,Traditional,None,2026-07-03 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,None,2026-06-21 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,Facebook,2026-07-04 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,03 - Contacted,SEO,None,2026-07-07 00:00:00,2026-07-09 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,SEO,None,2026-07-22 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Traditional,None,2026-07-20 00:00:00,2026-07-22 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,05 - Interview Completed,PPC,LinkedIn,2026-07-10 00:00:00,2026-07-11 00:00:00,2026-07-15 00:00:00,,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,Traditional,None,2026-06-27 00:00:00,2026-06-29 00:00:00,2026-07-01 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,Traditional,None,2026-07-20 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,03 - Contacted,PPC,LinkedIn,2026-07-24 00:00:00,2026-07-24 00:00:00,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,Traditional,None,2026-07-17 00:00:00,2026-07-20 00:00:00,2026-07-24 00:00:00,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Referral,None,2026-06-16 00:00:00,2026-06-17 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,06 - Pending Application,PPC,None,2026-07-21 00:00:00,2026-07-23 00:00:00,2026-07-25 00:00:00,2026-07-28 00:00:00,
-Sunway University - Online,Master of Marketing,MMKTG,05 - Interview Completed,PPC,None,2026-07-12 00:00:00,2026-07-13 00:00:00,2026-07-13 00:00:00,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,SEO,None,2026-06-30 00:00:00,2026-07-03 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,05 - Interview Completed,PPC,Facebook,2026-07-14 00:00:00,2026-07-16 00:00:00,2026-07-19 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,Facebook,2026-06-16 00:00:00,2026-06-16 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,PPC,Google,2026-07-11 00:00:00,2026-07-14 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,Referral,None,2026-06-20 00:00:00,2026-06-20 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,Creative,None,2026-06-28 00:00:00,2026-07-01 00:00:00,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,PPC,Google,2026-07-16 00:00:00,2026-07-17 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,Referral,None,2026-06-26 00:00:00,2026-06-27 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,SEO,None,2026-06-27 00:00:00,2026-06-29 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,01 - New,SEO,None,2026-06-19 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,03 - Contacted,Referral,None,2026-07-07 00:00:00,2026-07-09 00:00:00,,,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,PPC,None,2026-06-20 00:00:00,2026-06-21 00:00:00,2026-06-24 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Google,2026-07-01 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,PPC,Facebook,2026-06-26 00:00:00,2026-06-28 00:00:00,2026-07-02 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,SEO,None,2026-07-10 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,05 - Interview Completed,Traditional,None,2026-07-01 00:00:00,2026-07-03 00:00:00,2026-07-05 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,08 - File Complete,SEO,None,2026-06-16 00:00:00,2026-06-18 00:00:00,2026-06-19 00:00:00,2026-06-21 00:00:00,2026-06-21 00:00:00
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,PPC,Facebook,2026-07-10 00:00:00,2026-07-11 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,08 - File Complete,SEO,None,2026-06-15 00:00:00,2026-06-18 00:00:00,2026-06-21 00:00:00,2026-06-21 00:00:00,2026-06-24 00:00:00
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,LinkedIn,2026-06-28 00:00:00,2026-07-01 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,SEO,None,2026-06-24 00:00:00,2026-06-24 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,LinkedIn,2026-06-21 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,Facebook,2026-06-26 00:00:00,2026-06-27 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-07-26 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,None,2026-06-23 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,08 - File Complete,Referral,None,2026-07-18 00:00:00,2026-07-20 00:00:00,2026-07-22 00:00:00,2026-07-25 00:00:00,2026-07-28 00:00:00
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,None,2026-07-11 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,PPC,Facebook,2026-06-16 00:00:00,2026-06-18 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,01 - New,PPC,Facebook,2026-07-15 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,None,2026-06-29 00:00:00,2026-06-29 00:00:00,,,
-Sunway University - Online,Master of Education,MED,01 - New,Creative,None,2026-06-29 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,PPC,LinkedIn,2026-07-06 00:00:00,2026-07-06 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,05 - Interview Completed,PPC,Google,2026-07-01 00:00:00,2026-07-04 00:00:00,2026-07-08 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,None,2026-06-22 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,SEO,None,2026-07-16 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,None,2026-06-23 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,01 - New,PPC,LinkedIn,2026-07-13 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Google,2026-06-24 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,Referral,None,2026-07-15 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,SEO,None,2026-06-30 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,LinkedIn,2026-06-18 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,LinkedIn,2026-07-07 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,Creative,None,2026-06-25 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,Facebook,2026-07-08 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,Google,2026-06-30 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,LinkedIn,2026-07-20 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,05 - Interview Completed,Traditional,None,2026-06-18 00:00:00,2026-06-20 00:00:00,2026-06-23 00:00:00,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,LinkedIn,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,Creative,None,2026-07-17 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,03 - Contacted,PPC,Google,2026-07-01 00:00:00,2026-07-01 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,Referral,None,2026-07-17 00:00:00,2026-07-17 00:00:00,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,PPC,None,2026-07-26 00:00:00,2026-07-27 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Referral,None,2026-06-25 00:00:00,2026-06-27 00:00:00,,,
-Sunway University - Online,Master of Education,MED,01 - New,SEO,None,2026-07-26 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Referral,None,2026-07-06 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,Google,2026-06-17 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,None,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,Referral,None,2026-07-18 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,None,2026-06-22 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,SEO,None,2026-07-02 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,05 - Interview Completed,SEO,None,2026-07-24 00:00:00,2026-07-27 00:00:00,2026-07-28 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Creative,None,2026-07-08 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Referral,None,2026-07-23 00:00:00,2026-07-24 00:00:00,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,None,2026-06-19 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-07-22 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,Google,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,Google,2026-07-26 00:00:00,2026-07-29 00:00:00,,,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,PPC,LinkedIn,2026-06-29 00:00:00,2026-06-29 00:00:00,2026-07-03 00:00:00,,
-Sunway University - Online,Master of Business Analytics,MBANAL,05 - Interview Completed,Creative,None,2026-06-18 00:00:00,2026-06-19 00:00:00,2026-06-21 00:00:00,,
-Sunway University - Online,Master of Data Science,MDS,05 - Interview Completed,PPC,None,2026-07-14 00:00:00,2026-07-14 00:00:00,2026-07-14 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,05 - Interview Completed,PPC,LinkedIn,2026-06-16 00:00:00,2026-06-18 00:00:00,2026-06-19 00:00:00,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,Google,2026-07-24 00:00:00,2026-07-24 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,Referral,None,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,LinkedIn,2026-07-01 00:00:00,2026-07-04 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,03 - Contacted,Creative,None,2026-07-16 00:00:00,2026-07-16 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,None,2026-07-10 00:00:00,2026-07-10 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,SEO,None,2026-07-09 00:00:00,2026-07-11 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,05 - Interview Completed,PPC,None,2026-06-27 00:00:00,2026-06-29 00:00:00,2026-07-01 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,LinkedIn,2026-06-24 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Creative,None,2026-07-25 00:00:00,2026-07-25 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Referral,None,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,Referral,None,2026-07-15 00:00:00,2026-07-16 00:00:00,2026-07-17 00:00:00,,
-Sunway University - Online,Master of Management,MM,01 - New,SEO,None,2026-06-28 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Referral,None,2026-07-11 00:00:00,2026-07-14 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,SEO,None,2026-06-22 00:00:00,2026-06-24 00:00:00,,,
-Sunway University - Online,Master of Education,MED,06 - Pending Application,Creative,None,2026-07-12 00:00:00,2026-07-14 00:00:00,2026-07-15 00:00:00,2026-07-18 00:00:00,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,PPC,Google,2026-06-27 00:00:00,2026-06-27 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,03 - Contacted,PPC,None,2026-07-19 00:00:00,2026-07-21 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,08 - File Complete,PPC,Google,2026-07-04 00:00:00,2026-07-07 00:00:00,2026-07-11 00:00:00,2026-07-12 00:00:00,2026-07-15 00:00:00
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,SEO,None,2026-07-03 00:00:00,2026-07-03 00:00:00,,,
-Sunway University - Online,Master of Management,MM,01 - New,SEO,None,2026-06-19 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,Facebook,2026-07-24 00:00:00,2026-07-25 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,PPC,None,2026-06-16 00:00:00,2026-06-18 00:00:00,2026-06-21 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,Facebook,2026-06-15 00:00:00,2026-06-16 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,SEO,None,2026-07-10 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,SEO,None,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,Google,2026-07-03 00:00:00,2026-07-05 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,Referral,None,2026-07-06 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,08 - File Complete,PPC,Facebook,2026-06-20 00:00:00,2026-06-21 00:00:00,2026-06-21 00:00:00,2026-06-23 00:00:00,2026-06-24 00:00:00
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,Facebook,2026-07-22 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,None,2026-06-22 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,Traditional,None,2026-06-28 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,Traditional,None,2026-06-26 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,PPC,LinkedIn,2026-06-30 00:00:00,2026-06-30 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Referral,None,2026-06-17 00:00:00,2026-06-18 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-06-17 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,PPC,Facebook,2026-07-19 00:00:00,2026-07-22 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,None,2026-07-11 00:00:00,2026-07-14 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,LinkedIn,2026-07-17 00:00:00,2026-07-19 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,Facebook,2026-07-04 00:00:00,2026-07-06 00:00:00,,,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,PPC,Facebook,2026-07-10 00:00:00,2026-07-11 00:00:00,2026-07-12 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,LinkedIn,2026-07-18 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,01 - New,PPC,Facebook,2026-07-15 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,Creative,None,2026-07-03 00:00:00,2026-07-04 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,PPC,LinkedIn,2026-07-10 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,PPC,Facebook,2026-06-18 00:00:00,2026-06-21 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,Referral,None,2026-07-23 00:00:00,2026-07-23 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,SEO,None,2026-07-15 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Referral,None,2026-07-09 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,Facebook,2026-07-16 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,PPC,None,2026-06-19 00:00:00,2026-06-22 00:00:00,2026-06-25 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,LinkedIn,2026-06-28 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,PPC,Google,2026-07-15 00:00:00,2026-07-15 00:00:00,,,
-Sunway University - Online,Master of Management,MM,01 - New,SEO,None,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,Facebook,2026-07-02 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Facebook,2026-07-01 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,Google,2026-06-28 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,Creative,None,2026-07-08 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,SEO,None,2026-07-13 00:00:00,2026-07-14 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,LinkedIn,2026-06-19 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Referral,None,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,Facebook,2026-07-08 00:00:00,2026-07-08 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,PPC,LinkedIn,2026-07-06 00:00:00,2026-07-07 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,Facebook,2026-06-17 00:00:00,2026-06-19 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,06 - Pending Application,Creative,None,2026-07-21 00:00:00,2026-07-22 00:00:00,2026-07-24 00:00:00,2026-07-26 00:00:00,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,PPC,LinkedIn,2026-07-26 00:00:00,2026-07-27 00:00:00,2026-07-27 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,03 - Contacted,Referral,None,2026-07-14 00:00:00,2026-07-15 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,PPC,Facebook,2026-06-18 00:00:00,2026-06-21 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,05 - Interview Completed,PPC,Google,2026-07-17 00:00:00,2026-07-19 00:00:00,2026-07-20 00:00:00,,
-Sunway University - Online,Master of Finance,MAF,01 - New,Creative,None,2026-07-08 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,LinkedIn,2026-07-24 00:00:00,2026-07-25 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,Facebook,2026-07-25 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,LinkedIn,2026-07-07 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,Google,2026-07-20 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,Creative,None,2026-07-25 00:00:00,2026-07-25 00:00:00,2026-07-28 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,PPC,None,2026-06-15 00:00:00,2026-06-16 00:00:00,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,LinkedIn,2026-06-24 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Creative,None,2026-06-15 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,Creative,None,2026-07-16 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,03 - Contacted,SEO,None,2026-06-30 00:00:00,2026-07-02 00:00:00,,,
-Sunway University - Online,Master of Management,MM,01 - New,Creative,None,2026-06-17 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,Google,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Google,2026-07-22 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,Creative,None,2026-06-16 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,05 - Interview Completed,SEO,None,2026-06-27 00:00:00,2026-06-27 00:00:00,2026-07-01 00:00:00,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,PPC,Facebook,2026-06-29 00:00:00,2026-06-29 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,Google,2026-07-08 00:00:00,2026-07-10 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,SEO,None,2026-07-10 00:00:00,2026-07-10 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,PPC,None,2026-07-19 00:00:00,2026-07-22 00:00:00,,,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,PPC,Facebook,2026-06-24 00:00:00,2026-06-26 00:00:00,2026-06-29 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Creative,None,2026-06-26 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,08 - File Complete,Creative,None,2026-06-29 00:00:00,2026-06-29 00:00:00,2026-07-02 00:00:00,2026-07-03 00:00:00,2026-07-03 00:00:00
-Sunway University - Online,Master of Management,MM,03 - Contacted,PPC,Facebook,2026-06-21 00:00:00,2026-06-22 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,01 - New,Creative,None,2026-06-30 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,LinkedIn,2026-07-18 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-06-15 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,Facebook,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,06 - Pending Application,PPC,None,2026-06-15 00:00:00,2026-06-18 00:00:00,2026-06-19 00:00:00,2026-06-20 00:00:00,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,LinkedIn,2026-07-19 00:00:00,2026-07-19 00:00:00,,,
-Sunway University - Online,Master of Education,MED,08 - File Complete,PPC,Facebook,2026-06-20 00:00:00,2026-06-21 00:00:00,2026-06-25 00:00:00,2026-06-25 00:00:00,2026-06-25 00:00:00
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,None,2026-07-13 00:00:00,2026-07-14 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,PPC,LinkedIn,2026-07-06 00:00:00,2026-07-08 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Google,2026-06-27 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,LinkedIn,2026-07-20 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,SEO,None,2026-06-30 00:00:00,2026-07-02 00:00:00,2026-07-04 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Referral,None,2026-06-20 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,SEO,None,2026-06-26 00:00:00,2026-06-27 00:00:00,,,
-Sunway University - Online,Master of Management,MM,01 - New,SEO,None,2026-07-19 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,SEO,None,2026-07-26 00:00:00,2026-07-29 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,06 - Pending Application,Referral,None,2026-07-16 00:00:00,2026-07-17 00:00:00,2026-07-21 00:00:00,2026-07-22 00:00:00,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,01 - New,PPC,None,2026-07-07 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,PPC,Facebook,2026-07-11 00:00:00,2026-07-12 00:00:00,2026-07-12 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,01 - New,PPC,Google,2026-06-17 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,PPC,None,2026-06-18 00:00:00,2026-06-20 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,03 - Contacted,PPC,Facebook,2026-07-06 00:00:00,2026-07-06 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,05 - Interview Completed,PPC,Facebook,2026-07-26 00:00:00,2026-07-26 00:00:00,2026-07-30 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,LinkedIn,2026-07-15 00:00:00,2026-07-15 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,PPC,None,2026-07-14 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,05 - Interview Completed,PPC,None,2026-06-28 00:00:00,2026-07-01 00:00:00,2026-07-02 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,SEO,None,2026-07-14 00:00:00,2026-07-15 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,SEO,None,2026-07-15 00:00:00,2026-07-16 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,Facebook,2026-06-29 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,05 - Interview Completed,PPC,Google,2026-06-17 00:00:00,2026-06-19 00:00:00,2026-06-23 00:00:00,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,01 - New,Creative,None,2026-07-04 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,Referral,None,2026-06-20 00:00:00,2026-06-21 00:00:00,2026-06-21 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Creative,None,2026-07-11 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,PPC,LinkedIn,2026-06-19 00:00:00,2026-06-22 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,SEO,None,2026-07-22 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,Creative,None,2026-07-15 00:00:00,2026-07-18 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,Creative,None,2026-07-16 00:00:00,2026-07-17 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,03 - Contacted,SEO,None,2026-07-08 00:00:00,2026-07-08 00:00:00,,,
-Sunway University - Online,Master of Management,MM,01 - New,PPC,LinkedIn,2026-07-20 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,PPC,Google,2026-07-08 00:00:00,2026-07-08 00:00:00,2026-07-09 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Google,2026-07-02 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,None,2026-07-03 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,PPC,Facebook,2026-06-28 00:00:00,2026-06-30 00:00:00,2026-07-02 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,03 - Contacted,PPC,None,2026-06-18 00:00:00,2026-06-21 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,08 - File Complete,PPC,Google,2026-07-07 00:00:00,2026-07-09 00:00:00,2026-07-13 00:00:00,2026-07-16 00:00:00,2026-07-17 00:00:00
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,PPC,Facebook,2026-06-15 00:00:00,2026-06-17 00:00:00,2026-06-19 00:00:00,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,None,2026-07-24 00:00:00,2026-07-24 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-06-30 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,LinkedIn,2026-07-22 00:00:00,2026-07-24 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,05 - Interview Completed,PPC,Facebook,2026-07-13 00:00:00,2026-07-15 00:00:00,2026-07-15 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Referral,None,2026-06-24 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,Referral,None,2026-06-15 00:00:00,2026-06-15 00:00:00,2026-06-16 00:00:00,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,03 - Contacted,Creative,None,2026-07-23 00:00:00,2026-07-26 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,LinkedIn,2026-07-09 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,PPC,LinkedIn,2026-07-23 00:00:00,2026-07-25 00:00:00,2026-07-27 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,SEO,None,2026-07-03 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,PPC,None,2026-07-25 00:00:00,2026-07-25 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,SEO,None,2026-07-06 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,01 - New,SEO,None,2026-07-05 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,Creative,None,2026-06-27 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,05 - Interview Completed,PPC,Google,2026-06-20 00:00:00,2026-06-21 00:00:00,2026-06-21 00:00:00,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,None,2026-07-08 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,08 - File Complete,PPC,None,2026-07-10 00:00:00,2026-07-11 00:00:00,2026-07-12 00:00:00,2026-07-15 00:00:00,2026-07-17 00:00:00
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,SEO,None,2026-06-22 00:00:00,2026-06-25 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Facebook,2026-07-20 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Diploma in Data Science,GDDS,05 - Interview Completed,PPC,LinkedIn,2026-07-02 00:00:00,2026-07-03 00:00:00,2026-07-04 00:00:00,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-06-18 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,PPC,Facebook,2026-06-19 00:00:00,2026-06-20 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,PPC,LinkedIn,2026-06-15 00:00:00,2026-06-17 00:00:00,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,PPC,Google,2026-07-02 00:00:00,2026-07-05 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,08 - File Complete,SEO,None,2026-07-10 00:00:00,2026-07-10 00:00:00,2026-07-11 00:00:00,2026-07-13 00:00:00,2026-07-15 00:00:00
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,Creative,None,2026-07-07 00:00:00,2026-07-10 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,PPC,Google,2026-07-18 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,SEO,None,2026-06-22 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,PPC,None,2026-06-19 00:00:00,2026-06-20 00:00:00,2026-06-23 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,Traditional,None,2026-07-24 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Analytics,SIM x UNSW Master of Analytics,01 - New,PPC,Facebook,2026-06-15 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,SEO,None,2026-06-16 00:00:00,2026-06-18 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,None,2026-07-26 00:00:00,2026-07-27 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,PPC,LinkedIn,2026-06-18 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,SEO,None,2026-07-05 00:00:00,2026-07-05 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,06 - Pending Application,PPC,LinkedIn,2026-07-17 00:00:00,2026-07-19 00:00:00,2026-07-20 00:00:00,2026-07-20 00:00:00,
-Sunway University - Online,Master of Management,MM,06 - Pending Application,Creative,None,2026-07-18 00:00:00,2026-07-20 00:00:00,2026-07-24 00:00:00,2026-07-26 00:00:00,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,03 - Contacted,PPC,None,2026-07-17 00:00:00,2026-07-20 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,05 - Interview Completed,Creative,None,2026-07-04 00:00:00,2026-07-07 00:00:00,2026-07-08 00:00:00,,
-Sunway University - Online,Master of Education,MED,08 - File Complete,Referral,None,2026-07-10 00:00:00,2026-07-10 00:00:00,2026-07-10 00:00:00,2026-07-11 00:00:00,2026-07-13 00:00:00
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,06 - Pending Application,Referral,None,2026-06-23 00:00:00,2026-06-26 00:00:00,2026-06-28 00:00:00,2026-06-28 00:00:00,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,SEO,None,2026-07-15 00:00:00,2026-07-15 00:00:00,2026-07-19 00:00:00,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,LinkedIn,2026-06-28 00:00:00,2026-06-30 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,Referral,None,2026-06-17 00:00:00,2026-06-17 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,Facebook,2026-07-18 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,05 - Interview Completed,PPC,Facebook,2026-07-26 00:00:00,2026-07-27 00:00:00,2026-07-29 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Creative,None,2026-07-26 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,03 - Contacted,SEO,None,2026-06-23 00:00:00,2026-06-23 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,None,2026-07-04 00:00:00,2026-07-06 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,PPC,Facebook,2026-07-12 00:00:00,2026-07-14 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,LinkedIn,2026-06-28 00:00:00,2026-07-01 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,PPC,LinkedIn,2026-07-09 00:00:00,2026-07-09 00:00:00,2026-07-13 00:00:00,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,Referral,None,2026-07-09 00:00:00,2026-07-10 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,PPC,Facebook,2026-06-21 00:00:00,2026-06-22 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,08 - File Complete,SEO,None,2026-06-18 00:00:00,2026-06-20 00:00:00,2026-06-22 00:00:00,2026-06-23 00:00:00,2026-06-25 00:00:00
-Sunway University - Online,Master of Management,MM,05 - Interview Completed,SEO,None,2026-07-22 00:00:00,2026-07-22 00:00:00,2026-07-22 00:00:00,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,Google,2026-06-30 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Google,2026-06-24 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,03 - Contacted,SEO,None,2026-07-15 00:00:00,2026-07-16 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,SEO,None,2026-07-05 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,LinkedIn,2026-06-15 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Google,2026-07-11 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,Creative,None,2026-07-02 00:00:00,2026-07-04 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,PPC,Google,2026-07-17 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,None,2026-07-04 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,SEO,None,2026-06-21 00:00:00,,,,
-Sunway University - Online,Master of Management,MM,08 - File Complete,Creative,None,2026-06-19 00:00:00,2026-06-22 00:00:00,2026-06-26 00:00:00,2026-06-29 00:00:00,2026-06-30 00:00:00
-Sunway University - Online,Master of Education,MED,01 - New,SEO,None,2026-06-29 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,PPC,Facebook,2026-06-17 00:00:00,2026-06-19 00:00:00,2026-06-21 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,SEO,None,2026-07-25 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,05 - Interview Completed,Referral,None,2026-06-29 00:00:00,2026-06-29 00:00:00,2026-06-30 00:00:00,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Creative,None,2026-07-15 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,SEO,None,2026-07-23 00:00:00,2026-07-23 00:00:00,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,Referral,None,2026-06-20 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,PPC,Facebook,2026-07-01 00:00:00,,,,
-Sunway University - Online,Master of Marketing,MMKTG,03 - Contacted,Creative,None,2026-07-25 00:00:00,2026-07-27 00:00:00,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,03 - Contacted,PPC,Facebook,2026-07-15 00:00:00,2026-07-16 00:00:00,,,
-Sunway University - Online,Master of Education,MED,05 - Interview Completed,SEO,None,2026-06-22 00:00:00,2026-06-25 00:00:00,2026-06-28 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,03 - Contacted,PPC,None,2026-07-23 00:00:00,2026-07-25 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Creative,None,2026-06-18 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,08 - File Complete,PPC,Facebook,2026-06-15 00:00:00,2026-06-18 00:00:00,2026-06-18 00:00:00,2026-06-19 00:00:00,2026-06-20 00:00:00
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,05 - Interview Completed,PPC,Google,2026-06-24 00:00:00,2026-06-24 00:00:00,2026-06-26 00:00:00,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,Google,2026-07-23 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Google,2026-06-22 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,Referral,None,2026-07-10 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,Google,2026-07-10 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Cybersecurity Management,GCCYBM,01 - New,PPC,Google,2026-06-19 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,05 - Interview Completed,PPC,LinkedIn,2026-07-06 00:00:00,2026-07-06 00:00:00,2026-07-06 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,LinkedIn,2026-07-20 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,Referral,None,2026-07-12 00:00:00,2026-07-14 00:00:00,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,Google,2026-07-21 00:00:00,,,,
-Sunway University - Online,Master of Business Analytics,MBANAL,01 - New,Traditional,None,2026-07-11 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,05 - Interview Completed,PPC,None,2026-07-09 00:00:00,2026-07-09 00:00:00,2026-07-12 00:00:00,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,01 - New,Traditional,None,2026-07-21 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Human Resource Management,GCHRM,01 - New,Referral,None,2026-07-21 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,PPC,Google,2026-07-10 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,PPC,Facebook,2026-07-22 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,Google,2026-07-21 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,08 - File Complete,SEO,None,2026-06-17 00:00:00,2026-06-18 00:00:00,2026-06-21 00:00:00,2026-06-21 00:00:00,2026-06-23 00:00:00
-Sunway University - Online,Master of Business Administration,MBA,01 - New,PPC,Google,2026-07-04 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,03 - Contacted,PPC,LinkedIn,2026-06-23 00:00:00,2026-06-24 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,None,2026-07-04 00:00:00,2026-07-05 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Creative,None,2026-06-15 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,PPC,Facebook,2026-06-15 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,08 - File Complete,PPC,LinkedIn,2026-07-18 00:00:00,2026-07-18 00:00:00,2026-07-18 00:00:00,2026-07-18 00:00:00,2026-07-20 00:00:00
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,03 - Contacted,SEO,None,2026-07-11 00:00:00,2026-07-12 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,01 - New,Traditional,None,2026-07-19 00:00:00,,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,None,2026-07-18 00:00:00,2026-07-21 00:00:00,,,
-Sunway University - Online,Master of Business Administration,MBA,03 - Contacted,PPC,Google,2026-07-25 00:00:00,2026-07-27 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,SEO,None,2026-06-18 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Human Resource Management,SIM x UNSW Master of Human Resource Management,03 - Contacted,PPC,None,2026-07-14 00:00:00,2026-07-16 00:00:00,,,
-Sunway University - Online,Master of Marketing,MMKTG,01 - New,Traditional,None,2026-07-15 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Facebook,2026-06-25 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,01 - New,PPC,LinkedIn,2026-07-23 00:00:00,,,,
-Sunway University - Online,Master of Education,MED,01 - New,Referral,None,2026-07-15 00:00:00,,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,01 - New,PPC,Facebook,2026-07-13 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,03 - Contacted,Traditional,None,2026-07-09 00:00:00,2026-07-10 00:00:00,,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,Google,2026-06-24 00:00:00,2026-06-26 00:00:00,,,
-Sunway University - Online,Master of Education,MED,01 - New,Traditional,None,2026-06-23 00:00:00,,,,
-Singapore Institute of Management - Online,Graduate Certificate in Analytics,GCA,01 - New,SEO,None,2026-07-16 00:00:00,,,,
-Sunway University - Online,Master of Data Science,MDS,01 - New,PPC,Facebook,2026-06-25 00:00:00,,,,
-Sunway University - Online,Master of Finance,MAF,05 - Interview Completed,Creative,None,2026-07-16 00:00:00,2026-07-18 00:00:00,2026-07-18 00:00:00,,
-Sunway University - Online,Master of Data Science,MDS,03 - Contacted,PPC,None,2026-07-15 00:00:00,2026-07-17 00:00:00,,,
-Singapore Institute of Management - Online,SIM x UNSW Master of Data Science,SIM x UNSW Master of Data Science,05 - Interview Completed,PPC,None,2026-07-18 00:00:00,2026-07-18 00:00:00,2026-07-21 00:00:00,,
+# SUN / SIM Weekly Alignment Dashboard
+
+A static, client-side dashboard that reads the weekly CRM "Leads" export
+directly — no reshaping needed. Open `index.html` in a browser, or host the
+folder on GitHub Pages. All parsing and calculation happens in the visitor's
+browser; nothing is ever uploaded anywhere.
+
+## Quick start
+
+1. Open `index.html`.
+2. Click **Load sample data** to see it populated with a synthetic dataset,
+   or click **Upload weekly CRM export** and select your actual export file
+   (the same `.xlsx` you pull from the CRM each week).
+3. Switch between entities (SUN / SIM, or whatever accounts are in your
+   data) with the toggle in the header.
+
+## What file to upload
+
+Upload the CRM's **Leads** export as-is — the same file, unmodified, that
+you already pull weekly. The dashboard reads it directly. No pivoting,
+reshaping, or renaming needed.
+
+**Required columns** (matched case-insensitively, extra columns are ignored):
+
+| Column | Used for |
+|---|---|
+| `Account` | Which entity the lead belongs to (maps "Sunway University - Online" → SUN, "Singapore Institute of Management - Online" → SIM; any other account name is used as its own entity label) |
+| `Program` / `Short Name (Program) (Program)` | Program breakdown |
+| `Lead Channel` | Channel breakdown (PPC, SEO, Creative, etc. — whatever appears in your data) |
+| `Created On` | When the lead was created — drives the Leads count and its week |
+| `Contacted Date` | When first contacted — drives the Contacts count |
+| `Interview Completed Date` | Drives the ICs count |
+| `Evaluation Completed Date` | Drives the ECs count |
+| `File Completed Date` | Drives the Applications / Apps count |
+
+Each upload is treated as a **full refresh** — it replaces whatever was
+loaded before, since the export is a rolling extract of all leads to date,
+not just the new ones. Just upload the latest file each week; you don't
+need to merge or trim anything first.
+
+## Weeks run Monday–Sunday
+
+Every date column is bucketed into the Mon–Sun week it actually falls in,
+labelled by its week-ending Sunday. A lead created in one week that reaches
+Interview Complete two weeks later shows up correctly in both weeks'
+figures — leads counted the week they arrived, Contacts/ICs/ECs/Apps
+counted the week each milestone happened.
+
+**"Latest week" always means the last fully-completed Mon–Sun week.** If
+you upload the file on a Monday and it already contains a few leads created
+that same morning, those get bucketed into the new (still in-progress)
+week and are excluded from the headline KPI cards and the funnel panel —
+so Monday's view always reflects the week that just ended, not a partial
+sliver of the new one. They still show up in the trend charts, just as a
+naturally lower, still-forming data point.
+
+## What's on the dashboard
+
+- **KPI row** — last full week's Leads, Applications, Lead-to-Application
+  Rate, and IC→EC Rate (flagged "watch" — historically the bottleneck
+  stage), each with a vs-prior-week delta.
+- **Leads by Channel** — line chart, one line per channel that appears in
+  your data.
+- **Leads & Applications by Program** — rolled-up totals on a dual axis.
+- **Funnel Stage Rates** — C→IC, IC→EC, EC→App over time.
+- **Funnel (latest week)** — a waterfall-style bar view of
+  Contacts → ICs → ECs → Apps for the last completed week.
+- **Program Detail table** — last completed week, per program, sortable.
+
+## A known gap: no advisor-level detail or Handles
+
+This export is a lead-lifecycle file — it has no advisor/owner column and
+no call-activity data, so there's nothing in it to build a per-advisor
+breakdown or a "Handles" (dial volume) metric from. Everything on this
+dashboard is entity-level, built purely from lead and milestone dates.
+
+If you get a separate call-activity/dialer export later (one with an
+advisor column and call counts), that can be wired in as an additional
+upload and advisor-level detail can be added back — just share a sample
+of that export's columns and it can be built the same way this one was.
+
+## Deploying to GitHub Pages
+
+1. Put these files together in one repo folder: `index.html`, `style.css`,
+   `app.js`, `sample-data.js`, `sample_data.csv`.
+2. Push to GitHub.
+3. **Settings → Pages** → set Source to your branch, root folder, save.
+4. GitHub gives you a live URL — that's the dashboard.
+
+If this dashboard shares a repo with anything else, keep it in its own
+subfolder or its own repo entirely — GitHub Pages serves whatever
+`index.html` it finds, so a filename collision with another project will
+silently overwrite one or the other.
+
+## Data persistence
+
+Once loaded, data is cached in the browser's `localStorage` so it's still
+there if you close and reopen the page, until you upload a new file or
+click **Clear loaded data**. This is per-browser, per-device — it doesn't
+sync anywhere or get shared with anyone else who opens the page.
+
+## Customising
+
+- **Colours**: edit the CSS custom properties at the top of `style.css`
+  (`--sun`, `--sim`, etc.).
+- **Programs/channels**: no code change needed — whatever values appear in
+  your data are picked up automatically.
+- **Column mapping**: if the CRM export's column names ever change, update
+  the lowercase key lookups in `transformCRMRows()` in `app.js`.
+
+## Fully offline / no external network dependencies
+
+The three JS libraries this dashboard uses (Chart.js, PapaParse, SheetJS)
+are bundled locally in the `vendor/` folder rather than loaded from a CDN.
+This matters if you're on a network that blocks common CDN domains
+(`cdnjs.cloudflare.com`, `jsdelivr.net`, etc.) — a real issue we hit while
+testing this, showing as `Uncaught ReferenceError: Chart is not defined`
+in the browser console. With everything bundled locally, the only network
+request the page makes is for the Google Fonts stylesheet (cosmetic only —
+if that's blocked too, it just falls back to a system font, nothing breaks).
+
+**When uploading to GitHub, make sure the `vendor/` folder goes up too** —
+it's not optional, `index.html` references `vendor/chart.umd.js`,
+`vendor/papaparse.min.js`, and `vendor/xlsx.full.min.js` directly.

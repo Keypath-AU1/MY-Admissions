@@ -1,109 +1,119 @@
-# SUN / SIM Weekly Alignment Dashboard
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUN / SIM Weekly Alignment Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="vendor/chart.umd.js"></script>
+<script src="vendor/papaparse.min.js"></script>
+<script src="vendor/xlsx.full.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-A static, client-side dashboard that reads the weekly CRM "Leads" export
-directly — no reshaping needed. Open `index.html` in a browser, or host the
-folder on GitHub Pages. All parsing and calculation happens in the visitor's
-browser; nothing is ever uploaded anywhere.
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 30 30"><path d="M4 24 L11 9 L15 17 L19 6 L26 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <div class="brand-text">
+        <h1>Weekly Alignment</h1>
+        <p>SUN &middot; SIM — Marketing &amp; Admissions</p>
+      </div>
+    </div>
 
-## Quick start
+    <div class="topbar-controls">
+      <div class="entity-toggle" role="tablist" aria-label="Entity" id="entityToggle">
+        <button class="entity-btn active" data-entity="SUN" role="tab" aria-selected="true">SUN</button>
+      </div>
+      <label class="upload-btn">
+        <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M12 3l-4 4M12 3l4 4M4 21h16"/></svg>
+        Upload weekly CRM export
+      </label>
+      <button class="ghost-btn" id="sampleBtn">Load sample data</button>
+      <a class="ghost-btn" id="templateBtn" href="sample_data.csv" download>Download template</a>
+    </div>
+  </div>
+  <div id="statusBar" class="status-bar empty">No data loaded — upload the weekly CRM export or load the sample dataset.</div>
+</header>
 
-1. Open `index.html`.
-2. Click **Load sample data** to see it populated with a synthetic dataset,
-   or click **Upload weekly CRM export** and select your actual export file
-   (the same `.xlsx` you pull from the CRM each week).
-3. Switch between entities (SUN / SIM, or whatever accounts are in your
-   data) with the toggle in the header.
+<main id="app" class="app hidden">
 
-## What file to upload
+  <section class="kpi-row" id="kpiRow" aria-label="Key metrics"></section>
 
-Upload the CRM's **Leads** export as-is — the same file, unmodified, that
-you already pull weekly. The dashboard reads it directly. No pivoting,
-reshaping, or renaming needed.
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Leads by Channel</h2>
+      <span class="panel-sub">Weekly leads, by source</span>
+    </div>
+    <div class="chart-wrap"><canvas id="chartChannel"></canvas></div>
+  </section>
 
-**Required columns** (matched case-insensitively, extra columns are ignored):
+  <section class="two-col">
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Leads &amp; Applications by Program</h2>
+        <span class="panel-sub">Weekly totals, by program</span>
+      </div>
+      <div class="chart-wrap"><canvas id="chartProgram"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Funnel Stage Rates</h2>
+        <span class="panel-sub">Contact → IC → EC → App, over time</span>
+      </div>
+      <div class="chart-wrap"><canvas id="chartRates"></canvas></div>
+    </div>
+  </section>
 
-| Column | Used for |
-|---|---|
-| `Account` | Which entity the lead belongs to (maps "Sunway University - Online" → SUN, "Singapore Institute of Management - Online" → SIM; any other account name is used as its own entity label) |
-| `Program` / `Short Name (Program) (Program)` | Program breakdown |
-| `Lead Channel` | Channel breakdown (PPC, SEO, Creative, etc. — whatever appears in your data) |
-| `Created On` | When the lead was created — drives the Leads count and its week |
-| `Contacted Date` | When first contacted — drives the Contacts count |
-| `Interview Completed Date` | Drives the ICs count |
-| `Evaluation Completed Date` | Drives the ECs count |
-| `File Completed Date` | Drives the Applications / Apps count |
+  <section class="panel funnel-panel">
+    <div class="panel-head">
+      <h2>Funnel — Latest Week</h2>
+      <span class="panel-sub" id="funnelWeekLabel">Contacts &rarr; ICs &rarr; ECs &rarr; Apps</span>
+    </div>
+    <div id="funnelViz" class="funnel-viz"></div>
+  </section>
 
-Each upload is treated as a **full refresh** — it replaces whatever was
-loaded before, since the export is a rolling extract of all leads to date,
-not just the new ones. Just upload the latest file each week; you don't
-need to merge or trim anything first.
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Program Detail — Latest Week</h2>
+      <span class="panel-sub">Click a column header to sort</span>
+    </div>
+    <div class="table-wrap">
+      <table id="programTable">
+        <thead>
+          <tr>
+            <th data-key="name">Program</th>
+            <th data-key="Leads">Leads</th>
+            <th data-key="Applications">Applications</th>
+            <th data-key="rate">Lead-to-App Rate</th>
+          </tr>
+        </thead>
+        <tbody id="programTableBody"></tbody>
+      </table>
+    </div>
+  </section>
 
-## Weeks run Monday–Sunday
+</main>
 
-Every date column is bucketed into the Mon–Sun week it actually falls in,
-labelled by its week-ending Sunday. A lead created in one week that reaches
-Interview Complete two weeks later shows up correctly in both weeks'
-figures — leads counted the week they arrived, Contacts/ICs/ECs/Apps
-counted the week each milestone happened.
+<section id="emptyState" class="empty-state">
+  <div class="empty-inner">
+    <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18M7 15l3-4 3 3 5-7"/></svg>
+    <h2>No data yet</h2>
+    <p>Upload the weekly CRM leads export (CSV or Excel, straight from the CRM, no reshaping needed), or load the sample dataset to see the dashboard populated.</p>
+  </div>
+</section>
 
-**"Latest week" always means the last fully-completed Mon–Sun week.** If
-you upload the file on a Monday and it already contains a few leads created
-that same morning, those get bucketed into the new (still in-progress)
-week and are excluded from the headline KPI cards and the funnel panel —
-so Monday's view always reflects the week that just ended, not a partial
-sliver of the new one. They still show up in the trend charts, just as a
-naturally lower, still-forming data point.
+<footer class="footer">
+  <p>Runs entirely in your browser — nothing is uploaded to a server. Data stays on this device (cached in local storage) until you clear it or load a new file.</p>
+  <button class="ghost-btn" id="clearBtn">Clear loaded data</button>
+</footer>
 
-## What's on the dashboard
-
-- **KPI row** — last full week's Leads, Applications, Lead-to-Application
-  Rate, and IC→EC Rate (flagged "watch" — historically the bottleneck
-  stage), each with a vs-prior-week delta.
-- **Leads by Channel** — line chart, one line per channel that appears in
-  your data.
-- **Leads & Applications by Program** — rolled-up totals on a dual axis.
-- **Funnel Stage Rates** — C→IC, IC→EC, EC→App over time.
-- **Funnel (latest week)** — a waterfall-style bar view of
-  Contacts → ICs → ECs → Apps for the last completed week.
-- **Program Detail table** — last completed week, per program, sortable.
-
-## A known gap: no advisor-level detail or Handles
-
-This export is a lead-lifecycle file — it has no advisor/owner column and
-no call-activity data, so there's nothing in it to build a per-advisor
-breakdown or a "Handles" (dial volume) metric from. Everything on this
-dashboard is entity-level, built purely from lead and milestone dates.
-
-If you get a separate call-activity/dialer export later (one with an
-advisor column and call counts), that can be wired in as an additional
-upload and advisor-level detail can be added back — just share a sample
-of that export's columns and it can be built the same way this one was.
-
-## Deploying to GitHub Pages
-
-1. Put these files together in one repo folder: `index.html`, `style.css`,
-   `app.js`, `sample-data.js`, `sample_data.csv`.
-2. Push to GitHub.
-3. **Settings → Pages** → set Source to your branch, root folder, save.
-4. GitHub gives you a live URL — that's the dashboard.
-
-If this dashboard shares a repo with anything else, keep it in its own
-subfolder or its own repo entirely — GitHub Pages serves whatever
-`index.html` it finds, so a filename collision with another project will
-silently overwrite one or the other.
-
-## Data persistence
-
-Once loaded, data is cached in the browser's `localStorage` so it's still
-there if you close and reopen the page, until you upload a new file or
-click **Clear loaded data**. This is per-browser, per-device — it doesn't
-sync anywhere or get shared with anyone else who opens the page.
-
-## Customising
-
-- **Colours**: edit the CSS custom properties at the top of `style.css`
-  (`--sun`, `--sim`, etc.).
-- **Programs/channels**: no code change needed — whatever values appear in
-  your data are picked up automatically.
-- **Column mapping**: if the CRM export's column names ever change, update
-  the lowercase key lookups in `transformCRMRows()` in `app.js`.
+<script src="sample-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
