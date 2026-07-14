@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIM → UNSW Articulation Confirmation Call Script</title>
+<style>
+:root{
+  --navy:#1E2754; --cyan:#00AEEF; --yellow:#F5C123; --red:#E63329;
+  --navy-t:#2B356B; --ink:#1b2033; --sub:#5a6178; --bg:#f4f5f9; --card:#ffffff;
+  --line:#e3e6ef; --unsw:#FFB81C; --unsw-d:#7a5c00;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:-apple-system,Segoe UI,Calibri,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+::-webkit-scrollbar{width:8px;} ::-webkit-scrollbar-thumb{background:#c7cbdb;border-radius:4px;}
+
+#selectScreen{position:fixed;inset:0;background:linear-gradient(135deg,var(--navy) 0%,#111637 100%);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 20px;overflow-y:auto;}
+.sel-wrap{max-width:920px;width:100%;color:#fff;}
+.sel-brand{font-size:12px;letter-spacing:4px;color:var(--cyan);font-weight:700;text-align:center;margin-bottom:6px;}
+.sel-title{font-size:26px;font-weight:800;text-align:center;margin-bottom:4px;}
+.sel-sub{text-align:center;color:#b7bcd6;font-size:13.5px;margin-bottom:32px;}
+.sel-block{margin-bottom:28px;}
+.sel-label{font-size:12px;letter-spacing:2px;color:var(--yellow);font-weight:700;margin-bottom:12px;}
+.stage-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.stage-card{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 18px;cursor:pointer;transition:.15s;}
+.stage-card:hover{border-color:var(--cyan);background:rgba(0,174,239,.1);}
+.stage-card.active{border-color:var(--cyan);background:rgba(0,174,239,.16);}
+.stage-card h4{margin:0 0 4px;font-size:15px;}
+.stage-card p{margin:0;font-size:12.5px;color:#c3c7de;line-height:1.4;}
+.prog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.prog-card{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.14);border-radius:12px;padding:14px;cursor:pointer;transition:.15s;text-align:center;}
+.prog-card:hover{border-color:var(--yellow);}
+.prog-card.active{border-color:var(--yellow);background:rgba(245,193,35,.14);}
+.prog-icon{font-size:22px;margin-bottom:6px;line-height:1;}
+.prog-card h5{margin:0;font-size:12.5px;line-height:1.3;}
+.sel-start{display:block;width:100%;max-width:340px;margin:30px auto 0;background:var(--yellow);color:var(--navy);border:none;border-radius:10px;padding:15px;font-size:16px;font-weight:800;cursor:pointer;text-align:center;}
+.sel-start:disabled{opacity:.35;cursor:not-allowed;}
+.sel-start:not(:disabled):hover{background:#ffd450;}
+
+#app{display:none;}
+.layout{display:flex;min-height:100vh;}
+.sidebar{width:250px;flex-shrink:0;background:var(--navy);color:#fff;position:fixed;top:0;bottom:0;left:0;overflow-y:auto;padding:18px 14px 30px;z-index:50;}
+.sb-brand{font-size:11px;letter-spacing:3px;color:var(--cyan);font-weight:700;margin-bottom:2px;}
+.sb-title{font-size:14.5px;font-weight:800;margin-bottom:2px;}
+.sb-ctx{font-size:11px;color:#9aa1c2;margin-bottom:16px;line-height:1.4;}
+.sb-ctx b{color:var(--yellow);}
+.sb-sec-title{font-size:10px;letter-spacing:2px;color:#7d84a8;font-weight:700;margin:16px 0 6px;text-transform:uppercase;}
+.sb-nav a{display:block;padding:7px 9px;border-radius:7px;font-size:12.5px;color:#dfe1f0;text-decoration:none;margin-bottom:2px;}
+.sb-nav a:hover{background:rgba(255,255,255,.08);}
+.sb-obj a{display:block;padding:5px 9px;border-radius:6px;font-size:11.5px;color:#c3c7de;text-decoration:none;margin-bottom:1px;}
+.sb-obj a:hover{background:rgba(255,255,255,.08);color:#fff;}
+.sb-btn{display:block;width:100%;text-align:left;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;padding:9px 10px;border-radius:8px;font-size:12px;cursor:pointer;margin-bottom:6px;}
+.sb-btn:hover{background:rgba(255,255,255,.16);}
+.sb-switch{margin-top:16px;font-size:11px;color:#8890b3;text-decoration:underline;cursor:pointer;background:none;border:none;padding:0;}
+
+.main{margin-left:250px;flex:1;max-width:900px;padding:26px 34px 90px;}
+.top-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+.badge{font-size:10.5px;font-weight:700;letter-spacing:.5px;padding:4px 10px;border-radius:20px;}
+.badge.stage{background:var(--navy);color:#fff;}
+.badge.prog{background:var(--yellow);color:var(--navy);}
+.badge.unit{background:#eef0f8;color:var(--sub);}
+.badge.priority{background:var(--red);color:#fff;}
+
+.legend{font-size:11px;color:var(--sub);background:#eef0f8;border-radius:8px;padding:8px 12px;margin-bottom:20px;}
+.sec{margin-bottom:10px;}
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.sec-num{width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex-shrink:0;}
+.sec-hdr h2{margin:0;font-size:19px;}
+.timing{font-size:11px;color:var(--sub);font-weight:600;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px;}
+.tog{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:2px 0;}
+.tog h3{margin:0;font-size:14.5px;}
+.chv{transition:.2s;color:var(--sub);}
+.tog.closed .chv{transform:rotate(-90deg);}
+.tog-body{margin-top:10px;}
+.tog-body.closed{display:none;}
+.sl{background:#f7f8fc;border-left:3px solid var(--cyan);border-radius:6px;padding:10px 12px;margin:8px 0;}
+.sl p{margin:0;font-size:13.5px;line-height:1.55;}
+.sl-tip{margin-top:6px;font-size:11px;color:var(--sub);font-style:italic;}
+.compliance{background:#fff7e0;border:1px solid #f0d98a;border-radius:8px;padding:10px 12px;margin:10px 0;}
+.compliance .lbl{font-size:10.5px;font-weight:700;letter-spacing:1px;color:var(--unsw-d);margin-bottom:4px;}
+.compliance p{margin:0;font-size:13px;}
+.qb{display:flex;gap:10px;align-items:flex-start;margin-top:10px;}
+.ql{width:22px;height:22px;border-radius:6px;background:var(--cyan);color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.qt{font-size:14px;font-weight:600;line-height:1.4;padding-top:2px;}
+.hint{font-size:11.5px;color:var(--sub);margin-top:8px;}
+.sq-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+.sq-btn{background:#fff8e0;border:1px solid var(--yellow);color:#8a6c00;font-size:12px;font-weight:600;padding:7px 12px;border-radius:20px;cursor:pointer;}
+.sq-btn.active{background:var(--yellow);color:var(--navy);}
+.sq-btn:hover{background:#ffe9a0;}
+.sq-ans{display:none;background:#f7f8fc;border-radius:8px;padding:10px 12px;margin-top:8px;}
+.sq-ans.show{display:block;}
+.sq-l1{font-size:13px;margin-bottom:6px;}
+.sq-plbl{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--cyan);}
+.sq-probe{font-size:12.5px;color:var(--sub);font-style:italic;margin-top:2px;}
+.note{font-size:11.5px;color:var(--red);margin-top:6px;}
+.prog-name-slot{color:var(--navy);font-weight:700;}
+.confirm{background:#ffe4e1;color:#a11313;font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;}
+.usp-list{margin:8px 0 0;padding-left:18px;font-size:13px;line-height:1.6;}
+.entry-box{background:#eef0f8;border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px;}
+.divider{border:none;border-top:1px solid var(--line);margin:26px 0;}
+.unsw-box{border:2px dashed var(--unsw);background:#fffaf0;border-radius:10px;padding:14px 16px;margin:12px 0;}
+.unsw-box h5{margin:0 0 6px;font-size:13px;color:var(--unsw-d);letter-spacing:.5px;}
+
+.obj-panel{border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden;scroll-margin-top:20px;}
+.obj-header{padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#fff;}
+.obj-header.navy{background:var(--navy);}
+.obj-header.red{background:var(--red);}
+.obj-header.teal{background:#0a7ea4;}
+.obj-body{padding:14px 16px;display:none;}
+.obj-body.show{display:block;}
+.obj-row{margin-bottom:10px;}
+.obj-label{display:inline-block;font-size:10px;font-weight:800;letter-spacing:1px;padding:2px 8px;border-radius:5px;margin-bottom:4px;}
+.obj-label.emp{background:#dbeafe;color:#1d4ed8;}
+.obj-label.ref{background:#fef3c7;color:#92400e;}
+.obj-label.cls{background:#dcfce7;color:#166534;}
+.obj-content{font-size:13px;line-height:1.55;}
+
+.checklist{list-style:none;padding:0;margin:0;}
+.checklist li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;}
+.check-box{width:19px;height:19px;border:2px solid var(--cyan);border-radius:5px;flex-shrink:0;cursor:pointer;}
+.check-box.checked{background:var(--cyan);}
+.checklist li.done{color:var(--sub);text-decoration:line-through;}
+
+#stickyToggle{position:fixed;right:20px;bottom:20px;background:var(--red);color:#fff;border:none;width:52px;height:52px;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:80;}
+#stickyPanel{position:fixed;right:20px;bottom:84px;width:280px;max-height:60vh;background:#fffbe0;border:1px solid #f0d98a;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.2);z-index:80;display:none;flex-direction:column;padding:10px;}
+#stickyPanel.show{display:flex;}
+#stickyPanel h4{margin:2px 4px 6px;font-size:12.5px;color:#8a6c00;}
+#stickyTextarea{flex:1;min-height:200px;resize:vertical;border:none;background:transparent;font-family:inherit;font-size:13px;outline:none;}
+
+.ref-overlay{position:fixed;inset:0;background:rgba(10,12,30,.45);z-index:90;display:none;}
+.ref-overlay.show{display:block;}
+.ref-panel{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:88vw;background:#fff;z-index:91;transform:translateX(100%);transition:.25s;overflow-y:auto;padding:22px;}
+.ref-panel.show{transform:translateX(0);}
+.ref-panel h3{margin-top:0;color:var(--navy);}
+.ref-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--sub);}
+.diff-block{margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+.diff-block h5{margin:0 0 6px;font-size:13px;color:var(--navy);}
+.diff-block p,.diff-block li{font-size:12.5px;line-height:1.55;color:#333;}
+
+@media(max-width:880px){
+  .sidebar{position:fixed;transform:translateX(-100%);transition:.2s;}
+  .sidebar.show{transform:translateX(0);}
+  .main{margin-left:0;padding:60px 16px 90px;}
+  #mobileMenuBtn{display:flex;}
+  .prog-grid{grid-template-columns:1fr 1fr;}
+  .stage-grid{grid-template-columns:1fr;}
+}
+#mobileMenuBtn{display:none;position:fixed;top:14px;left:14px;z-index:60;background:var(--navy);color:#fff;border:none;width:40px;height:40px;border-radius:9px;font-size:18px;}
+</style>
+</head>
+<body>
+
+<div id="selectScreen">
+  <div class="sel-wrap">
+    <div class="sel-brand">KEYPATH · SIM ONLINE</div>
+    <div class="sel-title">SIM → UNSW Articulation Confirmation Call</div>
+    <div class="sel-sub">For calling current SIM Online students · confirming intent to articulate and maximising conversion into their UNSW Master's</div>
+
+    <div class="sel-block">
+      <div class="sel-label">STEP 1 — WHERE IS THIS STUDENT IN THEIR PROGRAMME?</div>
+      <div class="stage-grid">
+        <div class="stage-card" data-stage="early" onclick="selectStage('early')">
+          <h4>🌱 Early / mid-programme check-in</h4>
+          <p>Student is roughly 25–60% through their units. Goal: plant and build intent early, confirm they're tracking toward the GPA/unit requirements, and get ahead of any hesitation.</p>
+        </div>
+        <div class="stage-card" data-stage="late" onclick="selectStage('late')">
+          <h4>🏁 Late-stage / near completion</h4>
+          <p>Student is on their final unit(s) or has just finished. Goal: convert confirmed intent into an actual submitted UNSW application before the window closes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sel-block">
+      <div class="sel-label">STEP 2 — WHICH PROGRAMME ARE THEY ENROLLED IN?</div>
+      <div class="prog-grid" id="progGrid"></div>
+    </div>
+
+    <button class="sel-start" id="startBtn" disabled onclick="startCall()">Start call script →</button>
+  </div>
+</div>
+
+<div id="app">
+<button id="mobileMenuBtn" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+<div class="layout">
+
+  <div class="sidebar">
+    <div class="sb-brand">KEYPATH · SIM ONLINE</div>
+    <div class="sb-title">Articulation Call Script</div>
+    <div class="sb-ctx" id="sbCtx"></div>
+
+    <div class="sb-sec-title">Navigate</div>
+    <div class="sb-nav">
+      <a href="#s1">1 · Opening &amp; Purpose</a>
+      <a href="#s2">2 · Progress Check</a>
+      <a href="#s3">3 · Confirm Intent</a>
+      <a href="#s4">4 · The UNSW Value Case</a>
+      <a href="#s5">5 · Requirements &amp; Cost</a>
+      <a href="#s6">6 · Objection Handling</a>
+      <a href="#s7">7 · Closing &amp; Next Steps</a>
+      <a href="#s8">8 · Checklist</a>
+    </div>
+
+    <div class="sb-sec-title">Jump to objection</div>
+    <div class="sb-obj">
+      <a href="#obj1">Even with 20% off, too expensive</a>
+      <a href="#obj2">Tired / needs a break first</a>
+      <a href="#obj3">Not sure I need a full Masters</a>
+      <a href="#obj4">Considering a different university</a>
+      <a href="#obj5">Worried about GPA / units not qualifying</a>
+      <a href="#obj6">Needs to check with employer/family</a>
+    </div>
+
+    <div class="sb-sec-title">Reference</div>
+    <button class="sb-btn" onclick="openPanel('value')">📘 UNSW Value Guide (all programmes)</button>
+    <button class="sb-btn" onclick="openPanel('reqs')">📊 Requirements Quick Reference</button>
+
+    <button class="sb-switch" onclick="backToSelect()">← Change programme / stage</button>
+  </div>
+
+  <div class="main">
+    <div class="top-badges">
+      <span class="badge stage" id="badgeStage"></span>
+      <span class="badge prog" id="badgeProg"></span>
+      <span class="badge priority">HIGH-VALUE CALL</span>
+    </div>
+    <div class="legend">▾ headings expand/collapse · yellow buttons reveal likely responses + follow-up probes · Section 4 is pre-set to the student's programme · tap 🔴 (bottom right) for live call notes</div>
+
+    <!-- S1 -->
+    <section class="sec" id="s1">
+      <div class="sec-hdr"><div class="sec-num">1</div><div><h2>Opening &amp; Purpose</h2><span class="timing">2–3 minutes</span></div></div>
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Warm reconnect &amp; compliance line</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl"><p>Hi [Name], it's [Your Name] calling from SIM Online — great to catch up with you again! How has the <span class="prog-name-slot"></span> been treating you so far?</p><div class="sl-tip">[Tip: this is a warm call to an existing, paying student — lead with genuine rapport, not a sales tone. They already trust SIM; your job is to deepen that, not "pitch" from scratch.]</div></div>
+          <div class="compliance"><div class="lbl">COMPLIANCE — REQUIRED BEFORE PROCEEDING</div><p>"Just a quick note that this call may be recorded for training and quality assurance purposes."</p></div>
+        </div>
+      </div>
+      <div class="card stage-block" data-stage="early">
+        <div class="tog" onclick="tSub(this)"><h3>Purpose — early/mid-programme framing</h3><span class="chv">▾</span></div>
+        <div class="tog-body"><div class="sl"><p>"The reason I'm calling today is I wanted to check in on how things are going, and also make sure you're aware of the pathway you're already on — every unit you're completing right now is actually building toward a UNSW Master's degree, at a 20% saving, if that's something you'd want to pursue. I'd love to walk you through what that could look like."</p></div></div>
+      </div>
+      <div class="card stage-block" data-stage="late">
+        <div class="tog" onclick="tSub(this)"><h3>Purpose — late-stage framing</h3><span class="chv">▾</span></div>
+        <div class="tog-body"><div class="sl"><p>"The reason I'm calling is that you're right at the point where the UNSW Master's articulation becomes real — you're eligible to move onto that pathway now, and I wanted to make sure we get your application in while everything's fresh and you don't lose momentum."</p><div class="sl-tip">[Tip: create gentle urgency here — this is the highest-leverage moment in the entire student journey for this business outcome. Don't let the call end without a concrete next step.]</div></div></div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S2 -->
+    <section class="sec" id="s2">
+      <div class="sec-hdr"><div class="sec-num">2</div><div><h2>Progress Check &amp; Rapport</h2><span class="timing">3–4 minutes</span></div></div>
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>How is the programme going?</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="qb"><div class="ql">Q</div><div class="qt">How are you finding the workload alongside everything else you've got going on?</div></div>
+          <div class="qb"><div class="ql">Q</div><div class="qt">Which unit or topic have you found most valuable so far?</div></div>
+          <div class="hint">→ Tap their tone:</div>
+          <div class="sq-grid">
+            <button class="sq-btn" onclick="tSQ(this,'p1')">Going well, enjoying it</button>
+            <button class="sq-btn" onclick="tSQ(this,'p2')">Manageable but tiring</button>
+            <button class="sq-btn" onclick="tSQ(this,'p3')">Struggling / considering pausing</button>
+          </div>
+          <div class="sq-ans" id="p1"><div class="sq-l1">That's great to hear — that's exactly the kind of momentum that makes the UNSW pathway an easy next step.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">Have you thought at all about what you'd want to do once you've completed this qualification?</div></div>
+          <div class="sq-ans" id="p2"><div class="sq-l1">That's completely understandable — balancing study with work and life isn't easy, and it says a lot that you're still pushing through.</div><div class="sq-plbl">DEEPER PROBE</div><div class="sq-probe">Is it more the volume of work, or the pace, that's been the harder part?</div></div>
+          <div class="sq-ans" id="p3"><div class="sq-l1">Thank you for being upfront about that — let's talk about what's making it tough before we go anywhere else. This isn't the moment to push the UNSW conversation; it's the moment to support them through the current programme first.</div><div class="sq-plbl">NOTE</div><div class="sq-probe">Flag to your supervisor if a student expresses genuine distress or risk of withdrawal — this call's priority shifts to retention support, not articulation upsell.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S3 -->
+    <section class="sec" id="s3">
+      <div class="sec-hdr"><div class="sec-num">3</div><div><h2>Confirm Current Articulation Intent</h2><span class="timing">3–4 minutes</span></div></div>
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Direct intent question</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="qb"><div class="ql">Q</div><div class="qt">Have you given any thought to continuing on into the UNSW Master's once you finish this qualification?</div></div>
+          <div class="hint">→ Route based on their answer:</div>
+          <div class="sq-grid">
+            <button class="sq-btn" onclick="tSQ(this,'i1')">✅ Yes, already keen</button>
+            <button class="sq-btn" onclick="tSQ(this,'i2')">🤔 Hadn't really thought about it / unsure</button>
+            <button class="sq-btn" onclick="tSQ(this,'i3')">❌ Not interested / decided against it</button>
+          </div>
+          <div class="sq-ans" id="i1"><div class="sq-l1">Fantastic — let's make sure you're on the exact right units and tracking toward the GPA requirement, and I'll walk you through what the Master's actually adds on top of what you're doing now.</div><div class="sq-plbl">NEXT</div><div class="sq-probe">Go straight to Section 4 (Value Case) to reinforce their decision, then Section 5 for logistics, and lock in a concrete next step in Section 7.</div></div>
+          <div class="sq-ans" id="i2"><div class="sq-l1">No problem at all — that's actually really common, a lot of students don't think about it until it's raised. This is a great moment to walk you through what it could add.</div><div class="sq-plbl">NEXT</div><div class="sq-probe">Spend real time in Section 4 — this is the student most worth investing in on this call, since the decision is genuinely still open.</div></div>
+          <div class="sq-ans" id="i3"><div class="sq-l1">Totally understand — can I ask what's behind that, just so I'm not assuming?</div><div class="sq-plbl">NEXT</div><div class="sq-probe">Use Section 6 (Objection Handling) to identify the real reason before accepting "not interested" as final — often it's a specific, addressable concern (cost, fatigue, uncertainty) rather than a firm no.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S4 -->
+    <section class="sec" id="s4">
+      <div class="sec-hdr"><div class="sec-num">4</div><div><h2>The UNSW Value Case — <span class="prog-name-slot"></span></h2><span class="timing">5–7 minutes</span></div></div>
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>What the Master's adds on top of what they've done</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl" id="valueCase"></div>
+          <div class="note">Exact UNSW programme name, module titles, and specific outcomes: <span class="confirm">CONFIRM</span> before quoting precise course content — the framing above is directional positioning, not verified curriculum detail.</div>
+        </div>
+      </div>
+      <div class="unsw-box">
+        <h5>🎯 REINFORCE, DON'T OVER-SELL</h5>
+        <div class="sl"><p>"You've already done the hard part — you're most of the way there on the units. The Master's isn't starting over, it's building directly on what you've already learned, and it's the difference between having a strong specialist qualification and having a full postgraduate degree from a globally recognised university."</p></div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S5 -->
+    <section class="sec" id="s5">
+      <div class="sec-hdr"><div class="sec-num">5</div><div><h2>Requirements &amp; Cost</h2><span class="timing">2–3 minutes</span></div></div>
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Confirm eligibility &amp; discount</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="entry-box">
+            <strong>Discount:</strong> 20% off UNSW Master's tuition, subject to GPA and completing the correct units.<br>
+            <strong>GPA threshold:</strong> <span class="confirm">CONFIRM exact figure before quoting</span><br>
+            <strong>Correct units:</strong> <span class="confirm">CONFIRM which specific units must be completed for this programme's pathway</span><br>
+            <strong>Application window:</strong> <span class="confirm">CONFIRM current intake dates/deadlines</span>
+          </div>
+          <div class="sl"><p>"Based on what you've completed, [Advisor: check CRM/transcript for actual GPA and units before this call] — let's make sure everything lines up so there are no surprises when you go to apply."</p></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S6 -->
+    <section class="sec" id="s6">
+      <div class="sec-hdr"><div class="sec-num">6</div><div><h2>Objection Handling</h2><span class="timing">as needed</span></div></div>
+
+      <div class="obj-panel" id="obj1">
+        <div class="obj-header red" onclick="tObj(this)">⚠ "Even with 20% off, it's still expensive"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's fair — a Master's is a real investment, and it's right to think it through properly."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Reframe from cost to return: they've already absorbed the "startup cost" of postgraduate study with SIM — the Master's is the highest-leverage next step because it converts a specialist qualification into a globally recognised degree, at a lower combined cost than applying to UNSW without the pathway.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"I hear you. Compare it this way — you've already invested the time to get this far, and this discount only exists because of that. Walking away now means the specialist qualification stands alone; continuing gets you a full Master's for meaningfully less than starting from scratch. Does your employer have a training budget that could help offset the rest?"</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj2">
+        <div class="obj-header teal" onclick="tObj(this)">⚠ "I'm tired, I need a break before starting something else"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's completely valid — you've been working hard, and that fatigue is real."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Don't pressure an immediate start — offer to lock in eligibility/pathway status now while deferring the actual UNSW start date, if that flexibility exists. <span class="confirm">CONFIRM</span> whether deferred/later intake enrolment is possible under the articulation agreement before offering this.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"That makes complete sense — you don't have to decide on a start date today. What I'd suggest is we lock in your eligibility now, while everything's fresh, and you can choose when to actually begin. Would that take the pressure off?"</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj3">
+        <div class="obj-header navy" onclick="tObj(this)">⚠ "I'm not sure I actually need a full Masters"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's a fair question to ask honestly — not everyone needs it, and I'd rather you go in for the right reason."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Connect back to the career goal they may have shared in earlier conversations — if they're targeting a role that expects a Master's-level qualification, or want to future-proof against more competitive candidates, this is the lowest-friction way to get there.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"Where do you see yourself heading in the next few years? [Listen] — if that path tends to reward a full Master's, this is genuinely the most cost- and time-efficient way to get one, since you're already most of the way there."</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj4">
+        <div class="obj-header teal" onclick="tObj(this)">⚠ "I'm considering a different university for my Masters"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's a smart thing to weigh up — it's worth comparing your options."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Emphasise the unique advantage they'd be giving up: the 20% discount and direct unit credit only apply via this articulation pathway — enrolling elsewhere means starting a Master's from zero, at full cost and full duration.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"That's worth comparing, absolutely. Just so it's factored in — this pathway is the only option where the work you've already done actually counts toward the Master's, plus the 20% saving. Anywhere else, you'd likely be starting completely fresh. What's drawing you to the other option?"</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj5">
+        <div class="obj-header red" onclick="tObj(this)">⚠ "I'm worried my GPA or units won't qualify me"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"That's a really sensible thing to check before getting your hopes up."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Don't guess — pull their actual transcript/GPA from the CRM before or during the call. If they're short, identify exactly what's needed (a specific unit resit, grade improvement) rather than leaving it vague.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"Let's check that properly rather than guess — [review CRM/transcript]. Based on what I can see, [confirm eligibility or identify the specific gap and a plan to close it]." <span class="confirm">CONFIRM</span> exact GPA/unit thresholds internally before stating eligibility to the student.</div></div>
+        </div>
+      </div>
+
+      <div class="obj-panel" id="obj6">
+        <div class="obj-header navy" onclick="tObj(this)">⚠ "I need to check with my employer / family first"</div>
+        <div class="obj-body">
+          <div class="obj-row"><div class="obj-label emp">EMPATHISE</div><div class="obj-content">"Of course — that's a good habit before committing to something like this."</div></div>
+          <div class="obj-row"><div class="obj-label ref">REFRAME</div><div class="obj-content">Support them for that conversation rather than treating it as a stall — offer a one-pager or the value case in writing, and lock a specific follow-up date.</div></div>
+          <div class="obj-row"><div class="obj-label cls">CLOSE</div><div class="obj-content">"Makes sense. I can send you a short summary of the pathway and the discount over WhatsApp so you've got everything in front of you for that conversation. Can we pencil in a follow-up call for [specific date]?"</div></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S7 -->
+    <section class="sec" id="s7">
+      <div class="sec-hdr"><div class="sec-num">7</div><div><h2>Closing &amp; Next Steps</h2><span class="timing">2–3 minutes</span></div></div>
+      <div class="card">
+        <div class="tog" onclick="tSub(this)"><h3>Lock in the concrete next step</h3><span class="chv">▾</span></div>
+        <div class="tog-body">
+          <div class="sl"><p>"So based on everything we've talked through, what I'd suggest as the next step is [submitting the UNSW application this week / confirming your unit selection / booking a follow-up once you've spoken to your employer] — how does that sound?"</p></div>
+          <div class="hint">→ Mandatory before ending the call:</div>
+          <ul class="usp-list">
+            <li>Capture articulation intent in CRM as High / Medium / Low with the specific reason</li>
+            <li>Agree and log a specific date for the next action (application submission, document collection, or follow-up call)</li>
+            <li>If intent is High: send the UNSW application link / next steps via WhatsApp during the call, not after</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- S8 -->
+    <section class="sec" id="s8">
+      <div class="sec-hdr"><div class="sec-num">8</div><div><h2>Quick Reference — Call Checklist</h2><span class="timing">tick off as you go</span></div></div>
+      <ul class="checklist" id="checklist">
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Compliance recording line stated</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Genuine progress/rapport check done before any pitch</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Direct articulation intent question asked</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Programme-specific UNSW value case delivered</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> GPA / units / discount confirmed against actual CRM record, not assumed</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Objections handled using Empathise → Reframe → Close</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Articulation intent captured in CRM (mandatory)</li>
+        <li><div class="check-box" onclick="toggleCheck(this)"></div> Specific next action + date locked in before hanging up</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+</div>
+
+<button id="stickyToggle" onclick="document.getElementById('stickyPanel').classList.toggle('show')">📝</button>
+<div id="stickyPanel">
+  <h4>Live call notes</h4>
+  <textarea id="stickyTextarea" placeholder="Jot notes during the call — saved automatically on this device..."></textarea>
+</div>
+
+<div class="ref-overlay" id="refOverlay" onclick="closePanel()"></div>
+<div class="ref-panel" id="panel-value">
+  <button class="ref-close" onclick="closePanel()">✕</button>
+  <h3>UNSW Value Guide — all programmes</h3>
+  <div id="valueGuideBody"></div>
+  <div class="diff-block"><p><span class="confirm">CONFIRM</span> exact UNSW programme names, module titles, and outcome data with the academic/partnerships team before using specific claims on calls — the positioning above is directional, not verified curriculum detail.</p></div>
+</div>
+<div class="ref-panel" id="panel-reqs">
+  <button class="ref-close" onclick="closePanel()">✕</button>
+  <h3>Requirements Quick Reference</h3>
+  <div class="diff-block"><h5>Discount</h5><p>20% off UNSW Master's tuition via the articulation pathway, for all 7 SIM Online programmes.</p></div>
+  <div class="diff-block"><h5>Eligibility</h5><p>Subject to a minimum GPA and completion of the correct units. <span class="confirm">CONFIRM</span> exact GPA threshold and per-programme unit requirements before quoting to students.</p></div>
+  <div class="diff-block"><h5>Application window</h5><p><span class="confirm">CONFIRM</span> current UNSW intake dates and application deadlines.</p></div>
+  <div class="diff-block"><h5>Deferred start</h5><p><span class="confirm">CONFIRM</span> whether a student can lock in eligibility now and defer their UNSW start date — useful for the "I need a break" objection.</p></div>
+</div>
+
+<script>
+const PROGRAMMES = [
+  {id:'cyber', short:'Cybersecurity Management', icon:'🔐',
+    value:"You've built the management and governance foundations of cybersecurity. The UNSW Master's <span class=\"confirm\">(CONFIRM exact programme name — e.g. Master of Cyber Security / Master of IT)</span> extends this into deeper technical specialisation — areas like security architecture, threat intelligence, and applied risk modelling at a level that positions you for senior security architect or CISO-track roles, backed by a globally recognised Master's."},
+  {id:'digmkt', short:'Digital Marketing', icon:'📣',
+    value:"You've built strong channel and campaign fundamentals. The UNSW Master's <span class=\"confirm\">(CONFIRM exact programme name — e.g. Master of Marketing / Master of Commerce)</span> extends this into consumer analytics, marketing science, and brand strategy at a global scale — the kind of strategic depth that separates a marketing executor from a marketing strategist or future CMO."},
+  {id:'hr', short:'Human Resource Management', icon:'🤝',
+    value:"You've built solid HR management fundamentals. The UNSW Master's <span class=\"confirm\">(CONFIRM exact programme name — e.g. Master of HR Management / Master of Commerce)</span> extends this into organisational psychology, strategic workforce planning, and HR analytics at scale — the depth expected of HR leaders moving into Head of HR or People &amp; Culture roles."},
+  {id:'analytics', short:'Analytics', icon:'📊',
+    value:"You've built applied business analytics capability. The UNSW Master's <span class=\"confirm\">(CONFIRM exact programme name — e.g. Master of Business Analytics)</span> extends this into advanced statistical modelling and machine learning applications for business decision-making at an enterprise scale — positioning you for analytics leadership roles."},
+  {id:'datasci', short:'Data Science', icon:'🧠',
+    value:"You've built foundational data science methods. The UNSW Master's <span class=\"confirm\">(CONFIRM exact programme name — e.g. Master of Data Science &amp; Decisions)</span> extends this into advanced statistical inference, deep learning, and research-level applied data science — the depth that distinguishes a data analyst from a senior data scientist or ML practitioner."},
+  {id:'itm', short:'Information Technology Management', icon:'💻',
+    value:"You've built IT management fundamentals. The UNSW Master's <span class=\"confirm\">(CONFIRM exact programme name — e.g. Master of IT / Master of IT Management)</span> extends this into enterprise architecture and digital transformation leadership at C-suite level — positioning you for CIO-track roles."},
+  {id:'busmgmt', short:'Business Management', icon:'💼',
+    value:"You've built broad management foundations across the discipline. The UNSW Master's <span class=\"confirm\">(CONFIRM exact programme name — e.g. MBA / Master of Commerce / Master of Management)</span> extends this into strategic leadership, corporate finance, and global business strategy — positioning you for senior management and general manager-track roles."},
+];
+
+let selectedStage = null, selectedProg = null;
+
+function renderProgGrid(){
+  document.getElementById('progGrid').innerHTML = PROGRAMMES.map(p => `
+    <div class="prog-card" data-prog="${p.id}" onclick="selectProg('${p.id}')">
+      <div class="prog-icon">${p.icon}</div>
+      <h5>${p.short}</h5>
+    </div>`).join('');
+}
+renderProgGrid();
+
+function renderValueGuide(){
+  document.getElementById('valueGuideBody').innerHTML = PROGRAMMES.map(p => `
+    <div class="diff-block"><h5>${p.icon} ${p.short}</h5><p>${p.value}</p></div>`).join('');
+}
+renderValueGuide();
+
+function selectStage(s){ selectedStage = s; document.querySelectorAll('.stage-card').forEach(c=>c.classList.toggle('active', c.dataset.stage===s)); checkReady(); }
+function selectProg(id){ selectedProg = id; document.querySelectorAll('.prog-card').forEach(c=>c.classList.toggle('active', c.dataset.prog===id)); checkReady(); }
+function checkReady(){ document.getElementById('startBtn').disabled = !(selectedStage && selectedProg); }
+
+function startCall(){
+  const p = PROGRAMMES.find(x=>x.id===selectedProg);
+  document.getElementById('selectScreen').style.display='none';
+  document.getElementById('app').style.display='block';
+
+  document.querySelectorAll('.prog-name-slot').forEach(el=> el.textContent = p.short);
+  document.getElementById('valueCase').innerHTML = `<p>${p.value}</p>`;
+
+  document.getElementById('badgeStage').textContent = selectedStage==='early' ? 'EARLY / MID-PROGRAMME' : 'LATE-STAGE / NEAR COMPLETION';
+  document.getElementById('badgeProg').textContent = p.short.toUpperCase();
+  document.getElementById('sbCtx').innerHTML = `Stage: <b>${selectedStage==='early'?'Early/mid-programme':'Late-stage'}</b><br>Programme: <b>${p.short}</b>`;
+
+  document.querySelectorAll('.stage-block').forEach(el=>{ el.style.display = el.dataset.stage===selectedStage ? '' : 'none'; });
+
+  window.scrollTo(0,0);
+}
+function backToSelect(){ document.getElementById('app').style.display='none'; document.getElementById('selectScreen').style.display='flex'; }
+
+function tSub(el){ el.classList.toggle('closed'); el.nextElementSibling.classList.toggle('closed'); }
+function tSQ(btn,id){
+  const grid = btn.parentElement;
+  grid.querySelectorAll('.sq-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const container = grid.parentElement;
+  container.querySelectorAll('.sq-ans').forEach(a=>a.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+}
+function tObj(header){ header.nextElementSibling.classList.toggle('show'); }
+function toggleCheck(box){ box.classList.toggle('checked'); box.parentElement.classList.toggle('done'); }
+function openPanel(name){ document.getElementById('refOverlay').classList.add('show'); document.getElementById('panel-'+name).classList.add('show'); }
+function closePanel(){ document.getElementById('refOverlay').classList.remove('show'); document.querySelectorAll('.ref-panel').forEach(p=>p.classList.remove('show')); }
+
+const stickyKey = 'sim_unsw_articulation_sticky_notes';
+const ta = document.getElementById('stickyTextarea');
+try{ ta.value = localStorage.getItem(stickyKey) || ''; }catch(e){}
+ta.addEventListener('input', ()=>{ try{ localStorage.setItem(stickyKey, ta.value); }catch(e){} });
+</script>
+</body>
+</html>
