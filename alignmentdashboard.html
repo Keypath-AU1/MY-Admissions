@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUN / SIM Weekly Alignment Dashboard</title>
+<script src="chart.umd.js"></script>
+<script src="papaparse.min.js"></script>
+<script src="xlsx.full.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="topHeader">
+  <div class="header-inner">
+    <div>
+      <p class="eyebrow">KEYPATH EDUCATION <span class="dot">&bull;</span> SUN &amp; SIM MARKETING AND ADMISSIONS</p>
+      <h1>Weekly Alignment Dashboard</h1>
+      <p class="subtitle">Marketing &amp; Admissions performance, updated from the weekly CRM export</p>
+    </div>
+    <div class="header-right">
+      <div class="checkin-box">
+        <div class="line1" id="latestCheckinLine">Latest check-in: no data loaded</div>
+        <div class="line2" id="latestCheckinSub">Upload the weekly CRM export to begin</div>
+      </div>
+      <div class="entity-toggle" role="tablist" aria-label="Entity" id="entityToggle">
+        <button class="entity-btn active" data-entity="SUN" role="tab" aria-selected="true">SUN</button>
+      </div>
+      <div class="header-controls">
+        <label class="upload-btn">
+          <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12M12 3l-4 4M12 3l4 4M4 21h16"/></svg>
+          Upload CRM export
+        </label>
+        <button class="ghost-btn" id="sampleBtn">Load sample</button>
+        <a class="ghost-btn" id="templateBtn" href="sample_data.csv" download>Template</a>
+      </div>
+    </div>
+  </div>
+  <div class="status-bar empty" id="statusBar">No data loaded — upload the weekly CRM export or load the sample dataset.</div>
+</header>
+
+<nav class="tabnav-wrap">
+  <div class="tabnav" id="tabNav">
+    <a class="tab-link" href="#sec-snapshot">Snapshot</a>
+    <a class="tab-link" href="#sec-leads-trend">Leads Trend</a>
+    <a class="tab-link" href="#sec-source-mix">Lead Source Mix</a>
+    <a class="tab-link" href="#sec-programs">Programs &amp; Applications</a>
+    <a class="tab-link" href="#sec-funnel">Funnel &amp; Rates</a>
+    <a class="tab-link" href="#sec-detail">Program Detail</a>
+    <a class="tab-link" href="#sec-term-targets">Term Targets</a>
+    <a class="tab-link" href="#sec-advisor">Advisor Detail</a>
+    <a class="tab-link" href="#sec-traffic">Traffic Light</a>
+  </div>
+</nav>
+
+<main id="app" class="app hidden">
+
+  <section class="block" id="sec-snapshot">
+    <div class="section-title">
+      <h2>Performance Snapshot</h2>
+      <span class="meta" id="snapshotWeekLabel">Latest complete week</span>
+    </div>
+    <div class="kpi-row" id="kpiRow" aria-label="Key metrics"></div>
+  </section>
+
+  <section class="block decision-box" id="sec-decision">
+    <div class="eyebrow2">This Week's Focus</div>
+    <textarea id="focusNote" placeholder="Jot this week's decision, focus area, or call-out here — it's saved in this browser and shows up here every time you open the dashboard."></textarea>
+    <div class="hint">Saved locally in this browser — not shared with anyone else who opens this dashboard.</div>
+  </section>
+
+  <section class="block">
+    <div class="numbered-banner">
+      <div class="left">
+        <span class="badge">1</span>
+        <span class="title">Marketing Updates</span>
+      </div>
+      <span class="sub">Leads trend, source mix &amp; channel detail</span>
+    </div>
+  </section>
+
+  <section class="block" id="sec-leads-trend">
+    <div class="section-title">
+      <h2>Weekly Leads — Trend</h2>
+      <span class="meta">By channel, Monday&ndash;Sunday weeks</span>
+    </div>
+    <div class="panel">
+      <div class="chart-wrap"><canvas id="chartChannel"></canvas></div>
+    </div>
+  </section>
+
+  <section class="block" id="sec-source-mix">
+    <div class="section-title">
+      <h2>Lead Source Mix</h2>
+      <span class="meta" id="sourceMixWeekLabel">Latest complete week</span>
+    </div>
+    <div class="two-col">
+      <div class="panel">
+        <div class="panel-head"><h3>Share of Leads by Channel</h3></div>
+        <div class="chart-wrap"><canvas id="chartDonut"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Channel Totals</h3><span class="panel-sub">Latest complete week</span></div>
+        <div class="table-wrap">
+          <table id="channelTable">
+            <thead><tr><th>Channel</th><th>Leads</th><th>Share</th></tr></thead>
+            <tbody id="channelTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="numbered-banner">
+      <div class="left">
+        <span class="badge">2</span>
+        <span class="title">Admissions Update</span>
+      </div>
+      <span class="sub">Programs, funnel &amp; conversion detail</span>
+    </div>
+  </section>
+
+  <section class="block" id="sec-programs">
+    <div class="section-title">
+      <h2>Leads &amp; Applications by Program</h2>
+      <span class="meta">Rolled-up totals, weekly</span>
+    </div>
+    <div class="panel">
+      <div class="chart-wrap"><canvas id="chartProgram"></canvas></div>
+    </div>
+  </section>
+
+  <section class="block" id="sec-funnel">
+    <div class="section-title">
+      <h2>Funnel &amp; Conversion Rates</h2>
+      <span class="meta" id="funnelWeekLabel">Latest complete week</span>
+    </div>
+    <div class="two-col">
+      <div class="panel">
+        <div class="panel-head"><h3>Funnel — Latest Week</h3></div>
+        <div class="funnel-viz" id="funnelViz"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Stage Conversion Rates Over Time</h3></div>
+        <div class="chart-wrap"><canvas id="chartRates"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="sec-detail">
+    <div class="section-title">
+      <h2>Program Detail</h2>
+      <span class="meta">Latest complete week &bull; click a column to sort</span>
+    </div>
+    <div class="panel">
+      <div class="table-wrap">
+        <table id="programTable">
+          <thead>
+            <tr>
+              <th data-key="name">Program</th>
+              <th data-key="Leads">Leads</th>
+              <th data-key="Applications">Applications</th>
+              <th data-key="rate">Lead-to-App Rate</th>
+            </tr>
+          </thead>
+          <tbody id="programTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="sec-term-targets">
+    <div class="section-title">
+      <h2>Term Targets</h2>
+      <span class="meta">Start Target &amp; conversion rate are manual — everything else pulls from Planned Term</span>
+    </div>
+    <div class="term-row" id="termTargetsRow"></div>
+  </section>
+
+  <section class="block" id="sec-advisor">
+    <div class="section-title">
+      <h2>Advisor Detail</h2>
+      <span class="meta">Latest complete week &bull; click a column to sort</span>
+    </div>
+    <div class="panel">
+      <div class="table-wrap">
+        <table id="advisorTable">
+          <thead>
+            <tr>
+              <th data-key="name">Advisor</th>
+              <th data-key="Contacts">Contacts</th>
+              <th data-key="ICs">ICs</th>
+              <th data-key="cicRate">C&rarr;IC</th>
+              <th data-key="ECs">ECs</th>
+              <th data-key="icecRate">IC&rarr;EC</th>
+              <th data-key="Apps">Apps</th>
+              <th data-key="ecappRate">EC&rarr;App</th>
+            </tr>
+          </thead>
+          <tbody id="advisorTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="sec-traffic">
+    <div class="section-title">
+      <h2>Traffic Light Analysis</h2>
+      <span class="meta">Week-on-week status &bull; RAG</span>
+    </div>
+    <div class="traffic-legend">
+      <span><span class="dot" style="background:var(--good)"></span>Green — healthy</span>
+      <span><span class="dot" style="background:var(--amber)"></span>Amber — needs attention</span>
+      <span><span class="dot" style="background:var(--bad)"></span>Red — critical</span>
+    </div>
+    <div class="rag-row" id="ragRow"></div>
+  </section>
+
+</main>
+
+<section id="emptyState" class="empty-state">
+  <div class="empty-inner">
+    <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18M7 15l3-4 3 3 5-7"/></svg>
+    <h2>No data yet</h2>
+    <p>Upload the weekly CRM export (CSV or Excel), or load the sample dataset to see the dashboard populated.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Runs entirely in your browser — nothing is uploaded to a server. Source: weekly CRM Leads export. Figures reflect the most recently completed Monday&ndash;Sunday week at the time of upload.</p>
+  <button class="ghost-btn" id="clearBtn">Clear loaded data</button>
+</footer>
+
+<script src="sample-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
