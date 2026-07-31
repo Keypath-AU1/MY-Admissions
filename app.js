@@ -117,8 +117,31 @@ function parsePlannedTerm(raw) {
 // this widens to cover the union rather than trusting a single row.
 let termWindows = {};
 
+// leadRecords: one entry per raw CRM row (not expanded like `records`), used for anything that
+// needs to reason about a single lead's full stage-date history at once -- backlog-by-stage,
+// turnaround times between stages, and open-lead counts all need this, since the aggregate
+// `records` array only stores individual stage *events*, not which events belong to the same lead.
+let leadRecords = [];
+
+// This CRM's Status Reason uses numbered progression codes ("01 - New" ... "08 - File Complete",
+// "10 - Registered") for leads still moving through the funnel, and plain-text reasons
+// ("Not Interested", "Does Not Meet Adm. Req.", etc.) once a lead is lost. Adjust here if your
+// CRM's own taxonomy differs.
+function isLostStatus(status) {
+  if (!status) return false;
+  return !/^\d/.test(String(status).trim());
+}
+function isCompletedStatus(status) {
+  if (!status) return false;
+  return /^(08|10)\b/.test(String(status).trim());
+}
+function isOpenStatus(status) {
+  return !isLostStatus(status) && !isCompletedStatus(status);
+}
+
 function transformCRMRows(rawRows) {
   const out = [];
+  const leadsOut = [];
   let skipped = 0;
   termWindows = {};
   for (const row of rawRows) {
@@ -129,6 +152,7 @@ function transformCRMRows(rawRows) {
     const program = String(k["short name (program) (program)"] || k["program"] || "Unknown").trim() || "Unknown";
     const channel = String(k["lead channel"] || "Unknown").trim() || "Unknown";
     const advisor = String(k["enrollment advisor"] || "").trim();
+    const statusReason = String(k["status reason"] || "").trim();
     const plannedTermRaw = String(k["planned term"] || "").trim();
     const parsedTerm = plannedTermRaw ? parsePlannedTerm(plannedTermRaw) : null;
     if (parsedTerm) {
@@ -149,6 +173,13 @@ function transformCRMRows(rawRows) {
       ECs: parseDateValue(k["evaluation completed date"]),
       Apps: parseDateValue(k["file completed date"]),
     };
+
+    leadsOut.push({
+      entity, program, channel, advisor, status: statusReason,
+      term: parsedTerm ? parsedTerm.prefix : null,
+      created: stageDates.Leads, contacted: stageDates.Contacts,
+      ic: stageDates.ICs, ec: stageDates.ECs, app: stageDates.Apps,
+    });
 
     if (stageDates.Leads) {
       const we = weekEndingSunday(stageDates.Leads);
@@ -182,7 +213,8 @@ function transformCRMRows(rawRows) {
       });
     }
   }
-  return { rows: out, skipped, totalInput: rawRows.length, termWindows };
+  leadRecords = leadsOut;
+  return { rows: out, skipped, totalInput: rawRows.length, termWindows, leadRecords: leadsOut };
 }
 
 function parseCSVText(text) {
@@ -306,6 +338,7 @@ function renderEntityToggle() {
 
 function renderAll() {
   updateCheckinBox();
+  renderExecScorecard();
   renderKPIs();
   renderChannelChart();
   renderDonutAndChannelTable();
@@ -315,6 +348,8 @@ function renderAll() {
   renderProgramTable();
   renderTermTargets();
   renderAdvisorTable();
+  renderOperations();
+  renderActionsLog();
   renderTrafficLight();
 }
 
@@ -330,8 +365,8 @@ function updateCheckinBox() {
     line1.textContent = "Latest check-in: no complete week yet";
     line2.textContent = currentEntity + " \u2022 waiting on data";
   }
-  $("#snapshotWeekLabel").textContent = latest ? "Week ending " + latest : "\u2013";
-  $("#sourceMixWeekLabel").textContent = latest ? "Week ending " + latest : "\u2013";
+  const marketingLabel = $("#marketingWeekLabel");
+  if (marketingLabel) marketingLabel.textContent = latest ? "Week ending " + latest : "\u2013";
 }
 
 function deltaBadge(curr, prev, higherIsBetter) {
@@ -601,6 +636,190 @@ function renderAdvisorTable() {
   tbody.innerHTML = body || ('<tr><td colspan="7" style="font-family:var(--body-font);color:var(--ink-soft);">No advisor data for ' + currentEntity + ' yet \u2014 this needs the CRM\'s Enrollment Advisor column populated.</td></tr>');
 }
 
+/* ==================== Executive Scorecard ==================== */
+
+function getCurrentTermKey(entity) {
+  const now = new Date();
+  const keys = Object.keys(termWindows).filter((k) => k.startsWith(entity + "|"));
+  if (!keys.length) return null;
+  let current = keys.find((k) => termWindows[k].start <= now && now <= termWindows[k].end);
+  if (!current) {
+    const upcoming = keys.filter((k) => termWindows[k].end >= now).sort((a, b) => termWindows[a].end - termWindows[b].end);
+    current = upcoming[0] || keys.sort((a, b) => termWindows[b].end - termWindows[a].end)[0];
+  }
+  return current;
+}
+
+function computeStartsForecast(entity) {
+  const key = getCurrentTermKey(entity);
+  if (!key) return null;
+  const prefix = key.split("|")[1];
+  const win = termWindows[key];
+  const assumptions = getTermAssumptions()[key] || {};
+  const startTarget = assumptions.startTarget !== undefined && assumptions.startTarget !== "" ? Number(assumptions.startTarget) : null;
+  const convRate = assumptions.convRate !== undefined ? Number(assumptions.convRate) : 0.8;
+  const currentApps = cumulativeTermStage(entity, prefix, "Apps");
+
+  const appRows = filterRows({ entity, group: "Term", type: "Stage", name: prefix, metric: "Apps" });
+  const weekTotals = {};
+  appRows.forEach((r) => { weekTotals[r.date] = (weekTotals[r.date] || 0) + r.value; });
+  const weekDates = completeDates(uniqueSorted(Object.keys(weekTotals)));
+  const last4 = weekDates.slice(-4);
+  const recentAvg = last4.length ? last4.reduce((s, d) => s + weekTotals[d], 0) / last4.length : 0;
+
+  const wr = weeksRemaining(win.end);
+  const projectedApps = currentApps + recentAvg * wr;
+  const projectedStarts = Math.round(projectedApps * convRate);
+  return { prefix, windowEnd: win.end, startTarget, currentApps, projectedApps: Math.round(projectedApps), projectedStarts, weeksRemaining: wr, recentAvgPerWeek: Math.round(recentAvg * 10) / 10 };
+}
+
+function computeOpenLeads(entity) {
+  const openLeads = leadRecords.filter((r) => r.entity === entity && isOpenStatus(r.status) && !r.app);
+  const byStage = { "Not Yet Contacted": 0, "Awaiting Interview": 0, "Awaiting Evaluation": 0, "Awaiting Application": 0 };
+  openLeads.forEach((r) => {
+    if (!r.contacted) byStage["Not Yet Contacted"]++;
+    else if (!r.ic) byStage["Awaiting Interview"]++;
+    else if (!r.ec) byStage["Awaiting Evaluation"]++;
+    else byStage["Awaiting Application"]++;
+  });
+  return { total: openLeads.length, byStage };
+}
+
+function renderExecScorecard() {
+  const wrap = $("#execScorecard");
+  if (!wrap) return;
+  const forecast = computeStartsForecast(currentEntity);
+  const open = computeOpenLeads(currentEntity);
+
+  let forecastHtml;
+  if (!forecast) {
+    forecastHtml = '<div class="scorecard-empty">No Planned Term data for ' + currentEntity + '.</div>';
+  } else {
+    const pct = forecast.startTarget ? Math.round((forecast.projectedStarts / forecast.startTarget) * 100) : null;
+    const statusClass = pct === null ? "" : (pct >= 100 ? "good" : pct >= 85 ? "amber" : "bad");
+    forecastHtml =
+      '<div class="score-value">' + fmtInt(forecast.projectedStarts) + (forecast.startTarget ? ' <span class="score-of">/ ' + fmtInt(forecast.startTarget) + '</span>' : "") + '</div>' +
+      '<div class="score-sub ' + statusClass + '">' + (pct === null ? "No target set" : pct + "% of target, projected") + '</div>' +
+      '<div class="score-detail">' + forecast.prefix + " &bull; " + forecast.weeksRemaining + " wks left &bull; " + forecast.recentAvgPerWeek + " apps/wk recent pace</div>";
+  }
+
+  const appsToDateHtml = forecast
+    ? '<div class="score-value">' + fmtInt(forecast.currentApps) + '</div><div class="score-sub">' + forecast.prefix + ' to date</div>'
+    : '<div class="scorecard-empty">No Planned Term data for ' + currentEntity + '.</div>';
+
+  const openHtml =
+    '<div class="score-value">' + fmtInt(open.total) + '</div>' +
+    '<div class="score-sub">still open across the funnel</div>' +
+    '<div class="score-breakdown">' + Object.entries(open.byStage).map(([k, v]) => k + ": <b>" + v + "</b>").join(" &bull; ") + "</div>";
+
+  wrap.innerHTML =
+    '<div class="score-card"><div class="score-label">Current Term Starts Forecast</div>' + forecastHtml + '</div>' +
+    '<div class="score-card"><div class="score-label">Current Term Applications to Date</div>' + appsToDateHtml + '</div>' +
+    '<div class="score-card"><div class="score-label">Funnel Health \u2014 Leads Still Open</div>' + openHtml + '</div>';
+}
+
+/* ==================== Operations / Admissions ==================== */
+
+function avgDaysBetween(entity, fromField, toField) {
+  const diffs = leadRecords
+    .filter((r) => r.entity === entity && r[fromField] && r[toField])
+    .map((r) => (r[toField] - r[fromField]) / (1000 * 3600 * 24));
+  if (!diffs.length) return null;
+  return diffs.reduce((s, d) => s + d, 0) / diffs.length;
+}
+
+function renderOperations() {
+  const backlogWrap = $("#backlogRow");
+  const turnaroundWrap = $("#turnaroundRow");
+  if (!backlogWrap || !turnaroundWrap) return;
+
+  const open = computeOpenLeads(currentEntity);
+  const maxCount = Math.max.apply(null, Object.values(open.byStage).concat([1]));
+  backlogWrap.innerHTML = Object.entries(open.byStage).map(([stage, count]) => {
+    const pct = (count / maxCount) * 100;
+    return '<div class="backlog-row"><div class="backlog-label">' + stage + '</div>' +
+      '<div class="backlog-track"><div class="backlog-fill" style="width:' + pct + '%"></div></div>' +
+      '<div class="backlog-count">' + fmtInt(count) + '</div></div>';
+  }).join("");
+
+  const stages = [
+    { label: "Contact \u2192 Interview", from: "contacted", to: "ic" },
+    { label: "Interview \u2192 Evaluation", from: "ic", to: "ec" },
+    { label: "Evaluation \u2192 Application", from: "ec", to: "app" },
+  ];
+  turnaroundWrap.innerHTML = stages.map((s) => {
+    const avg = avgDaysBetween(currentEntity, s.from, s.to);
+    return '<div class="kpi-card"><div class="label">' + s.label + '</div><div class="value">' + (avg === null ? "\u2013" : avg.toFixed(1) + " d") + '</div><div class="sub">average turnaround</div></div>';
+  }).join("");
+}
+
+/* ==================== Free-text notes (persisted) ==================== */
+
+function setupNote(elId) {
+  const el = $(elId);
+  if (!el) return;
+  const key = "wat_note_" + elId.replace("#", "");
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved) el.value = saved;
+  } catch (e) { /* ignore */ }
+  el.addEventListener("input", () => {
+    try { localStorage.setItem(key, el.value); } catch (e) { /* storage full or unavailable */ }
+  });
+}
+
+/* ==================== Risks, Decisions & Actions log ==================== */
+
+const ACTIONS_KEY = "wat_actions_log_v1";
+function getActionsLog() {
+  try {
+    const saved = localStorage.getItem(ACTIONS_KEY);
+    if (saved) return JSON.parse(saved);
+  } catch (e) { /* ignore */ }
+  return [];
+}
+function setActionsLog(list) {
+  try { localStorage.setItem(ACTIONS_KEY, JSON.stringify(list)); } catch (e) { /* ignore */ }
+}
+
+function renderActionsLog() {
+  const tbody = $("#actionsTableBody");
+  if (!tbody) return;
+  const log = getActionsLog();
+  tbody.innerHTML = log.map((item, i) => (
+    '<tr>' +
+      '<td><input class="action-input" data-i="' + i + '" data-f="item" value="' + (item.item || "").replace(/"/g, "&quot;") + '" placeholder="Issue / decision / action"></td>' +
+      '<td><select class="action-input" data-i="' + i + '" data-f="type">' +
+        ["Risk", "Decision", "Action"].map((t) => '<option' + (item.type === t ? " selected" : "") + '>' + t + '</option>').join("") +
+      '</select></td>' +
+      '<td><input class="action-input" data-i="' + i + '" data-f="owner" value="' + (item.owner || "").replace(/"/g, "&quot;") + '" placeholder="Owner"></td>' +
+      '<td><input class="action-input" data-i="' + i + '" data-f="deadline" type="date" value="' + (item.deadline || "") + '"></td>' +
+      '<td><select class="action-input" data-i="' + i + '" data-f="status">' +
+        ["Open", "In Progress", "Done"].map((s) => '<option' + (item.status === s ? " selected" : "") + '>' + s + '</option>').join("") +
+      '</select></td>' +
+      '<td><button class="action-remove" data-i="' + i + '" title="Remove">&times;</button></td>' +
+    '</tr>'
+  )).join("") || '<tr><td colspan="6" style="color:var(--ink-soft);">No items yet \u2014 click "Add row" below.</td></tr>';
+
+  $$(".action-input").forEach((inp) => {
+    const evt = inp.tagName === "SELECT" || inp.type === "date" ? "change" : "input";
+    inp.addEventListener(evt, () => {
+      const list = getActionsLog();
+      const i = Number(inp.dataset.i);
+      list[i][inp.dataset.f] = inp.value;
+      setActionsLog(list);
+    });
+  });
+  $$(".action-remove").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const list = getActionsLog();
+      list.splice(Number(btn.dataset.i), 1);
+      setActionsLog(list);
+      renderActionsLog();
+    });
+  });
+}
+
 function renderTrafficLight() {
   const leads = totalsByDate({ entity: currentEntity, group: "Marketing", type: "Channel", metric: "Leads" });
   const leadDates = completeDates(leads.dates);
@@ -717,7 +936,12 @@ function loadRecords(newRecords, sourceLabel) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
     localStorage.setItem(STORAGE_KEY + "_termWindows", JSON.stringify(termWindows));
-  } catch (e) { /* storage full or unavailable */ }
+    localStorage.setItem(STORAGE_KEY + "_leadRecords", JSON.stringify(leadRecords));
+  } catch (e) {
+    // leadRecords can be large (one entry per raw CRM row) -- if storage is full, drop it from
+    // persistence rather than failing the whole load. It'll just need re-deriving next session.
+    try { localStorage.removeItem(STORAGE_KEY + "_leadRecords"); } catch (e2) { /* ignore */ }
+  }
   const dates = uniqueSorted(records.map((r) => r.date));
   const entities = allEntities();
   setStatus("Loaded " + records.length.toLocaleString() + " data points from " + sourceLabel + " \u2022 " + dates.length + " weeks \u2022 entities: " + (entities.join(", ") || "\u2013"), false);
@@ -789,7 +1013,15 @@ function setupFocusNote() {
 
 function initDashboard() {
   setupTabNav();
-  setupFocusNote();
+  ["#marketingIntelNote", "#marketingFocusNote", "#salesCoachingNote", "#salesFocusNote", "#opsNote"].forEach(setupNote);
+  renderActionsLog();
+
+  $("#addActionRow").addEventListener("click", () => {
+    const list = getActionsLog();
+    list.push({ item: "", type: "Risk", owner: "", deadline: "", status: "Open" });
+    setActionsLog(list);
+    renderActionsLog();
+  });
 
   $("#fileInput").addEventListener("change", (e) => {
     if (e.target.files && e.target.files[0]) handleFile(e.target.files[0]);
@@ -802,8 +1034,10 @@ function initDashboard() {
   $("#clearBtn").addEventListener("click", () => {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(STORAGE_KEY + "_termWindows");
+    localStorage.removeItem(STORAGE_KEY + "_leadRecords");
     records = [];
     termWindows = {};
+    leadRecords = [];
     showApp(false);
     setStatus("No data loaded - upload the weekly CRM export or load the sample dataset.", true);
   });
@@ -840,6 +1074,18 @@ function initDashboard() {
             });
           }
         } catch (e2) { /* ignore corrupt term-window cache */ }
+        try {
+          const savedLR = localStorage.getItem(STORAGE_KEY + "_leadRecords");
+          if (savedLR) {
+            const rawLR = JSON.parse(savedLR);
+            const dateFields = ["created", "contacted", "ic", "ec", "app"];
+            leadRecords = rawLR.map((r) => {
+              const rec = Object.assign({}, r);
+              dateFields.forEach((f) => { rec[f] = rec[f] ? new Date(rec[f]) : null; });
+              return rec;
+            });
+          }
+        } catch (e3) { /* ignore corrupt lead-record cache */ }
         setStatus("Restored " + records.length.toLocaleString() + " data points from your last session.", false);
         showApp(true);
         renderEntityToggle();

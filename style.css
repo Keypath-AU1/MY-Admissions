@@ -393,6 +393,56 @@ tbody tr:hover{background:#EEF1FB;}
 .term-stat-value{font-family:var(--mono);font-weight:700;color:var(--navy);font-size:15px;}
 .term-cumulative{font-size:11px;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:8px;}
 
+/* ---------- Executive Scorecard ---------- */
+.score-row{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;}
+.score-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-top:4px solid var(--navy);
+  border-radius:var(--radius);
+  padding:18px 20px;
+}
+.score-label{font-size:11.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-soft);font-weight:700;margin-bottom:8px;}
+.score-value{font-family:var(--mono);font-size:32px;font-weight:800;color:var(--navy);line-height:1;}
+.score-of{font-size:17px;color:var(--ink-soft);font-weight:600;}
+.score-sub{font-size:13px;color:var(--ink-soft);margin-top:8px;font-weight:600;}
+.score-sub.good{color:var(--good);}
+.score-sub.amber{color:var(--amber);}
+.score-sub.bad{color:var(--bad);}
+.score-detail{font-size:11.5px;color:var(--ink-soft);margin-top:6px;}
+.score-breakdown{font-size:11px;color:var(--ink-soft);margin-top:8px;line-height:1.6;}
+.scorecard-empty{font-size:13px;color:var(--ink-soft);padding:10px 0;}
+
+/* ---------- Backlog bars (Operations) ---------- */
+.backlog-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.backlog-label{font-size:12.5px;color:var(--ink-soft);width:150px;flex-shrink:0;}
+.backlog-track{flex:1;height:10px;background:var(--canvas);border-radius:5px;overflow:hidden;}
+.backlog-fill{height:100%;background:var(--navy);border-radius:5px;}
+.backlog-count{font-family:var(--mono);font-weight:700;color:var(--navy);width:36px;text-align:right;flex-shrink:0;}
+
+/* ---------- Actions / Risks log ---------- */
+#actionsTable input.action-input, #actionsTable select.action-input{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:5px;
+  padding:5px 7px;
+  font-family:var(--body-font);
+  font-size:12.5px;
+  color:var(--ink);
+  background:#fff;
+}
+#actionsTable td{vertical-align:middle;}
+.action-remove{
+  border:none;
+  background:transparent;
+  color:var(--bad);
+  font-size:18px;
+  cursor:pointer;
+  line-height:1;
+  padding:2px 8px;
+}
+.action-remove:hover{background:var(--bad-tint);border-radius:5px;}
+
 /* ---------- Traffic light ---------- */
 .traffic-legend{display:flex;gap:20px;font-size:12.5px;color:var(--ink-soft);margin-bottom:14px;flex-wrap:wrap;}
 .traffic-legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle;}
@@ -446,6 +496,7 @@ tbody tr:hover{background:#EEF1FB;}
 @media (max-width: 980px){
   .kpi-row{grid-template-columns:repeat(2,1fr);}
   .two-col{grid-template-columns:1fr;}
+  .score-row{grid-template-columns:1fr;}
 }
 @media (max-width: 620px){
   .kpi-row{grid-template-columns:1fr 1fr;}
