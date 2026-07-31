@@ -337,20 +337,31 @@ function renderEntityToggle() {
 }
 
 function renderAll() {
-  updateCheckinBox();
-  renderExecScorecard();
-  renderKPIs();
-  renderChannelChart();
-  renderDonutAndChannelTable();
-  renderProgramChart();
-  renderRatesChart();
-  renderFunnel();
-  renderProgramTable();
-  renderTermTargets();
-  renderAdvisorTable();
-  renderOperations();
-  renderActionsLog();
-  renderTrafficLight();
+  const sections = [
+    ["Check-in box", updateCheckinBox],
+    ["Executive Scorecard", renderExecScorecard],
+    ["KPI row", renderKPIs],
+    ["Channel chart", renderChannelChart],
+    ["Donut & channel table", renderDonutAndChannelTable],
+    ["Program chart", renderProgramChart],
+    ["Rates chart", renderRatesChart],
+    ["Funnel", renderFunnel],
+    ["Program table", renderProgramTable],
+    ["Term Targets", renderTermTargets],
+    ["Advisor table", renderAdvisorTable],
+    ["Operations", renderOperations],
+    ["Actions log", renderActionsLog],
+    ["Traffic light", renderTrafficLight],
+  ];
+  sections.forEach(([label, fn]) => {
+    try {
+      fn();
+    } catch (e) {
+      // One section failing (e.g. a missing element from a stale/mismatched HTML+JS pair)
+      // should never blank out every other section -- log it and keep going.
+      console.error("Dashboard section failed to render: " + label, e);
+    }
+  });
 }
 
 function updateCheckinBox() {
@@ -358,12 +369,14 @@ function updateCheckinBox() {
   const latest = latestDate(completeDates(leads.dates));
   const line1 = $("#latestCheckinLine");
   const line2 = $("#latestCheckinSub");
-  if (latest) {
-    line1.textContent = "Latest check-in: week ending " + latest;
-    line2.textContent = currentEntity + " \u2022 figures as of most recent complete week";
-  } else {
-    line1.textContent = "Latest check-in: no complete week yet";
-    line2.textContent = currentEntity + " \u2022 waiting on data";
+  if (line1 && line2) {
+    if (latest) {
+      line1.textContent = "Latest check-in: week ending " + latest;
+      line2.textContent = currentEntity + " \u2022 figures as of most recent complete week";
+    } else {
+      line1.textContent = "Latest check-in: no complete week yet";
+      line2.textContent = currentEntity + " \u2022 waiting on data";
+    }
   }
   const marketingLabel = $("#marketingWeekLabel");
   if (marketingLabel) marketingLabel.textContent = latest ? "Week ending " + latest : "\u2013";
