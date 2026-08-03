@@ -246,12 +246,13 @@ function uniqueSorted(arr) {
   return Array.from(new Set(arr)).sort();
 }
 
-function filterRows({ entity, group, type, metric }) {
+function filterRows({ entity, group, type, metric, name }) {
   return records.filter((r) =>
     (!entity || r.entity === entity) &&
     (!group || r.group === group) &&
     (!type || r.type === type) &&
-    (!metric || r.metric === metric)
+    (!metric || r.metric === metric) &&
+    (!name || r.name === name)
   );
 }
 
@@ -652,9 +653,31 @@ function renderAdvisorTable() {
 /* ==================== Executive Scorecard ==================== */
 
 function getCurrentTermKey(entity) {
-  const now = new Date();
   const keys = Object.keys(termWindows).filter((k) => k.startsWith(entity + "|"));
   if (!keys.length) return null;
+
+  // Enrollment for a term typically winds down well before its academic dates finish, and new
+  // leads shift to targeting the next term long before the current one's formal end date -- so
+  // the raw date window is an unreliable signal for "current term" on its own (a just-closed term
+  // can still numerically contain today's date for weeks). Real recent lead activity is a much
+  // better signal for which term is actually being worked right now: whichever term picked up the
+  // most new leads in the last couple of complete weeks.
+  const leadRows = filterRows({ entity, group: "Term", type: "Stage", metric: "Leads" });
+  const allDates = uniqueSorted(leadRows.map((r) => r.date));
+  const recentDates = completeDates(allDates).slice(-2);
+  const counts = {};
+  keys.forEach((k) => { counts[k] = 0; });
+  leadRows.forEach((r) => {
+    const key = entity + "|" + r.name;
+    if (recentDates.includes(r.date) && key in counts) counts[key] += r.value;
+  });
+  let best = null, bestCount = 0;
+  keys.forEach((k) => { if (counts[k] > bestCount) { bestCount = counts[k]; best = k; } });
+  if (best) return best;
+
+  // Fallback (e.g. no recent activity at all, a very quiet week, or a small sample dataset):
+  // revert to date-window containment, then soonest upcoming, then most recent past.
+  const now = new Date();
   let current = keys.find((k) => termWindows[k].start <= now && now <= termWindows[k].end);
   if (!current) {
     const upcoming = keys.filter((k) => termWindows[k].end >= now).sort((a, b) => termWindows[a].end - termWindows[b].end);
